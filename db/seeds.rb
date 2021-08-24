@@ -15,9 +15,9 @@ puts "Destroying all Locations..."
 Location.destroy_all
 puts "All locations destroyed successfully!"
 
-# puts "Destroying all Users..."
-# User.destroy_all
-# puts "All users destroyed successfully!"
+puts "Destroying all Users..."
+User.destroy_all
+puts "All users destroyed successfully!"
 
 puts "Creating sports..."
 cycling = Sport.create!(name: 'cycling')
@@ -188,7 +188,23 @@ puts "Location #{location.name} created successfully!"
 
 puts "All Locations were created successfully!"
 
-# puts "Creating coach user..."
-# user = create!(username: "Coach",
-#                email: "coach@coach.com",
-#                password:)
+puts "Now creating the users..."
+puts "Creating coach user..."
+user = create!(username: "Coach",
+               email: "coach@coach.com",
+               password: "coachcoach",
+               age: 25)
+puts "saving #{user.name}..."
+user.save
+puts "#{user.name} saved successfully!"
+
+15.times do
+  puts "Creating user..."
+  user = create!(username: Faker::Name.unique.female_first_name,
+                 email: Faker::Internet.unique.email,
+                 password: "123456",
+                 age: rand(18..45))
+  puts "saving #{user.name}..."
+  user.save
+  puts "#{user.name} saved successfully!"
+end
