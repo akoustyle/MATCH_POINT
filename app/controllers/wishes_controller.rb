@@ -1,7 +1,6 @@
 class WishesController < ApplicationController
   def index
-    @wishes = Wish.all
-    # @wishes = policy_scope(Wish).order(created_at: :desc)
+    @wishes = policy_scope(Wish).order(created_at: :desc)
 
   #   if params.dig(:search, :query).present?
   #     @wishes = @wishes.search_by_sport(params.dig(:search, :query))
@@ -16,18 +15,22 @@ class WishesController < ApplicationController
   end
 
   def create
-    @wish = Wish.new(wish_params)
+    @wish = Wish.new
     @wish.user = current_user
+    @sport = Sport.find_by(name: params[:wish][:sport])
+    @wish.sport = @sport
+    @wish.date = Date.today
+    authorize @wish
     if @wish.save
-      redirect_to wish_path(@wish)
-    else
-      render new
+      redirect_to wishes_path
+     else
+      render :new
     end
   end
 
-  private
+  # private
 
-  def wish_params
-    params.require(:wish).permit(:sport_id, :date)
-  end
+  # def wish_params
+  #    params.require(:wish).permit(:sport_id)
+  # end
 end

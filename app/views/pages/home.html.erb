@@ -1,2 +1,26 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="align-items-center justify-content-center">
+  <div class="card m-2 rounded-3 shadow-sm">
+    <div class="card-header py-3">
+      <h4 class="my-0 fw-normal">Join Match Point app for Women</h4>
+    </div>
+    <div class="card-body">
+      <h1 class="card-title pricing-card-title">Get starting for free<small class="text-muted fw-light"></small></h1>
+      <p>Release your potential and find a sports partner.</p>
+
+      <%= simple_form_for Wish.new, url: wishes_path, method: :post do |f| %>
+      <%= f.input :sport, collection: Sport.all.pluck(:name) %>
+      <%= f.submit %>
+      <% end %>
+
+    </div>
+  </div>
+  <div class="card m-2 rounded-3 shadow-sm">
+    <div class="card-header py-3">
+      <h4 class="my-0 fw-normal">Sign up today!</h4>
+    </div>
+    <div class="card-body">
+      <p class="card-title pricing-card-title">Click below to get started<small class="text-muted fw-light">.</small></p>
+      <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-lg btn-block btn-primary" %>
+    </div>
+  </div>
+</div>
