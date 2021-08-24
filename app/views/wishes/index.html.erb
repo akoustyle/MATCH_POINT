@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-sm-8 offset-sm-2 col-md-4 offset-md-4">
+      <ul id="slides">
+        <% @wishes.each do |wish|%>
+          <div class="slide" data-id="<%= wish.id %>">
+            <li><%= wish.user.email %>
+            <%= wish.sport.name %></li>
+          </div>
+        <% end %>
+      </ul>
+      <button class="" id="previous">No</button>
+      <button class="" id="next">Yes</button>
+    </div>
+  </div>
+</div>

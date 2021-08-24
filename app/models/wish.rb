@@ -7,4 +7,5 @@ class Wish < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_location?
 
   validates :date, presence: true
+
 end
