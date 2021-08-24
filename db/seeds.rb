@@ -15,9 +15,9 @@ puts "Destroying all Locations..."
 Location.destroy_all
 puts "All locations destroyed successfully!"
 
-puts "Destroying all Users..."
-User.destroy_all
-puts "All users destroyed successfully!"
+# puts "Destroying all Users..."
+# User.destroy_all
+# puts "All users destroyed successfully!"
 
 puts "Creating sports..."
 cycling = Sport.create!(name: 'cycling')
@@ -188,7 +188,7 @@ puts "Location #{location.name} created successfully!"
 
 puts "All Locations were created successfully!"
 
-puts "Creating coach user..."
-user = create!(username: "Coach",
-               email: "coach@coach.com",
-               password:)
+# puts "Creating coach user..."
+# user = create!(username: "Coach",
+#                email: "coach@coach.com",
+#                password:)
