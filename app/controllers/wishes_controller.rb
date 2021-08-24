@@ -6,9 +6,9 @@ class WishesController < ApplicationController
   #     @wishes = @wishes.search_by_sport(params.dig(:search, :query))
   end
 
-  # def show
+  def show
 
-  #end
+  end
 
   def new
     @wish = Wish.new
