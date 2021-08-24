@@ -5,14 +5,19 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
 
-puts "Destroying all Sports..."
-Sport.destroy_all
-puts "All sports destroyed successfully!"
+puts "Destroying all Users..."
+User.destroy_all
+puts "All users destroyed successfully!"
 
 puts "Destroying all Locations..."
 Location.destroy_all
 puts "All locations destroyed successfully!"
+
+puts "Destroying all Sports..."
+Sport.destroy_all
+puts "All sports destroyed successfully!"
 
 puts "Creating sports..."
 cycling = Sport.create!(name: 'cycling')
@@ -57,8 +62,8 @@ puts "Creating locations..."
 location = Location.create!(name: 'Square Montholon',
                             address: '2 Rue Mayran, 75009 Paris',
                             sport_id: football.id,
-                            longitude: 48.85443,
-                            latitude: 2.35894)
+                            longitude: 48.87717,
+                            latitude: 2.34569)
 puts "Location #{location.name} created successfully!"
 
 puts "Creating locations..."
@@ -182,3 +187,26 @@ location = Location.create!(name: "Edouard Pailleron Tennis",
 puts "Location #{location.name} created successfully!"
 
 puts "All Locations were created successfully!"
+
+puts "Now creating the users..."
+puts "Creating coach user..."
+user = User.create!(username: "Coach",
+                    email: "coach@coach.com",
+                    password: "coachcoach",
+                    age: 25)
+puts "saving #{user.username}..."
+user.save
+puts "#{user.username} saved successfully!"
+
+15.times do
+  puts "Creating user..."
+  user = User.create!(username: Faker::Name.unique.female_first_name,
+                      email: Faker::Internet.unique.email,
+                      password: "123456",
+                      age: rand(18..45))
+  puts "saving #{user.username}..."
+  user.save
+  puts "#{user.username} saved successfully!"
+end
+puts "Users created successfully!"
+puts "Et mercé"
