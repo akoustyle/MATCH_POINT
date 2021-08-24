@@ -15,20 +15,22 @@ class WishesController < ApplicationController
   end
 
   def create
-
-    # @wish = Wish.new(wish_params)
-    # @wish.user = current_user
-    # @wish.sport = @sport
-    # if @wish.save
-    #   render_to wish_path(@wish)
-    # else
-    #   render new
-    # end
+    @wish = Wish.new
+    @wish.user = current_user
+    @sport = Sport.find_by(name: params[:wish][:sport])
+    @wish.sport = @sport
+    @wish.date = Date.today
+    authorize @wish
+    if @wish.save
+      redirect_to wishes_path
+     else
+      render :new
+    end
   end
 
-  private
+  # private
 
-  def wish_params
-    # params.require(:wish).permit(:sport_id, :user_id, :date, :match_id)
-  end
+  # def wish_params
+  #    params.require(:wish).permit(:sport_id)
+  # end
 end

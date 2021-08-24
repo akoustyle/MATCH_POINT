@@ -5,4 +5,5 @@ class Wish < ApplicationRecord
   has_many :likes
 
   validates :date, presence: true
+
 end
