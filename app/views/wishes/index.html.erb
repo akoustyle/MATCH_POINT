@@ -1,0 +1,9 @@
+<ul id="slides">
+  <% @wishes.each do |wish|%>
+    <div class="slide" data-id="<%= wish.id %>">
+      <li><%= wish.user_id.username %></li>
+    </div>
+  <% end %>
+</ul>
+<button class="" id="previous">No</button>
+<button class="" id="next">Yes</button>
