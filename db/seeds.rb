@@ -7,17 +7,17 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
-puts "Destroying all Sports..."
-Sport.destroy_all
-puts "All sports destroyed successfully!"
+puts "Destroying all Users..."
+User.destroy_all
+puts "All users destroyed successfully!"
 
 puts "Destroying all Locations..."
 Location.destroy_all
 puts "All locations destroyed successfully!"
 
-puts "Destroying all Users..."
-User.destroy_all
-puts "All users destroyed successfully!"
+puts "Destroying all Sports..."
+Sport.destroy_all
+puts "All sports destroyed successfully!"
 
 puts "Creating sports..."
 cycling = Sport.create!(name: 'cycling')
@@ -190,21 +190,23 @@ puts "All Locations were created successfully!"
 
 puts "Now creating the users..."
 puts "Creating coach user..."
-user = create!(username: "Coach",
-               email: "coach@coach.com",
-               password: "coachcoach",
-               age: 25)
-puts "saving #{user.name}..."
+user = User.create!(username: "Coach",
+                    email: "coach@coach.com",
+                    password: "coachcoach",
+                    age: 25)
+puts "saving #{user.username}..."
 user.save
-puts "#{user.name} saved successfully!"
+puts "#{user.username} saved successfully!"
 
 15.times do
   puts "Creating user..."
-  user = create!(username: Faker::Name.unique.female_first_name,
-                 email: Faker::Internet.unique.email,
-                 password: "123456",
-                 age: rand(18..45))
-  puts "saving #{user.name}..."
+  user = User.create!(username: Faker::Name.unique.female_first_name,
+                      email: Faker::Internet.unique.email,
+                      password: "123456",
+                      age: rand(18..45))
+  puts "saving #{user.username}..."
   user.save
-  puts "#{user.name} saved successfully!"
+  puts "#{user.username} saved successfully!"
 end
+puts "Users created successfully!"
+puts "Et mercé"
