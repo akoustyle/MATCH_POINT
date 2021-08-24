@@ -62,8 +62,8 @@ puts "Creating locations..."
 location = Location.create!(name: 'Square Montholon',
                             address: '2 Rue Mayran, 75009 Paris',
                             sport_id: football.id,
-                            longitude: 48.85443,
-                            latitude: 2.35894)
+                            longitude: 48.87717,
+                            latitude: 2.34569)
 puts "Location #{location.name} created successfully!"
 
 puts "Creating locations..."
@@ -189,4 +189,6 @@ puts "Location #{location.name} created successfully!"
 puts "All Locations were created successfully!"
 
 puts "Creating coach user..."
-user = create!(username: )
+user = create!(username: "Coach",
+               email: "coach@coach.com",
+               password:)
