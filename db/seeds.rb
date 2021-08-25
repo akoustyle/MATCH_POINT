@@ -12,6 +12,10 @@ puts "Destroying all Users..."
 User.destroy_all
 puts "All users destroyed successfully!"
 
+puts "Destroying all Matches..."
+Match.destroy_all
+puts "All Matches destroyed successfully!"
+
 puts "Destroying all Wishes..."
 Wish.destroy_all
 puts "All wishes destroyed successfully!"
@@ -24,7 +28,6 @@ puts "Destroying all Sports..."
 Sport.destroy_all
 puts "All sports destroyed successfully!"
 
-puts "Creating sports..."
 cycling = Sport.create!(name: 'cycling')
 puts "Sport: #{cycling.name} created !"
 football = Sport.create!(name: 'football')
@@ -64,12 +67,12 @@ location = Location.create!(name: 'Terrain de sport des jardins Saint-Paul',
 puts "Location #{location.name} created successfully!"
 
 puts "Creating locations..."
-location = Location.create!(name: 'Square Montholon',
+location_football = Location.create!(name: 'Square Montholon',
                             address: '2 Rue Mayran, 75009 Paris',
                             sport_id: football.id,
                             longitude: 48.87717,
                             latitude: 2.34569)
-puts "Location #{location.name} created successfully!"
+puts "Location #{location_football.name} created successfully!"
 
 puts "Creating locations..."
 location = Location.create!(name: 'Square Montholon',
@@ -96,12 +99,12 @@ location = Location.create!(name: "Square d'Anvers",
 puts "Location #{location.name} created successfully!"
 
 puts "Creating locations..."
-location = Location.create!(name: "Playground Duperré",
+location_basketball = Location.create!(name: "Playground Duperré",
                             address: '22 rue Duperré, 75018 Paris',
                             sport_id: basketball.id,
                             longitude: 48.88208,
                             latitude: 2.33527)
-puts "Location #{location.name} created successfully!"
+puts "Location #{location_basketball.name} created successfully!"
 
 puts "Creating locations..."
 location = Location.create!(name: "Golf ParisLongchamp",
@@ -112,60 +115,60 @@ location = Location.create!(name: "Golf ParisLongchamp",
 puts "Location #{location.name} created successfully!"
 
 puts "Creating locations..."
-location = Location.create!(name: "SCUF Golf (Practice)",
-                            address: "17 Rue Louise-Émilie de la Tour d'Auvergne, 75009 Paris",
-                            sport_id: golf.id,
-                            longitude: 48.87905,
-                            latitude: 2.34379)
-puts "Location #{location.name} created successfully!"
+location_golf = Location.create!(name: "SCUF Golf (Practice)",
+                                 address: "17 Rue Louise-Émilie de la Tour d'Auvergne, 75009 Paris",
+                                 sport_id: golf.id,
+                                 longitude: 48.87905,
+                                 latitude: 2.34379)
+puts "Location #{location_golf.name} created successfully!"
 
 puts "Creating locations..."
-location = Location.create!(name: "CLC La Cartoucherie",
-                            address: "Route du Champ-de-Manœuvre, bois de Vincennes, 75012, paris",
-                            sport_id: horse_riding.id,
-                            longitude: 48.84848,
-                            latitude: 2.43820)
-puts "Location #{location.name} created successfully!"
+location_horse = Location.create!(name: "CLC La Cartoucherie",
+                                  address: "Route du Champ-de-Manœuvre, bois de Vincennes, 75012, paris",
+                                  sport_id: horse_riding.id,
+                                  longitude: 48.84848,
+                                  latitude: 2.43820)
+puts "Location #{location_horse.name} created successfully!"
 
 puts "Creating locations..."
-location = Location.create!(name: "Square Suzanne-Buisson",
-                            address: "7 bis, rue Girardon, 75018 PARIS",
+location_petanque = Location.create!(name: "Square Suzanne-Buisson",
+                                     address: "7 bis, rue Girardon, 75018 PARIS",
+                                     sport_id: petanque.id,
+                                     longitude: 48.8875,
+                                     latitude: 2.33746)
+puts "Location #{location_petanque.name} created successfully!"
+
+puts "Creating locations..."
+location = Location.create!(name: "Bois de Vincennes",
+                            address: "Bois de Vincennes - 75012 Paris",
                             sport_id: petanque.id,
-                            longitude: 48.8875,
-                            latitude: 2.33746)
-puts "Location #{location.name} created successfully!"
-
-puts "Creating locations..."
-location = Location.create!(name: "Bois de Vincennes",
-                            address: "Bois de Vincennes - 75012 Paris",
-                            sport_id: petanque.id,
                             longitude: 48.85337,
                             latitude: 2.43523)
 puts "Location #{location.name} created successfully!"
 
 puts "Creating locations..."
-location = Location.create!(name: "Bois de Vincennes",
-                            address: "Bois de Vincennes - 75012 Paris",
-                            sport_id: cycling.id,
-                            longitude: 48.85337,
-                            latitude: 2.43523)
+location_cycling = Location.create!(name: "Bois de Vincennes",
+                                    address: "Bois de Vincennes - 75012 Paris",
+                                    sport_id: cycling.id,
+                                    longitude: 48.85337,
+                                    latitude: 2.43523)
+puts "Location #{location_cycling.name} created successfully!"
+
+puts "Creating locations..."
+location_running = Location.create!(name: "Bois de Vincennes",
+                                    address: "Bois de Vincennes - 75012 Paris",
+                                    sport_id: running.id,
+                                    longitude: 48.85337,
+                                    latitude: 2.43523)
 puts "Location #{location.name} created successfully!"
 
 puts "Creating locations..."
-location = Location.create!(name: "Bois de Vincennes",
-                            address: "Bois de Vincennes - 75012 Paris",
-                            sport_id: running.id,
-                            longitude: 48.85337,
-                            latitude: 2.43523)
-puts "Location #{location.name} created successfully!"
-
-puts "Creating locations..."
-location = Location.create!(name: "Bois de Vincennes",
-                            address: "Bois de Vincennes - 75012 Paris",
-                            sport_id: ping_pong.id,
-                            longitude: 48.85337,
-                            latitude: 2.43523)
-puts "Location #{location.name} created successfully!"
+location_ping = Location.create!(name: "Bois de Vincennes",
+                                 address: "Bois de Vincennes - 75012 Paris",
+                                 sport_id: ping_pong.id,
+                                 longitude: 48.85337,
+                                 latitude: 2.43523)
+puts "Location #{location_ping.name} created successfully!"
 
 puts "Creating locations..."
 location = Location.create!(name: "Square Émile-Chautemps",
@@ -176,12 +179,12 @@ location = Location.create!(name: "Square Émile-Chautemps",
 puts "Location #{location.name} created successfully!"
 
 puts "Creating locations..."
-location = Location.create!(name: "Tennis Déjerine Doctors",
-                            address: "30 Rue des Docteurs Dejerine, 75020 Paris",
-                            sport_id: tennis.id,
-                            longitude: 48.85686,
-                            latitude: 2.41172)
-puts "Location #{location.name} created successfully!"
+location_tennis = Location.create!(name: "Tennis Déjerine Doctors",
+                                   address: "30 Rue des Docteurs Dejerine, 75020 Paris",
+                                   sport_id: tennis.id,
+                                   longitude: 48.85686,
+                                   latitude: 2.41172)
+puts "Location #{location_tennis.name} created successfully!"
 
 puts "Creating locations..."
 location = Location.create!(name: "Edouard Pailleron Tennis",
@@ -216,13 +219,14 @@ end
 puts "Users created successfully!"
 
 6.times do
-  puts "Creating wish..."
+  puts "Creating wish and match..."
+  match = Match.create!(location_id: location_cycling.id)
   user = User.all.pluck(:id).sample
-  p user
   wish = Wish.new(date: Date.today,
                   sport_id: cycling.id,
                   user_id: user,
-                  location: Location.all.pluck(:address).sample)
+                  location: Location.all.pluck(:address).sample,
+                  match_id: match.id)
   puts "saving wish for #{cycling.name}"
   wish.save
 end
@@ -230,96 +234,104 @@ end
 6.times do
   puts "Creating wish..."
   user = User.all.pluck(:id).sample
-  p user
+  match = Match.create!(location_id: location_football.id)
   wish = Wish.new(date: Date.today,
                   sport_id: football.id,
                   user_id: user,
-                  location: Location.all.pluck(:address).sample)
-  puts "saving wish for #{football.name}"
+                  location: Location.all.pluck(:address).sample,
+                  match_id: match.id)
+  puts "saving wish and match for #{football.name}"
   wish.save
 end
 
 6.times do
   puts "Creating wish..."
   user = User.all.pluck(:id).sample
-  p user
+  match = Match.create!(location_id: location_tennis.id)
   wish = Wish.new(date: Date.today,
                   sport_id: tennis.id,
                   user_id: user,
-                  location: Location.all.pluck(:address).sample)
-  puts "saving wish for #{tennis.name}"
+                  location: Location.all.pluck(:address).sample,
+                  match_id: match.id)
+  puts "saving wish and match for #{tennis.name}"
   wish.save
 end
 
 6.times do
   puts "Creating wish..."
   user = User.all.pluck(:id).sample
-  p user
+  match = Match.create!(location_id: location_running.id)
   wish = Wish.new(date: Date.today,
                   sport_id: running.id,
                   user_id: user,
-                  location: Location.all.pluck(:address).sample)
-  puts "saving wish for #{running.name}"
+                  location: Location.all.pluck(:address).sample,
+                  match_id: match.id)
+  puts "saving wish and match for #{running.name}"
   wish.save
 end
 
 6.times do
   puts "Creating wish..."
   user = User.all.pluck(:id).sample
-  p user
+  match = Match.create!(location_id: location_basketball.id)
   wish = Wish.new(date: Date.today,
                   sport_id: basketball.id,
                   user_id: user,
-                  location: Location.all.pluck(:address).sample)
-  puts "saving wish for #{basketball.name}"
+                  location: Location.all.pluck(:address).sample,
+                  match_id: match.id)
+  puts "saving wish and match for #{basketball.name}"
   wish.save
 end
 
 6.times do
   puts "Creating wish..."
   user = User.all.pluck(:id).sample
-  p user
+  match = Match.create!(location_id: location_petanque.id)
   wish = Wish.new(date: Date.today,
                   sport_id: petanque.id,
                   user_id: user,
-                  location: Location.all.pluck(:address).sample)
-  puts "saving wish for #{petanque.name}"
+                  location: Location.all.pluck(:address).sample,
+                  match_id: match.id)
+  puts "saving wish and match for #{petanque.name}"
   wish.save
 end
 
 6.times do
   puts "Creating wish..."
   user = User.all.pluck(:id).sample
-  p user
+  match = Match.create!(location_id: location_ping.id)
   wish = Wish.new(date: Date.today,
                   sport_id: ping_pong.id,
                   user_id: user,
-                  location: Location.all.pluck(:address).sample)
-  puts "saving wish for #{ping_pong.name}"
+                  location: Location.all.pluck(:address).sample,
+                  match_id: match.id)
+  puts "saving wish and match for #{ping_pong.name}"
   wish.save
 end
 
 6.times do
   puts "Creating wish..."
   user = User.all.pluck(:id).sample
-  p user
+  match = Match.create!(location_id: location_horse.id)
   wish = Wish.new(date: Date.today,
                   sport_id: horse_riding.id,
                   user_id: user,
-                  location: Location.all.pluck(:address).sample)
-  puts "saving wish for #{horse_riding.name}"
+                  location: Location.all.pluck(:address).sample,
+                  match_id: match.id)
+  puts "saving wish and match for #{horse_riding.name}"
   wish.save
 end
 
 6.times do
   puts "Creating wish..."
   user = User.all.pluck(:id).sample
-  p user
+  match = Match.create!(location_id: location_golf.id)
   wish = Wish.new(date: Date.today,
                   sport_id: golf.id,
                   user_id: user,
-                  location: Location.all.pluck(:address).sample)
-  puts "saving wish for #{golf.name}"
+                  location: Location.all.pluck(:address).sample,
+                  match_id: match.id)
+  puts "saving wish and match for #{golf.name}"
   wish.save
 end
 
