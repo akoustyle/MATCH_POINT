@@ -7,7 +7,5 @@ class MatchesController < ApplicationController
   def index
     # dashboard ca marche pas attention
     matches = policy_scope(Match)
-    @next_match = matches.select { |match| match.wish[:date] == Date.today }
-    @past_matches = matches.reject { |match| match.wish[:date] == Date.today }
   end
 end
