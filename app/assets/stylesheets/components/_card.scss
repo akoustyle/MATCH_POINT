@@ -1,14 +1,24 @@
-.card-category {
+.wish-card-category {
   background-size: cover;
   background-position: center;
-  height: 180px;
+  height: 60vh;
+  width: 91vw;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content:flex-start;
+  align-items:flex-end;
   color: white;
   font-size: 24px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-left: 1rem;
+  scroll-snap-align: start;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 290px;
+  margin-left: 1rem;
+  scroll-snap-align: start;
+}
+.wish-info {
+  padding: 10px;
 }

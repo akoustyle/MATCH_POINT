@@ -1,11 +1,15 @@
 <div class="container">
   <div class="row">
     <div class="col-12 col-sm-8 offset-sm-2 col-md-4 offset-md-4">
-      <ul id="slides d-flex">
+      <ul id="slides swipper-container">
         <% @wishes.each do |wish|%>
-          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)" data-id="<%= wish.id %>">
-            <li><%= wish.user.username %>
-            <%= wish.sport.name %></li>
+          <div class="wish-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)" data-id="<%= wish.id %>">
+            <div class="wish-info">
+              <h3><%= wish.user.username %></h3>
+              <h4><%= wish.sport.name %></h4>
+              <p><%= wish.user.age %></p>
+            </div>
+
           </div>
         <% end %>
       </ul>
