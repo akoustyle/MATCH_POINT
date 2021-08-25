@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :likes, only: [:create]
   end
 
-  resources :matches, only: [:show] do
+  resources :matches, only: [:show, :index] do
     resources :locations, only: [:show, :index]
   end
 end
