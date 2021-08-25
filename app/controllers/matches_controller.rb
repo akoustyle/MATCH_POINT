@@ -5,5 +5,6 @@ class MatchesController < ApplicationController
 
   def index
     #dashboard
+    
   end
 end
