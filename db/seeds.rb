@@ -6,10 +6,15 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
+require 'date'
 
 puts "Destroying all Users..."
 User.destroy_all
 puts "All users destroyed successfully!"
+
+puts "Destroying all Wishes..."
+Wish.destroy_all
+puts "All wishes destroyed successfully!"
 
 puts "Destroying all Locations..."
 Location.destroy_all
@@ -190,23 +195,132 @@ puts "All Locations were created successfully!"
 
 puts "Now creating the users..."
 puts "Creating coach user..."
-user = User.create!(username: "Coach",
-                    email: "coach@coach.com",
-                    password: "coachcoach",
-                    age: 25)
+user = User.new(username: "Coach",
+                email: "coach@coach.com",
+                password: "coachcoach",
+                age: 25)
 puts "saving #{user.username}..."
 user.save
 puts "#{user.username} saved successfully!"
 
-15.times do
+30.times do
   puts "Creating user..."
-  user = User.create!(username: Faker::Name.unique.female_first_name,
-                      email: Faker::Internet.unique.email,
-                      password: "123456",
-                      age: rand(18..45))
+  user = User.new(username: Faker::Name.unique.female_first_name,
+                  email: Faker::Internet.unique.email,
+                  password: "123456",
+                  age: rand(18..45))
   puts "saving #{user.username}..."
   user.save
   puts "#{user.username} saved successfully!"
 end
 puts "Users created successfully!"
-puts "Et mercé"
+
+6.times do
+  puts "Creating wish..."
+  user = User.all.pluck(:id).sample
+  p user
+  wish = Wish.new(date: Date.today,
+                  sport_id: cycling.id,
+                  user_id: user,
+                  location: Location.all.pluck(:address).sample)
+  puts "saving wish for #{cycling.name}"
+  wish.save
+end
+
+6.times do
+  puts "Creating wish..."
+  user = User.all.pluck(:id).sample
+  p user
+  wish = Wish.new(date: Date.today,
+                  sport_id: football.id,
+                  user_id: user,
+                  location: Location.all.pluck(:address).sample)
+  puts "saving wish for #{football.name}"
+  wish.save
+end
+
+6.times do
+  puts "Creating wish..."
+  user = User.all.pluck(:id).sample
+  p user
+  wish = Wish.new(date: Date.today,
+                  sport_id: tennis.id,
+                  user_id: user,
+                  location: Location.all.pluck(:address).sample)
+  puts "saving wish for #{tennis.name}"
+  wish.save
+end
+
+6.times do
+  puts "Creating wish..."
+  user = User.all.pluck(:id).sample
+  p user
+  wish = Wish.new(date: Date.today,
+                  sport_id: running.id,
+                  user_id: user,
+                  location: Location.all.pluck(:address).sample)
+  puts "saving wish for #{running.name}"
+  wish.save
+end
+
+6.times do
+  puts "Creating wish..."
+  user = User.all.pluck(:id).sample
+  p user
+  wish = Wish.new(date: Date.today,
+                  sport_id: basketball.id,
+                  user_id: user,
+                  location: Location.all.pluck(:address).sample)
+  puts "saving wish for #{basketball.name}"
+  wish.save
+end
+
+6.times do
+  puts "Creating wish..."
+  user = User.all.pluck(:id).sample
+  p user
+  wish = Wish.new(date: Date.today,
+                  sport_id: petanque.id,
+                  user_id: user,
+                  location: Location.all.pluck(:address).sample)
+  puts "saving wish for #{petanque.name}"
+  wish.save
+end
+
+6.times do
+  puts "Creating wish..."
+  user = User.all.pluck(:id).sample
+  p user
+  wish = Wish.new(date: Date.today,
+                  sport_id: ping_pong.id,
+                  user_id: user,
+                  location: Location.all.pluck(:address).sample)
+  puts "saving wish for #{ping_pong.name}"
+  wish.save
+end
+
+6.times do
+  puts "Creating wish..."
+  user = User.all.pluck(:id).sample
+  p user
+  wish = Wish.new(date: Date.today,
+                  sport_id: horse_riding.id,
+                  user_id: user,
+                  location: Location.all.pluck(:address).sample)
+  puts "saving wish for #{horse_riding.name}"
+  wish.save
+end
+
+6.times do
+  puts "Creating wish..."
+  user = User.all.pluck(:id).sample
+  p user
+  wish = Wish.new(date: Date.today,
+                  sport_id: golf.id,
+                  user_id: user,
+                  location: Location.all.pluck(:address).sample)
+  puts "saving wish for #{golf.name}"
+  wish.save
+end
+
+puts "Et mercé!"
