@@ -28,27 +28,30 @@ puts "Destroying all Sports..."
 Sport.destroy_all
 puts "All sports destroyed successfully!"
 
-cycling = Sport.create!(name: 'cycling')
+puts "Creating sports array..."
+SPORTS_ARRAY = []
+SPORTS_ARRAY << cycling = Sport.create!(name: 'cycling')
 puts "Sport: #{cycling.name} created !"
-football = Sport.create!(name: 'football')
+SPORTS_ARRAY << football = Sport.create!(name: 'football')
 puts "Sport: #{football.name} created !"
-tennis = Sport.create!(name: 'tennis')
+SPORTS_ARRAY << tennis = Sport.create!(name: 'tennis')
 puts "Sport: #{tennis.name} created !"
-running = Sport.create!(name: 'running')
+SPORTS_ARRAY << running = Sport.create!(name: 'running')
 puts "Sport: #{running.name} created !"
-basketball = Sport.create!(name: 'basketball')
+SPORTS_ARRAY << basketball = Sport.create!(name: 'basketball')
 puts "Sport: #{basketball.name} created !"
 # handball = Sport.create!(name: 'handball')
 # puts "Sport: #{handball.name} created !"
-petanque = Sport.create!(name: 'pétanque')
+SPORTS_ARRAY << petanque = Sport.create!(name: 'pétanque')
 puts "Sport: #{petanque.name} created !"
-ping_pong = Sport.create!(name: 'ping pong')
+SPORTS_ARRAY << ping_pong = Sport.create!(name: 'ping pong')
 puts "Sport: #{ping_pong.name} created !"
-horse_riding = Sport.create!(name: 'horse riding')
+SPORTS_ARRAY << horse_riding = Sport.create!(name: 'horse riding')
 puts "Sport: #{horse_riding.name} created !"
-golf = Sport.create!(name: 'golf')
+SPORTS_ARRAY << golf = Sport.create!(name: 'golf')
 puts "Sport: #{golf.name} created !"
 puts "All sports created successfully!"
+# SPORTS_ARRAY = [cycling, football, tennis, running, basketball, petanque, ping_pong, horse_riding, golf]
 
 puts "Creating locations..."
 location = Location.create!(name: 'Terrain de sport des jardins Saint-Paul',
@@ -68,10 +71,10 @@ puts "Location #{location.name} created successfully!"
 
 puts "Creating locations..."
 location_football = Location.create!(name: 'Square Montholon',
-                            address: '2 Rue Mayran, 75009 Paris',
-                            sport_id: football.id,
-                            longitude: 48.87717,
-                            latitude: 2.34569)
+                                     address: '2 Rue Mayran, 75009 Paris',
+                                     sport_id: football.id,
+                                     longitude: 48.87717,
+                                     latitude: 2.34569)
 puts "Location #{location_football.name} created successfully!"
 
 puts "Creating locations..."
@@ -100,10 +103,10 @@ puts "Location #{location.name} created successfully!"
 
 puts "Creating locations..."
 location_basketball = Location.create!(name: "Playground Duperré",
-                            address: '22 rue Duperré, 75018 Paris',
-                            sport_id: basketball.id,
-                            longitude: 48.88208,
-                            latitude: 2.33527)
+                                       address: '22 rue Duperré, 75018 Paris',
+                                       sport_id: basketball.id,
+                                       longitude: 48.88208,
+                                       latitude: 2.33527)
 puts "Location #{location_basketball.name} created successfully!"
 
 puts "Creating locations..."
@@ -160,7 +163,7 @@ location_running = Location.create!(name: "Bois de Vincennes",
                                     sport_id: running.id,
                                     longitude: 48.85337,
                                     latitude: 2.43523)
-puts "Location #{location.name} created successfully!"
+puts "Location #{location_running.name} created successfully!"
 
 puts "Creating locations..."
 location_ping = Location.create!(name: "Bois de Vincennes",
@@ -203,136 +206,578 @@ user = User.new(username: "Coach",
                 password: "coachcoach",
                 age: 25)
 puts "saving #{user.username}..."
-user.save
+user.save!
 puts "#{user.username} saved successfully!"
 
-30.times do
+10.times do
   puts "Creating user..."
   user = User.new(username: Faker::Name.unique.female_first_name,
                   email: Faker::Internet.unique.email,
                   password: "123456",
                   age: rand(18..45))
   puts "saving #{user.username}..."
-  user.save
+  user.save!
   puts "#{user.username} saved successfully!"
 end
 puts "Users created successfully!"
 
-6.times do
-  puts "Creating wish and match..."
-  match = Match.create!(location_id: location_cycling.id)
-  user = User.all.pluck(:id).sample
-  wish = Wish.new(date: Date.today,
-                  sport_id: cycling.id,
-                  user_id: user,
-                  location: Location.all.pluck(:address).sample,
-                  match_id: match.id)
-  puts "saving wish for #{cycling.name}"
-  wish.save
+# cycling_wish = []
+# 6.times do
+#   puts "Creating cycling wish..."
+#   user = User.all.pluck(:id).sample
+#   wish = Wish.new(date: DateTime.now,
+#                   sport_id: cycling.id,
+#                   user_id: user,
+#                   location: Location.all.pluck(:address).sample)
+#   puts "saving wish for #{cycling.name}"
+#   wish.save!
+#   puts "Wish saved successfully!"
+#   cycling_wish << wish
+#   puts "Wish put in cycling array!"
+# end
+
+puts "Creating Charlotte..."
+first_user = User.new(username: 'Charlotte',
+                      email: 'charlotte@lewagon.org',
+                      password: "123456",
+                      age: rand(27..30))
+puts "saving Charlotte..."
+first_user.save!
+puts "Charlotte saved successfully!"
+
+puts "Creating Diane..."
+second_user = User.new(username: 'Diane',
+                       email: 'diane@lewagon.org',
+                       password: "123456",
+                       age: rand(27..30))
+puts "saving Diane..."
+second_user.save!
+puts "Diane saved successfully!"
+
+puts "Users created successfully!"
+
+puts "Creating Charlotte's wish..."
+charlottes_wish = Wish.new(date: DateTime.now,
+                           sport_id: cycling.id,
+                           user_id: first_user.id,
+                           location: '16 villa gaudelet, paris')
+puts "saving Charlotte's wish..."
+charlottes_wish.save!
+puts "Wish saved successfully!"
+
+puts "Creating Diane's wish..."
+dianes_wish = Wish.new(date: DateTime.now,
+                       sport_id: cycling.id,
+                       user_id: second_user.id,
+                       location: '16 villa gaudelet, paris')
+puts "saving Diane's wish..."
+dianes_wish.save!
+puts "Wish saved successfully!"
+
+puts "Creating Le Wagon match"
+le_wagon_match = Match.create!(location: location_cycling)
+puts "Match created successfully!"
+
+puts "updating charlottes_wish..."
+charlottes_wish.update(match: le_wagon_match)
+puts "charlottes_wish updated successfully!"
+puts "Updating dianes_wish..."
+dianes_wish.update(match: le_wagon_match)
+puts "dianes_wish updated successfully!"
+
+7.times do
+  puts "Creating user..."
+  user_first = User.new(username: Faker::Name.unique.female_first_name,
+                  email: Faker::Internet.unique.email,
+                  password: "123456",
+                  age: rand(18..45))
+  puts "saving #{user_first.username}..."
+  user_first.save!
+  puts "#{user_first.username} saved successfully!"
+  puts "Creating user..."
+  user_second = User.new(username: Faker::Name.unique.female_first_name,
+                  email: Faker::Internet.unique.email,
+                  password: "123456",
+                  age: rand(18..45))
+  puts "saving #{user_second.username}..."
+  user_second.save!
+  puts "#{user_second.username} saved successfully!"
+  sport = SPORTS_ARRAY[0]
+  location = Location.where(sport_id: sport.id)
+  date = DateTime.now
+  puts "Creating first user wish..."
+  first_wish = Wish.new(date: date,
+                        sport_id: sport.id,
+                        user_id: user_first.id,
+                        location: Location.all.pluck(:address).sample)
+  puts "saving first_user's past wish..."
+  first_wish.save!
+  puts "Past wish saved successfully!"
+  puts "choose random user..."
+  puts "Creating second's past wish..."
+  second_wish = Wish.new(date: date,
+                         sport_id: sport.id,
+                         user_id: user_second.id,
+                         location: Location.all.pluck(:address).sample)
+  puts "saving second's past wish..."
+  second_wish.save!
+  puts "Second wish saved successfully!"
+
+  puts "Creating first's match"
+  first_match = Match.create!(location: location.first)
+  puts "Match created successfully!"
+
+  puts "updating first's wish..."
+  first_wish.update(match: first_match)
+  puts "first_wish updated successfully!"
+
+  puts "Updating second's wish..."
+  second_wish.update(match: first_match)
+  puts "second_wish updated successfully!"
 end
 
-6.times do
-  puts "Creating wish..."
-  user = User.all.pluck(:id).sample
-  match = Match.create!(location_id: location_football.id)
-  wish = Wish.new(date: Date.today,
-                  sport_id: football.id,
-                  user_id: user,
-                  location: Location.all.pluck(:address).sample,
-                  match_id: match.id)
-  puts "saving wish and match for #{football.name}"
-  wish.save
+7.times do
+  puts "Creating user..."
+  user_first = User.new(username: Faker::Name.unique.female_first_name,
+                  email: Faker::Internet.unique.email,
+                  password: "123456",
+                  age: rand(18..45))
+  puts "saving #{user_first.username}..."
+  user_first.save!
+  puts "#{user_first.username} saved successfully!"
+  puts "Creating user..."
+  user_second = User.new(username: Faker::Name.unique.female_first_name,
+                  email: Faker::Internet.unique.email,
+                  password: "123456",
+                  age: rand(18..45))
+  puts "saving #{user_second.username}..."
+  user_second.save!
+  puts "#{user_second.username} saved successfully!"
+  sport = SPORTS_ARRAY[1]
+  location = Location.where(sport_id: sport.id)
+  date = DateTime.now
+  puts "Creating first user wish..."
+  first_wish = Wish.new(date: date,
+                        sport_id: sport.id,
+                        user_id: user_first.id,
+                        location: Location.all.pluck(:address).sample)
+  puts "saving first_user's past wish..."
+  first_wish.save!
+  puts "Past wish saved successfully!"
+  puts "choose second user..."
+  puts "Creating second's past wish..."
+  second_wish = Wish.new(date: date,
+                         sport_id: sport.id,
+                         user_id: user_second.id,
+                         location: Location.all.pluck(:address).sample)
+  puts "saving second's past wish..."
+  second_wish.save!
+  puts "Second wish saved successfully!"
+
+  puts "Creating first's match"
+  first_match = Match.create!(location: location.first)
+  puts "Match created successfully!"
+
+  puts "updating first's wish..."
+  first_wish.update(match: first_match)
+  puts "first_wish updated successfully!"
+
+  puts "Updating second's wish..."
+  second_wish.update(match: first_match)
+  puts "second_wish updated successfully!"
 end
 
-6.times do
-  puts "Creating wish..."
-  user = User.all.pluck(:id).sample
-  match = Match.create!(location_id: location_tennis.id)
-  wish = Wish.new(date: Date.today,
-                  sport_id: tennis.id,
-                  user_id: user,
-                  location: Location.all.pluck(:address).sample,
-                  match_id: match.id)
-  puts "saving wish and match for #{tennis.name}"
-  wish.save
+7.times do
+  puts "Creating user..."
+  user_first = User.new(username: Faker::Name.unique.female_first_name,
+                  email: Faker::Internet.unique.email,
+                  password: "123456",
+                  age: rand(18..45))
+  puts "saving #{user_first.username}..."
+  user_first.save!
+  puts "#{user_first.username} saved successfully!"
+  puts "Creating user..."
+  user_second = User.new(username: Faker::Name.unique.female_first_name,
+                  email: Faker::Internet.unique.email,
+                  password: "123456",
+                  age: rand(18..45))
+  puts "saving #{user_second.username}..."
+  user_second.save!
+  puts "#{user_second.username} saved successfully!"
+  sport = SPORTS_ARRAY[2]
+  location = Location.where(sport_id: sport.id)
+  date = DateTime.now
+  puts "Creating first user wish..."
+  first_wish = Wish.new(date: date,
+                        sport_id: sport.id,
+                        user_id: user_first.id,
+                        location: Location.all.pluck(:address).sample)
+  puts "saving first_user's past wish..."
+  first_wish.save!
+  puts "Past wish saved successfully!"
+  puts "choose second user..."
+  puts "Creating second's past wish..."
+  second_wish = Wish.new(date: date,
+                         sport_id: sport.id,
+                         user_id: user_second.id,
+                         location: Location.all.pluck(:address).sample)
+  puts "saving second's past wish..."
+  second_wish.save!
+  puts "Second wish saved successfully!"
+
+  puts "Creating first's match"
+  first_match = Match.create!(location: location.first)
+  puts "Match created successfully!"
+
+  puts "updating first's wish..."
+  first_wish.update(match: first_match)
+  puts "first_wish updated successfully!"
+
+  puts "Updating second's wish..."
+  second_wish.update(match: first_match)
+  puts "second_wish updated successfully!"
 end
 
-6.times do
-  puts "Creating wish..."
-  user = User.all.pluck(:id).sample
-  match = Match.create!(location_id: location_running.id)
-  wish = Wish.new(date: Date.today,
-                  sport_id: running.id,
-                  user_id: user,
-                  location: Location.all.pluck(:address).sample,
-                  match_id: match.id)
-  puts "saving wish and match for #{running.name}"
-  wish.save
+7.times do
+  puts "Creating user..."
+  user_first = User.new(username: Faker::Name.unique.female_first_name,
+                  email: Faker::Internet.unique.email,
+                  password: "123456",
+                  age: rand(18..45))
+  puts "saving #{user_first.username}..."
+  user_first.save!
+  puts "#{user_first.username} saved successfully!"
+  puts "Creating user..."
+  user_second = User.new(username: Faker::Name.unique.female_first_name,
+                  email: Faker::Internet.unique.email,
+                  password: "123456",
+                  age: rand(18..45))
+  puts "saving #{user_second.username}..."
+  user_second.save!
+  puts "#{user_second.username} saved successfully!"
+  sport = SPORTS_ARRAY[3]
+  location = Location.where(sport_id: sport.id)
+  date = DateTime.now
+  puts "Creating first user wish..."
+  first_wish = Wish.new(date: date,
+                        sport_id: sport.id,
+                        user_id: user_first.id,
+                        location: Location.all.pluck(:address).sample)
+  puts "saving first_user's past wish..."
+  first_wish.save!
+  puts "Past wish saved successfully!"
+  puts "choose second user..."
+  puts "Creating second's past wish..."
+  second_wish = Wish.new(date: date,
+                         sport_id: sport.id,
+                         user_id: user_second.id,
+                         location: Location.all.pluck(:address).sample)
+  puts "saving second's past wish..."
+  second_wish.save!
+  puts "Second wish saved successfully!"
+
+  puts "Creating first's match"
+  first_match = Match.create!(location: location.first)
+  puts "Match created successfully!"
+
+  puts "updating first's wish..."
+  first_wish.update(match: first_match)
+  puts "first_wish updated successfully!"
+
+  puts "Updating second's wish..."
+  second_wish.update(match: first_match)
+  puts "second_wish updated successfully!"
 end
 
-6.times do
-  puts "Creating wish..."
-  user = User.all.pluck(:id).sample
-  match = Match.create!(location_id: location_basketball.id)
-  wish = Wish.new(date: Date.today,
-                  sport_id: basketball.id,
-                  user_id: user,
-                  location: Location.all.pluck(:address).sample,
-                  match_id: match.id)
-  puts "saving wish and match for #{basketball.name}"
-  wish.save
+7.times do
+  puts "Creating user..."
+  user_first = User.new(username: Faker::Name.unique.female_first_name,
+                  email: Faker::Internet.unique.email,
+                  password: "123456",
+                  age: rand(18..45))
+  puts "saving #{user_first.username}..."
+  user_first.save!
+  puts "#{user_first.username} saved successfully!"
+  puts "Creating user..."
+  user_second = User.new(username: Faker::Name.unique.female_first_name,
+                  email: Faker::Internet.unique.email,
+                  password: "123456",
+                  age: rand(18..45))
+  puts "saving #{user_second.username}..."
+  user_second.save!
+  puts "#{user_second.username} saved successfully!"
+  sport = SPORTS_ARRAY[4]
+  location = Location.where(sport_id: sport.id)
+  date = DateTime.now
+  puts "Creating first user wish..."
+  first_wish = Wish.new(date: date,
+                        sport_id: sport.id,
+                        user_id: user_first.id,
+                        location: Location.all.pluck(:address).sample)
+  puts "saving first_user's past wish..."
+  first_wish.save!
+  puts "Past wish saved successfully!"
+  puts "choose second user..."
+  puts "Creating second's past wish..."
+  second_wish = Wish.new(date: date,
+                         sport_id: sport.id,
+                         user_id: user_second.id,
+                         location: Location.all.pluck(:address).sample)
+  puts "saving second's past wish..."
+  second_wish.save!
+  puts "Second wish saved successfully!"
+
+  puts "Creating first's match"
+  first_match = Match.create!(location: location.first)
+  puts "Match created successfully!"
+
+  puts "updating first's wish..."
+  first_wish.update(match: first_match)
+  puts "first_wish updated successfully!"
+
+  puts "Updating second's wish..."
+  second_wish.update(match: first_match)
+  puts "second_wish updated successfully!"
 end
 
-6.times do
-  puts "Creating wish..."
-  user = User.all.pluck(:id).sample
-  match = Match.create!(location_id: location_petanque.id)
-  wish = Wish.new(date: Date.today,
-                  sport_id: petanque.id,
-                  user_id: user,
-                  location: Location.all.pluck(:address).sample,
-                  match_id: match.id)
-  puts "saving wish and match for #{petanque.name}"
-  wish.save
+7.times do
+  puts "Creating user..."
+  user_first = User.new(username: Faker::Name.unique.female_first_name,
+                  email: Faker::Internet.unique.email,
+                  password: "123456",
+                  age: rand(18..45))
+  puts "saving #{user_first.username}..."
+  user_first.save!
+  puts "#{user_first.username} saved successfully!"
+  puts "Creating user..."
+  user_second = User.new(username: Faker::Name.unique.female_first_name,
+                  email: Faker::Internet.unique.email,
+                  password: "123456",
+                  age: rand(18..45))
+  puts "saving #{user_second.username}..."
+  user_second.save!
+  puts "#{user_second.username} saved successfully!"
+  sport = SPORTS_ARRAY[5]
+  location = Location.where(sport_id: sport.id)
+  date = DateTime.now
+  puts "Creating first user wish..."
+  first_wish = Wish.new(date: date,
+                        sport_id: sport.id,
+                        user_id: user_first.id,
+                        location: Location.all.pluck(:address).sample)
+  puts "saving first_user's past wish..."
+  first_wish.save!
+  puts "Past wish saved successfully!"
+  puts "choose second user..."
+  puts "Creating second's past wish..."
+  second_wish = Wish.new(date: date,
+                         sport_id: sport.id,
+                         user_id: user_second.id,
+                         location: Location.all.pluck(:address).sample)
+  puts "saving second's past wish..."
+  second_wish.save!
+  puts "Second wish saved successfully!"
+
+  puts "Creating first's match"
+  first_match = Match.create!(location: location.first)
+  puts "Match created successfully!"
+
+  puts "updating first's wish..."
+  first_wish.update(match: first_match)
+  puts "first_wish updated successfully!"
+
+  puts "Updating second's wish..."
+  second_wish.update(match: first_match)
+  puts "second_wish updated successfully!"
 end
 
-6.times do
-  puts "Creating wish..."
-  user = User.all.pluck(:id).sample
-  match = Match.create!(location_id: location_ping.id)
-  wish = Wish.new(date: Date.today,
-                  sport_id: ping_pong.id,
-                  user_id: user,
-                  location: Location.all.pluck(:address).sample,
-                  match_id: match.id)
-  puts "saving wish and match for #{ping_pong.name}"
-  wish.save
+7.times do
+  puts "Creating user..."
+  user_first = User.new(username: Faker::Name.unique.female_first_name,
+                  email: Faker::Internet.unique.email,
+                  password: "123456",
+                  age: rand(18..45))
+  puts "saving #{user_first.username}..."
+  user_first.save!
+  puts "#{user_first.username} saved successfully!"
+  puts "Creating user..."
+  user_second = User.new(username: Faker::Name.unique.female_first_name,
+                  email: Faker::Internet.unique.email,
+                  password: "123456",
+                  age: rand(18..45))
+  puts "saving #{user_second.username}..."
+  user_second.save!
+  puts "#{user_second.username} saved successfully!"
+  sport = SPORTS_ARRAY[6]
+  location = Location.where(sport_id: sport.id)
+  date = DateTime.now
+  puts "Creating first user wish..."
+  first_wish = Wish.new(date: date,
+                        sport_id: sport.id,
+                        user_id: user_first.id,
+                        location: Location.all.pluck(:address).sample)
+  puts "saving first_user's past wish..."
+  first_wish.save!
+  puts "Past wish saved successfully!"
+  puts "choose second user..."
+  puts "Creating second's past wish..."
+  second_wish = Wish.new(date: date,
+                         sport_id: sport.id,
+                         user_id: user_second.id,
+                         location: Location.all.pluck(:address).sample)
+  puts "saving second's past wish..."
+  second_wish.save!
+  puts "Second wish saved successfully!"
+
+  puts "Creating first's match"
+  first_match = Match.create!(location: location.first)
+  puts "Match created successfully!"
+
+  puts "updating first's wish..."
+  first_wish.update(match: first_match)
+  puts "first_wish updated successfully!"
+
+  puts "Updating second's wish..."
+  second_wish.update(match: first_match)
+  puts "second_wish updated successfully!"
 end
 
-6.times do
-  puts "Creating wish..."
-  user = User.all.pluck(:id).sample
-  match = Match.create!(location_id: location_horse.id)
-  wish = Wish.new(date: Date.today,
-                  sport_id: horse_riding.id,
-                  user_id: user,
-                  location: Location.all.pluck(:address).sample,
-                  match_id: match.id)
-  puts "saving wish and match for #{horse_riding.name}"
-  wish.save
+7.times do
+  puts "Creating user..."
+  user_first = User.new(username: Faker::Name.unique.female_first_name,
+                  email: Faker::Internet.unique.email,
+                  password: "123456",
+                  age: rand(18..45))
+  puts "saving #{user_first.username}..."
+  user_first.save!
+  puts "#{user_first.username} saved successfully!"
+  puts "Creating user..."
+  user_second = User.new(username: Faker::Name.unique.female_first_name,
+                  email: Faker::Internet.unique.email,
+                  password: "123456",
+                  age: rand(18..45))
+  puts "saving #{user_second.username}..."
+  user_second.save!
+  puts "#{user_second.username} saved successfully!"
+  sport = SPORTS_ARRAY[7]
+  location = Location.where(sport_id: sport.id)
+  date = DateTime.now
+  puts "Creating first user wish..."
+  first_wish = Wish.new(date: date,
+                        sport_id: sport.id,
+                        user_id: user_first.id,
+                        location: Location.all.pluck(:address).sample)
+  puts "saving first_user's past wish..."
+  first_wish.save!
+  puts "Past wish saved successfully!"
+  puts "choose second user..."
+  puts "Creating second's past wish..."
+  second_wish = Wish.new(date: date,
+                         sport_id: sport.id,
+                         user_id: user_second.id,
+                         location: Location.all.pluck(:address).sample)
+  puts "saving second's past wish..."
+  second_wish.save!
+  puts "Second wish saved successfully!"
+
+  puts "Creating first's match"
+  first_match = Match.create!(location: location.first)
+  puts "Match created successfully!"
+
+  puts "updating first's wish..."
+  first_wish.update(match: first_match)
+  puts "first_wish updated successfully!"
+
+  puts "Updating second's wish..."
+  second_wish.update(match: first_match)
+  puts "second_wish updated successfully!"
 end
 
-6.times do
-  puts "Creating wish..."
-  user = User.all.pluck(:id).sample
-  match = Match.create!(location_id: location_golf.id)
-  wish = Wish.new(date: Date.today,
-                  sport_id: golf.id,
-                  user_id: user,
-                  location: Location.all.pluck(:address).sample,
-                  match_id: match.id)
-  puts "saving wish and match for #{golf.name}"
-  wish.save
+7.times do
+  puts "Creating user..."
+  user_first = User.new(username: Faker::Name.female_first_name,
+                  email: Faker::Internet.unique.email,
+                  password: "123456",
+                  age: rand(18..45))
+  puts "saving #{user_first.username}..."
+  user_first.save!
+  puts "#{user_first.username} saved successfully!"
+  puts "Creating user..."
+  user_second = User.new(username: Faker::Name.female_first_name,
+                  email: Faker::Internet.unique.email,
+                  password: "123456",
+                  age: rand(18..45))
+  puts "saving #{user_second.username}..."
+  user_second.save!
+  puts "#{user_second.username} saved successfully!"
+  sport = SPORTS_ARRAY[8]
+  location = Location.where(sport_id: sport.id)
+  date = DateTime.now
+  puts "Creating first user wish..."
+  first_wish = Wish.new(date: date,
+                        sport_id: sport.id,
+                        user_id: user_first.id,
+                        location: Location.all.pluck(:address).sample)
+  puts "saving first_user's past wish..."
+  first_wish.save!
+  puts "Past wish saved successfully!"
+  puts "choose second user..."
+  puts "Creating second's past wish..."
+  second_wish = Wish.new(date: date,
+                         sport_id: sport.id,
+                         user_id: user_second.id,
+                         location: Location.all.pluck(:address).sample)
+  puts "saving second's past wish..."
+  second_wish.save!
+  puts "Second wish saved successfully!"
+
+  puts "Creating first's match"
+  first_match = Match.create!(location: location.first)
+  puts "Match created successfully!"
+
+  puts "updating first's wish..."
+  first_wish.update(match: first_match)
+  puts "first_wish updated successfully!"
+
+  puts "Updating second's wish..."
+  second_wish.update(match: first_match)
+  puts "second_wish updated successfully!"
 end
 
-puts "Et mercé!"
+5.times do
+  sport = SPORTS_ARRAY.sample
+  location = Location.where(sport_id: sport.id)
+  random_date = DateTime.now - (rand * 21)
+  puts "Creating Charlotte's past wish..."
+  charlottes_wish = Wish.new(date: random_date,
+                             sport_id: sport.id,
+                             user_id: first_user.id,
+                             location: '16 villa gaudelet, paris')
+  puts "saving Charlotte's past wish..."
+  charlottes_wish.save!
+  puts "Past wish saved successfully!"
+  puts "choose random user..."
+  random_user = User.all.pluck(:id).sample
+  puts "Creating random's past wish..."
+  random_wish = Wish.new(date: random_date,
+                         sport_id: sport.id,
+                         user_id: random_user,
+                         location: Location.all.pluck(:address).sample)
+  puts "saving random's past wish..."
+  random_wish.save!
+  puts "Past wish saved successfully!"
+
+  puts "Creating charlotte's match"
+  le_wagon_match = Match.create!(location: location.first)
+  puts "Match created successfully!"
+
+  puts "updating charlotte's wish..."
+  charlottes_wish.update(match: le_wagon_match)
+  puts "charlottes_wish updated successfully!"
+
+  puts "Updating random's wish..."
+  random_wish.update(match: le_wagon_match)
+  puts "random_wish updated successfully!"
+end
+
+puts "Et mercé les T-A !"
