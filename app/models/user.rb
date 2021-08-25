@@ -18,8 +18,4 @@ class User < ApplicationRecord
   def past_matches
     self.matches.where.not(id: current_match.id)
   end
-
-  def buddy
-    current_user.current_match
-  end
 end
