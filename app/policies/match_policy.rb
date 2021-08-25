@@ -1,7 +1,7 @@
 class MatchPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.where(wishes: { user: user })
+      scope.joins(:wishes).where(wishes: { user: user })
     end
   end
 
