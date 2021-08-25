@@ -1,21 +1,20 @@
 <div class="container">
   <div class="row">
-    <div class="col-12 col-sm-8 offset-sm-2 col-md-4 offset-md-4">
+    <div class="col-12">
       <div class="swiper">
-        <ul id="slides">
+        <div class="swiper-wrapper">
           <% @wishes.each do |wish|%>
-            <div class="wish-card-category swiper-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)" data-id="<%= wish.id %>">
-              <div class="wish-info">
-                <h3><%= wish.user.username %></h3>
-                <h4><%= wish.sport.name %></h4>
-                <p><%= wish.user.age %></p>
+            <div class="swiper-slide">
+              <div class="wish-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)" data-id="<%= wish.id %>">
+                  <div class="wish-info">
+                    <h3><%= wish.user.username %></h3>
+                    <h4><%= wish.sport.name %></h4>
+                    <p><%= wish.user.age %></p>
+                  </div>
               </div>
-
             </div>
           <% end %>
-        </ul>
-        <button class="swiper-button-prev" id="previous">No</button>
-        <button class="swiper-button-next" id="next">Yes</button>
+        </div>
       </div>
     </div>
   </div>

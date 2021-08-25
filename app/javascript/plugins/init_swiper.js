@@ -1,22 +1,16 @@
+import Swiper from 'swiper';
 
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'vertical',
-  loop: true,
+const initSwiper = () => {
+  const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    spaceBetween: 60,
+    centeredSlides: true,
+    grabCursor: true,
+  });
 
-  // If we need pagination
-  // pagination: {
-  //   el: '.swiper-pagination',
-  // },
+  swiper.on('sliderFirstMove', function () {
+    console.log(swiper.touches.diff);
+  });
+}
 
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  // And if we need scrollbar
-  // scrollbar: {
-  //   el: '.swiper-scrollbar',
-  // },
-});
+export { initSwiper };
