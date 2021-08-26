@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 require 'date'
+require 'open-uri'
 
 puts "Destroying all Users..."
 User.destroy_all
@@ -205,22 +206,35 @@ user = User.new(username: "Coach",
                 email: "coach@coach.com",
                 password: "coachcoach",
                 age: 25)
+  user_photo = URI.open("https://ca.slack-edge.com/T02NE0241-U0270A8PS3E-8ed3c9c41e3c-512")
+  user.photo.attach(io: user_photo, filename: "#{user.username}_#{user.email}_photo.jpeg", content_type: 'image/jpeg')
 puts "saving #{user.username}..."
 user.save!
 puts "#{user.username} saved successfully!"
 
-10.times do
+37.times do
   puts "Creating user..."
   user = User.new(username: Faker::Name.unique.female_first_name,
                   email: Faker::Internet.unique.email,
                   password: "123456",
                   age: rand(18..45))
+  puts 'attaching photos on user...'
+  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user.photo.attach(io: user_photo, filename: "#{user.username}_#{user.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user.username}..."
   user.save!
   puts "#{user.username} saved successfully!"
+  sport = SPORTS_ARRAY.sample
+  location = Location.where(sport_id: sport.id)
+  date = DateTime.now
+  puts "Creating first user wish..."
+  first_wish = Wish.new(date: date,
+                        sport_id: sport.id,
+                        user_id: user.id,
+                        location: Location.all.pluck(:address).sample)
+  puts "saving first_user's past wish..."
+  first_wish.save!
 end
-puts "Users created successfully!"
-
 # cycling_wish = []
 # 6.times do
 #   puts "Creating cycling wish..."
@@ -241,6 +255,9 @@ first_user = User.new(username: 'Charlotte',
                       email: 'charlotte@lewagon.org',
                       password: "123456",
                       age: rand(27..30))
+user_photo = URI.open("https://ca.slack-edge.com/T02NE0241-U01HWUHQEMQ-396ed62d24ef-512")
+first_user.photo.attach(io: user_photo, filename: "Charlotte_photo.jpeg", content_type: 'image/jpeg')
+puts "attaching photo...."
 puts "saving Charlotte..."
 first_user.save!
 puts "Charlotte saved successfully!"
@@ -250,6 +267,9 @@ second_user = User.new(username: 'Diane',
                        email: 'diane@lewagon.org',
                        password: "123456",
                        age: rand(27..30))
+user_photo = URI.open("https://ca.slack-edge.com/T02NE0241-UDF8DJTMM-26237fc8cffe-512")
+second_user.photo.attach(io: user_photo, filename: "Diane_photo.jpeg", content_type: 'image/jpeg')
+puts "attaching photo...."
 puts "saving Diane..."
 second_user.save!
 puts "Diane saved successfully!"
@@ -285,12 +305,15 @@ puts "Updating dianes_wish..."
 dianes_wish.update(match: le_wagon_match)
 puts "dianes_wish updated successfully!"
 
-7.times do
+3.times do
   puts "Creating user..."
   user_first = User.new(username: Faker::Name.unique.female_first_name,
                   email: Faker::Internet.unique.email,
                   password: "123456",
                   age: rand(18..45))
+  puts 'attaching photos on first user...'
+  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user_first.photo.attach(io: user_photo, filename: "#{user_first.username}_#{user_first.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user_first.username}..."
   user_first.save!
   puts "#{user_first.username} saved successfully!"
@@ -299,6 +322,9 @@ puts "dianes_wish updated successfully!"
                   email: Faker::Internet.unique.email,
                   password: "123456",
                   age: rand(18..45))
+  puts 'attaching photos on second user....'
+  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user_second.photo.attach(io: user_photo, filename: "#{user_second.username}_#{user_second.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user_second.username}..."
   user_second.save!
   puts "#{user_second.username} saved successfully!"
@@ -336,12 +362,15 @@ puts "dianes_wish updated successfully!"
   puts "second_wish updated successfully!"
 end
 
-7.times do
+3.times do
   puts "Creating user..."
   user_first = User.new(username: Faker::Name.unique.female_first_name,
                   email: Faker::Internet.unique.email,
                   password: "123456",
                   age: rand(18..45))
+  puts 'attaching photos on first user...'
+  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user_first.photo.attach(io: user_photo, filename: "#{user_first.username}_#{user_first.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user_first.username}..."
   user_first.save!
   puts "#{user_first.username} saved successfully!"
@@ -350,6 +379,9 @@ end
                   email: Faker::Internet.unique.email,
                   password: "123456",
                   age: rand(18..45))
+  puts 'attaching photos on second user....'
+  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user_second.photo.attach(io: user_photo, filename: "#{user_second.username}_#{user_second.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user_second.username}..."
   user_second.save!
   puts "#{user_second.username} saved successfully!"
@@ -387,12 +419,15 @@ end
   puts "second_wish updated successfully!"
 end
 
-7.times do
+3.times do
   puts "Creating user..."
   user_first = User.new(username: Faker::Name.unique.female_first_name,
                   email: Faker::Internet.unique.email,
                   password: "123456",
                   age: rand(18..45))
+  puts 'attaching photos on first user...'
+  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user_first.photo.attach(io: user_photo, filename: "#{user_first.username}_#{user_first.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user_first.username}..."
   user_first.save!
   puts "#{user_first.username} saved successfully!"
@@ -401,6 +436,9 @@ end
                   email: Faker::Internet.unique.email,
                   password: "123456",
                   age: rand(18..45))
+  puts 'attaching photos on second user....'
+  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user_second.photo.attach(io: user_photo, filename: "#{user_second.username}_#{user_second.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user_second.username}..."
   user_second.save!
   puts "#{user_second.username} saved successfully!"
@@ -438,12 +476,15 @@ end
   puts "second_wish updated successfully!"
 end
 
-7.times do
+3.times do
   puts "Creating user..."
   user_first = User.new(username: Faker::Name.unique.female_first_name,
                   email: Faker::Internet.unique.email,
                   password: "123456",
                   age: rand(18..45))
+  puts 'attaching photos on first user...'
+  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user_first.photo.attach(io: user_photo, filename: "#{user_first.username}_#{user_first.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user_first.username}..."
   user_first.save!
   puts "#{user_first.username} saved successfully!"
@@ -452,6 +493,9 @@ end
                   email: Faker::Internet.unique.email,
                   password: "123456",
                   age: rand(18..45))
+  puts 'attaching photos on second user....'
+  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user_second.photo.attach(io: user_photo, filename: "#{user_second.username}_#{user_second.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user_second.username}..."
   user_second.save!
   puts "#{user_second.username} saved successfully!"
@@ -489,12 +533,15 @@ end
   puts "second_wish updated successfully!"
 end
 
-7.times do
+3.times do
   puts "Creating user..."
   user_first = User.new(username: Faker::Name.unique.female_first_name,
                   email: Faker::Internet.unique.email,
                   password: "123456",
                   age: rand(18..45))
+  puts 'attaching photos on first user...'
+  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user_first.photo.attach(io: user_photo, filename: "#{user_first.username}_#{user_first.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user_first.username}..."
   user_first.save!
   puts "#{user_first.username} saved successfully!"
@@ -503,6 +550,9 @@ end
                   email: Faker::Internet.unique.email,
                   password: "123456",
                   age: rand(18..45))
+  puts 'attaching photos on second user....'
+  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user_second.photo.attach(io: user_photo, filename: "#{user_second.username}_#{user_second.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user_second.username}..."
   user_second.save!
   puts "#{user_second.username} saved successfully!"
@@ -540,12 +590,15 @@ end
   puts "second_wish updated successfully!"
 end
 
-7.times do
+3.times do
   puts "Creating user..."
   user_first = User.new(username: Faker::Name.unique.female_first_name,
                   email: Faker::Internet.unique.email,
                   password: "123456",
                   age: rand(18..45))
+  puts 'attaching photos on first user...'
+  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user_first.photo.attach(io: user_photo, filename: "#{user_first.username}_#{user_first.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user_first.username}..."
   user_first.save!
   puts "#{user_first.username} saved successfully!"
@@ -554,6 +607,9 @@ end
                   email: Faker::Internet.unique.email,
                   password: "123456",
                   age: rand(18..45))
+  puts 'attaching photos on second user....'
+  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user_second.photo.attach(io: user_photo, filename: "#{user_second.username}_#{user_second.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user_second.username}..."
   user_second.save!
   puts "#{user_second.username} saved successfully!"
@@ -591,12 +647,15 @@ end
   puts "second_wish updated successfully!"
 end
 
-7.times do
+3.times do
   puts "Creating user..."
   user_first = User.new(username: Faker::Name.unique.female_first_name,
                   email: Faker::Internet.unique.email,
                   password: "123456",
                   age: rand(18..45))
+  puts 'attaching photos on first user...'
+  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user_first.photo.attach(io: user_photo, filename: "#{user_first.username}_#{user_first.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user_first.username}..."
   user_first.save!
   puts "#{user_first.username} saved successfully!"
@@ -605,6 +664,9 @@ end
                   email: Faker::Internet.unique.email,
                   password: "123456",
                   age: rand(18..45))
+  puts 'attaching photos on second user....'
+  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user_second.photo.attach(io: user_photo, filename: "#{user_second.username}_#{user_second.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user_second.username}..."
   user_second.save!
   puts "#{user_second.username} saved successfully!"
@@ -642,12 +704,15 @@ end
   puts "second_wish updated successfully!"
 end
 
-7.times do
+3.times do
   puts "Creating user..."
   user_first = User.new(username: Faker::Name.unique.female_first_name,
                   email: Faker::Internet.unique.email,
                   password: "123456",
                   age: rand(18..45))
+  puts 'attaching photos on first user...'
+  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user_first.photo.attach(io: user_photo, filename: "#{user_first.username}_#{user_first.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user_first.username}..."
   user_first.save!
   puts "#{user_first.username} saved successfully!"
@@ -656,6 +721,9 @@ end
                   email: Faker::Internet.unique.email,
                   password: "123456",
                   age: rand(18..45))
+  puts 'attaching photos on second user....'
+  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user_second.photo.attach(io: user_photo, filename: "#{user_second.username}_#{user_second.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user_second.username}..."
   user_second.save!
   puts "#{user_second.username} saved successfully!"
@@ -693,12 +761,15 @@ end
   puts "second_wish updated successfully!"
 end
 
-7.times do
+3.times do
   puts "Creating user..."
   user_first = User.new(username: Faker::Name.female_first_name,
                   email: Faker::Internet.unique.email,
                   password: "123456",
                   age: rand(18..45))
+  puts 'attaching photos on first user...'
+  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user_first.photo.attach(io: user_photo, filename: "#{user_first.username}_#{user_first.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user_first.username}..."
   user_first.save!
   puts "#{user_first.username} saved successfully!"
@@ -707,6 +778,9 @@ end
                   email: Faker::Internet.unique.email,
                   password: "123456",
                   age: rand(18..45))
+  puts 'attaching photos on second user....'
+  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user_second.photo.attach(io: user_photo, filename: "#{user_second.username}_#{user_second.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user_second.username}..."
   user_second.save!
   puts "#{user_second.username} saved successfully!"
