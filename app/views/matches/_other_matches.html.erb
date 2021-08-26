@@ -1,4 +1,4 @@
-<% current_user.past_matches.each do |match| %>
-<%= match.user.username %>
-<%= match.user.age %>
+<% current_user.past_matched_wishes.each do |wish| %>
+  <%= wish.sport %>
+  <%= wish.user.username %>
 <% end %>
