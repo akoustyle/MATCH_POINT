@@ -212,17 +212,20 @@ puts "saving #{user.username}..."
 user.save!
 puts "#{user.username} saved successfully!"
 
-37.times do
+
+
+
+20.times do
   puts "Creating user..."
-  user = User.new(username: Faker::Name.unique.female_first_name,
+  user_first = User.new(username: Faker::Name.unique.female_first_name,
                   email: Faker::Internet.unique.email,
                   password: "123456",
                   age: rand(18..45))
   puts 'attaching photos on user...'
   user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
-  user.photo.attach(io: user_photo, filename: "#{user.username}_#{user.email}_photo.jpeg", content_type: 'image/jpeg')
+  user_first.photo.attach(io: user_photo, filename: "#{user.username}_#{user.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user.username}..."
-  user.save!
+  user_first.save!
   puts "#{user.username} saved successfully!"
   sport = SPORTS_ARRAY.sample
   location = Location.where(sport_id: sport.id)
@@ -234,6 +237,28 @@ puts "#{user.username} saved successfully!"
                         location: Location.all.pluck(:address).sample)
   puts "saving first_user's past wish..."
   first_wish.save!
+  puts "Creating user..."
+  user = User.new(username: Faker::Name.unique.female_first_name,
+                  email: Faker::Internet.unique.email,
+                  password: "123456",
+                  age: rand(18..45))
+  puts 'attaching photos on user...'
+  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user.photo.attach(io: user_photo, filename: "#{user.username}_#{user.email}_photo.jpeg", content_type: 'image/jpeg')
+  puts "saving #{user.username}..."
+  user.save!
+  puts "#{user.username} saved successfully!"
+  location = Location.where(sport_id: sport.id)
+  puts "Creating first user wish..."
+  second_wish = Wish.new(date: date,
+                        sport_id: sport.id,
+                        user_id: user.id,
+                        location: Location.all.pluck(:address).sample)
+  puts "saving first_user's past wish..."
+  second_wish.save!
+  puts "creating user's likes toward other's wish"
+  Like.create!(wish: first_wish, user: user_first)
+  puts 'likes done!'
 end
 # cycling_wish = []
 # 6.times do
