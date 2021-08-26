@@ -1,4 +1,4 @@
-<div class="align-items-center justify-content-center">
+<!-- <div class="align-items-center justify-content-center">
   <div class="card m-2 rounded-3 shadow-sm">
     <div class="card-header py-3">
       <h4 class="my-0 fw-normal">Join Match Point app for Women</h4>
@@ -13,4 +13,23 @@
       <% end %>
     </div>
   </div>
+</div>
+-->
+<div class='mt-4 p-2'>
+  <h1>Get motivated with us!<small class="text-muted fw-light"></small></h1>
+</div>
+<div class="container px-5">
+  <div class=" mt-2 text-center">
+    <%= simple_form_for Wish.new, url: wishes_path, method: :post, remote: true do |f| %>
+      <%= f.input :sport,
+                  collection: Sport.all.pluck(:name),
+                  prompt: "Select a sport",
+                  error: 'Please select a sport to begin your journey',
+                  required: false,
+                  class: 'form-field',
+                  label: 'Choose a sport to begin your journey',
+                  autofocus: true %>
+      <%= f.submit class: "btn btn-danger active", value: 'Find your buddy' %>
+    <% end %>
+</div>
 </div>
