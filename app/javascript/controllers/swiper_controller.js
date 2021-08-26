@@ -26,17 +26,23 @@ export default class extends Controller {
       loop: true,
     });
     console.log(swiper.activeIndex)
-    swiper.on('slideNextTransitionEnd', function () {
+    swiper.on('slideNextTransitionEnd',  () => {
       console.log("next");
+      console.log(this.wishTargets.length)
       console.log(swiper.activeIndex)
-    swiper.removeSlide(swiper.activeIndex - 1)
+    swiper.removeSlide(swiper.activeIndex - 2)
 
     })
-    swiper.on('slidePrevTransitionEnd', function () {
+    swiper.on('slidePrevTransitionEnd', () => {
       console.log("prev");
       console.log(swiper.activeIndex)
+      console.log(this.wishTargets.length)
       // this.wishTarget.classList.add("d-none")
-      swiper.removeSlide(swiper.activeIndex - 1)
+      swiper.removeSlide(swiper.activeIndex)
+
+      if (swiper.activeIndex === 1) {
+        swiper.slideTo(swiper.activeIndex -1, 0, false)
+      }
     })
   }
 }
