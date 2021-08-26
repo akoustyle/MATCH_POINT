@@ -1,9 +1,28 @@
-<div class="d-flex justify-content-between fixed-bottom">
+<div class="justify-content-between fixed-bottom">
   <ul>
     <li>
       <%= link_to root_path class: "btn" do %>
           <i class="fas fa-home"></i>
           <small class='text-muted'>Home</small>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to wishes_path class: "btn" do %>
+          <i class="fas fa-search"></i>
+          <small class='text-muted'>Search</small>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to matches_path class: "btn" do %>
+          <i class="fas fa-hands-helping"></i>
+          <small class='text-muted'>Buddies</small>
+      <% end %>
+    </li>
+    </li>
+    <li>
+      <%= link_to root_path class: "btn" do %>
+          <i class="fas fa-user"></i>
+          <small class='text-muted'>Profile</small>
       <% end %>
     </li>
   </ul>

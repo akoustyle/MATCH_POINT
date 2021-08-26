@@ -3,6 +3,10 @@
   background: white;
 }
 
+.fixed-top {
+  position: static;
+}
+
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }

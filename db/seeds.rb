@@ -9,6 +9,10 @@ require 'faker'
 require 'date'
 require 'open-uri'
 
+puts "Destroying all Likes..."
+Like.destroy_all
+puts "All Likes destroyed successfully!"
+
 puts "Destroying all Users..."
 User.destroy_all
 puts "All users destroyed successfully!"
@@ -320,7 +324,7 @@ dianes_wish.save!
 puts "Wish saved successfully!"
 
 puts "creating diane's like toward charlotte's wish"
-Like = Like.create!(wish: charlottes_wish, user: second_user)
+Like.create!(wish: charlottes_wish, user: second_user)
 puts 'likes done!'
 # puts "Creating Le Wagon match"
 # le_wagon_match = Match.create!(location: location_cycling)
