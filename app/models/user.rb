@@ -4,6 +4,7 @@ class User < ApplicationRecord
   has_many :preferences, dependent: :destroy
   has_many :matches, through: :wishes
   has_many :sports, through: :preferences
+  has_many_attached :photos
 
 
   # Include default devise modules. Others available are:
@@ -16,6 +17,7 @@ class User < ApplicationRecord
   end
 
   def past_matches
+    return [] if current_match.nil?
     self.matches.where.not(id: current_match.id)
   end
 end
