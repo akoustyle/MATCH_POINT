@@ -212,7 +212,7 @@ puts "saving #{user.username}..."
 user.save!
 puts "#{user.username} saved successfully!"
 
-35.times do
+37.times do
   puts "Creating user..."
   user = User.new(username: Faker::Name.unique.female_first_name,
                   email: Faker::Internet.unique.email,
