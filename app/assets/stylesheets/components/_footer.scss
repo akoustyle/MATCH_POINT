@@ -27,8 +27,12 @@
 
 .footer {
   background-color: #ffffff;
-
 }
+
+.fixed-bottom {
+  position: absolute;
+}
+
 .fas {
   color: $red;
   font-size: 30px;
