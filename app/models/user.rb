@@ -12,13 +12,14 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  def current_match
-    self.matches.order(created_at: :desc).first
+  def current_matched_wish
+    matches.order(created_at: :desc).first.wishes.find_by(user: self)
   end
 
-  def past_matches
-    return [] if current_match.nil?
+  def past_matched_wishes
+    return [] if current_matched_wish.nil?
 
-    self.matches.where.not(id: current_match.id)
+    # self.matches.where.not(id: current_match.id)
+    wishes.joins(:match).where.not(match_id: nil)
   end
 end

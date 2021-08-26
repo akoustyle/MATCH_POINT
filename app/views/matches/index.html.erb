@@ -8,9 +8,16 @@
   </div>
 </div>
 
+<ul>
+<% current_user.past_matched_wishes.each do |wish| %>
 <div class="card-other-matches">
   <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
   <div class="card-other-matches-infos">
-    <%= render "other_matches" %>
+  <li><%= wish.sport.name %></li>
+  <li><%= wish.user.username %></li>
+  <li><%= wish.user.age %></li>
+
   </div>
 </div>
+<% end %>
+</ul>
