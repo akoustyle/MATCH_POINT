@@ -27,14 +27,14 @@ export default class extends Controller {
     });
     console.log(swiper.activeIndex)
     swiper.on('slideNextTransitionEnd',  () => {
-      console.log("next");
+      console.log("next -> disliked");
       console.log(this.wishTargets.length)
       console.log(swiper.activeIndex)
     swiper.removeSlide(swiper.activeIndex - 2)
 
     })
     swiper.on('slidePrevTransitionEnd', () => {
-      console.log("prev");
+      console.log("prev -> liked");
       console.log(swiper.activeIndex)
       console.log(this.wishTargets.length)
       // this.wishTarget.classList.add("d-none")
@@ -44,6 +44,20 @@ export default class extends Controller {
         swiper.slideTo(swiper.activeIndex -1, 0, false)
       }
     })
+
+    fetch(sweeper.formTarget.action, {
+    method: 'POST',
+    headers: { 'Accept': "application/json", 'X-CSRF-Token': csrfToken() },
+    body: new FormData(this.formTarget)
+  })
+    .then(response => response.json())
+    .then((data) => {
+      if (data.inserted_item) {
+        this.itemsTarget.insertAdjacentHTML("beforeend", data.inserted_item);
+      }
+      this.formTarget.outerHTML = data.form;
+  });
+}
   }
 }
 
