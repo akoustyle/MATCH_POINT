@@ -1,12 +1,15 @@
-#slides{
+#slides {
   position: relative;
-  height: 300px;
   padding: 0px;
   margin: 0px;
+  background-color: transparent;
   list-style-type: none;
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  box-shadow: 3px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
 }
-
-.slide{
+.slide {
   position: absolute;
   left: 0px;
   top: 0px;

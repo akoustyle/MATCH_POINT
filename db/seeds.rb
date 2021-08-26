@@ -294,16 +294,19 @@ puts "saving Diane's wish..."
 dianes_wish.save!
 puts "Wish saved successfully!"
 
-puts "Creating Le Wagon match"
-le_wagon_match = Match.create!(location: location_cycling)
-puts "Match created successfully!"
+puts "creating diane's like toward charlotte's wish"
+Like = Like.create!(wish: charlottes_wish, user: second_user)
+puts 'likes done!'
+# puts "Creating Le Wagon match"
+# le_wagon_match = Match.create!(location: location_cycling)
+# puts "Match created successfully!"
 
-puts "updating charlottes_wish..."
-charlottes_wish.update(match: le_wagon_match)
-puts "charlottes_wish updated successfully!"
-puts "Updating dianes_wish..."
-dianes_wish.update(match: le_wagon_match)
-puts "dianes_wish updated successfully!"
+# puts "updating charlottes_wish..."
+# charlottes_wish.update(match: le_wagon_match)
+# puts "charlottes_wish updated successfully!"
+# puts "Updating dianes_wish..."
+# dianes_wish.update(match: le_wagon_match)
+# puts "dianes_wish updated successfully!"
 
 3.times do
   puts "Creating user..."
