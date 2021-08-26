@@ -10,13 +10,14 @@
 import { Controller } from "stimulus"
 import Swiper from 'swiper';
 import "swiper/swiper-bundle.min.css";
+import { csrfToken } from "@rails/ujs";
 
 export default class extends Controller {
   static targets = [ "wish" ]
 
   connect() {
     // this.outputTarget.textContent = 'Hello, Stimulus!'
-    console.log(this.wishTargets)
+    // console.log(this.wishTargets)
     const swiper = new Swiper('.swiper', {
       // Optional parameters
       spaceBetween: 60,
@@ -25,39 +26,40 @@ export default class extends Controller {
       grabCursor: true,
       loop: true,
     });
-    console.log(swiper.activeIndex)
+    // console.log(swiper.activeIndex)
     swiper.on('slideNextTransitionEnd',  () => {
-      console.log("next -> disliked");
-      console.log(this.wishTargets.length)
-      console.log(swiper.activeIndex)
+      // console.log("next -> disliked");
+      // console.log(this.wishTargets.length)
+      // console.log(swiper.activeIndex)
     swiper.removeSlide(swiper.activeIndex - 2)
 
     })
     swiper.on('slidePrevTransitionEnd', () => {
-      console.log("prev -> liked");
-      console.log(swiper.activeIndex)
-      console.log(this.wishTargets.length)
+      // console.log("prev -> liked");
+      // console.log(swiper.activeIndex)
+      // console.log(this.wishTargets.length)
       // this.wishTarget.classList.add("d-none")
       swiper.removeSlide(swiper.activeIndex)
 
       if (swiper.activeIndex === 1) {
         swiper.slideTo(swiper.activeIndex -1, 0, false)
       }
+
+      // 1. Recuperer l'id de la carte likee et je le stocke dans wishId
+
+    const wishId = this.wishTarget.dataset.swiperId
+    fetch(`/wishes/${wishId}/likes?liked=true`, {
+        method: 'POST',
+      headers: { 'Accept': "application/json", 'X-CSRF-Token': csrfToken() },
+        body: {}
+      })
+      .then(response => response.json())
+      .then((data) => {
+        console.log(data);
+      });
     })
 
-    fetch(sweeper.formTarget.action, {
-    method: 'POST',
-    headers: { 'Accept': "application/json", 'X-CSRF-Token': csrfToken() },
-    body: new FormData(this.formTarget)
-  })
-    .then(response => response.json())
-    .then((data) => {
-      if (data.inserted_item) {
-        this.itemsTarget.insertAdjacentHTML("beforeend", data.inserted_item);
-      }
-      this.formTarget.outerHTML = data.form;
-  });
-}
+
   }
 }
 
