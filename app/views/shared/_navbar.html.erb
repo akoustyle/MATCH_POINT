@@ -1,19 +1,23 @@
-<div class="d-flex justify-content-between flex-md-row align-items-center pb-3 mb-4 border-bottom">
-  <div>
-    <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-          <title>Match Point</title>
-          <strong>Match Point</strong>
-    </a>
+<div class="align-items-center p-2 border-bottom bg-light shadow-sm">
+  <div id="logo">
+    <%= link_to cl_image_tag('gupno13wmpacit9bvxpa', width: 200, height: 40), root_path %>
   </div>
+</div>
 
+<!--
   <div>
     <% if user_signed_in? %>
             <nav class="">
               <%= link_to "Home", root_path, class: "text-dark mr-3 mt-3"%>
-              <%= link_to "My matches", "#", class: "texte-dark mr-3 mt-3"%>
+              <%= link_to "My matches", matches_path, class: "texte-dark mr-3 mt-3"%>
               <%= link_to "Settings", "#", class: "texte-dark mr-3 mt-3"%>
               <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "btn btn-secondary mr-2 mt-2" %>
-
+            <li class="nav-item dropdown">
+        <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+        </div>
+      </li>
             </nav>
           <% else %>
 
@@ -25,6 +29,4 @@
 
           <% end %>
   </div>
-
-
-    </div>
+-->
