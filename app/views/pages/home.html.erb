@@ -15,21 +15,20 @@
   </div>
 </div>
 -->
-<div class='mt-4 p-2'>
-  <h1>Get motivated with us!<small class="text-muted fw-light"></small></h1>
+<div class='mt-4 p-2 mb-4 text-center'>
+  <h3>Get motivated with us!</h3>
 </div>
 <div class="container px-5">
-  <div class=" mt-2 text-center">
+  <div class=" mt-2 mb-1 text-center">
     <%= simple_form_for Wish.new, url: wishes_path, method: :post, remote: true do |f| %>
       <%= f.input :sport,
                   collection: Sport.all.pluck(:name),
                   prompt: "Select a sport",
                   error: 'Please select a sport to begin your journey',
                   required: false,
-                  class: 'form-field',
-                  label: 'Choose a sport to begin your journey',
+                  label: 'Find a sport buddy today',
                   autofocus: true %>
-      <%= f.submit class: "btn btn-danger active", value: 'Find your buddy' %>
+      <%= f.submit class: "btn btn-danger active w-100 btn-wish", value: 'Find your buddy' %>
     <% end %>
 </div>
 </div>

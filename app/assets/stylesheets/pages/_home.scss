@@ -8,10 +8,14 @@
 // justify-content: center;
 // }
 
-h1 {
+div.p-2 h3 {
   font-family: 'Open Sans', sans-serif;
-  font-size: 2em;
+  font-size: 26px;
   color: #444444;
-  font-weight: 600;
+  font-weight: 400;
   text-align: center;
+}
+
+.btn-wish {
+  border-radius: 15px
 }
