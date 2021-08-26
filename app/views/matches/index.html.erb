@@ -9,9 +9,9 @@
 </div>
 
 <ul>
-<% current_user.past_matched_wishes.each do |wish| %>
+<% current_user.past_matched_other_wishes.each do |wish| %>
 <div class="card-other-matches">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+  <%= cl_image_tag wish.user.photo.key, class: 'img-index' %>
   <div class="card-other-matches-infos">
   <li><%= wish.sport.name %></li>
   <li><%= wish.user.username %></li>

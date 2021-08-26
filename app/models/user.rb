@@ -14,12 +14,31 @@ class User < ApplicationRecord
 
   def current_matched_wish
     matches.order(created_at: :desc).first.wishes.find_by(user: self)
+    # wishes.joins(:match).order(matches: {created_at: :desc}).first
   end
 
   def past_matched_wishes
-    return [] if current_matched_wish.nil?
+    # return [] if current_matched_wish.nil?
 
     # self.matches.where.not(id: current_match.id)
     wishes.joins(:match).where.not(match_id: nil)
+  end
+
+  def matched_other_wishes
+    Wish.where(match_id: past_matched_wishes.pluck(:match_id)).where.not(user: self)
+  end
+
+  def current_matched_other_wish
+    matched_other_wishes.joins(:match).order("matches.created_at desc").first
+  end
+
+  def past_matched_other_wishes
+    other_wishes = matched_other_wishes.joins(:match).order("matches.created_at desc")
+
+    if current_matched_other_wish
+      other_wishes = other_wishes.where.not(id: current_matched_other_wish.id)
+    end
+
+    other_wishes
   end
 end
