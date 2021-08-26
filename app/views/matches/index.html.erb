@@ -1,6 +1,7 @@
-<%#= Il faut faire ce que Charlotte a dit, noté sur le cahier de Cricri %>
+<%# current_user.current_matched_other_wish do |wish| %>
 <div class="card-current-match">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+  <%= cl_image_tag current_user.current_matched_wish.user.photo.key, class: 'img-index' %>
+<!--<img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg"> !-->
   <div class="card-current-match-infos">
     <div>
       <%= render "recent_match" %>
@@ -9,13 +10,13 @@
 </div>
 
 <ul>
-<% current_user.past_matched_other_wishes.each do |wish| %>
+<% current_user.matched_wishes.each do |like| %>
 <div class="card-other-matches">
-  <%= cl_image_tag wish.user.photo.key, class: 'img-index' %>
+  <%= cl_image_tag like.user.photo.key, class: 'img-index' %>
   <div class="card-other-matches-infos">
-  <li><%= wish.sport.name %></li>
-  <li><%= wish.user.username %></li>
-  <li><%= wish.user.age %></li>
+  <li><%= like.sport.name %></li>
+  <li><%= like.user.username %></li>
+  <li><%= like.user.age %></li>
 
   </div>
 </div>
