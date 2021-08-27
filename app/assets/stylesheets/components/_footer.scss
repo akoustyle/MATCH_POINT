@@ -25,10 +25,18 @@
 //   min-height: calc(100vh - 70px - 80px);
 // }
 
+#footer-btn {
+  text-decoration: none;
+}
+
 .footer {
   background-color: #ffffff;
-
 }
+
+.fixed-bottom {
+  position: fixed;
+}
+
 .fas {
   color: $red;
   font-size: 30px;
@@ -38,7 +46,6 @@
   padding-top: 16px;
 }
 li a {
-  text-decoration: none;
   text-align: center;
   display: flex;
   width: 65px;
