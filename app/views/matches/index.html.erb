@@ -14,14 +14,14 @@
 <%# </div> %>
 
 <ul>
-  <% current_user.matched_wishes.each do |wish| %>
-    <%= link_to match_path(wish.match) do %>
+  <% current_user.likes.where(liked: true).joins(wish: :match).each do |like| %>
+    <%= link_to match_path(like.wish.match) do %>
       <div class="card-other-matches">
-        <%= cl_image_tag wish.user.photo.key, class: 'img-index' %>
+        <%= cl_image_tag like.wish.user.photo.key, class: 'img-index' %>
         <div class="card-other-matches-infos">
-          <li><%= wish.sport.name %></li>
-          <li><%= wish.user.username %></li>
-          <li><%= wish.user.age %></li>
+          <li><%= like.wish.sport.name %></li>
+          <li><%= like.wish.user.username %></li>
+          <li><%= like.wish.user.age %></li>
         </div>
       </div>
     <% end %>

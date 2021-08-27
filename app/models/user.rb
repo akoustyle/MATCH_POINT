@@ -53,7 +53,7 @@ class User < ApplicationRecord
   # end
 
   def matched_wishes
-    return Wish.none if current_matched_wish.nil?
+    # return Wish.none if current_matched_wish.nil?
 
     match_ids = wishes.joins(:match).where.not(match_id: nil).pluck(:match_id)
     Wish.where.not(user: self).where(match_id: match_ids)
