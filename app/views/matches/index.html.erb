@@ -1,23 +1,29 @@
-<%#= Il faut faire ce que Charlotte a dit, noté sur le cahier de Cricri %>
-<div class="card-current-match">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-  <div class="card-current-match-infos">
-    <div>
-      <%= render "recent_match" %>
-     </div>
-  </div>
-</div>
+<%# current_user.current_matched_other_wish do |wish| %>
+<%# <div class="card-current-match">
+  <% if current_user.current_matched_wish %>
+    <%# <%= cl_image_tag current_user.current_matched_wish.user.photo.key, class: 'img-index' %>
+    <!--<img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg"> !-->
+    <%# <div class="card-current-match-infos">
+      <div>
+        <%= render "recent_match" %>
+      <%# </div>
+    </div>
+  <% else %>
+    <%# <h2><%= No Match found %>
+  <%# <% end %>
+<%# </div> %>
 
-<ul>
-<% current_user.past_matched_wishes.each do |wish| %>
-<div class="card-other-matches">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-  <div class="card-other-matches-infos">
-  <li><%= wish.sport.name %></li>
-  <li><%= wish.user.username %></li>
-  <li><%= wish.user.age %></li>
-
-  </div>
-</div>
-<% end %>
+<ul class="flex-column">
+  <% current_user.likes.where(liked: true).joins(wish: :match).each do |like| %>
+    <%= link_to match_path(like.wish.match) do %>
+      <div class="card-other-matches">
+        <%= cl_image_tag like.wish.user.photo.key, class: 'img-index' %>
+        <div class="card-other-matches-infos">
+          <li><%= like.wish.sport.name %></li>
+          <li><%= like.wish.user.username %></li>
+          <li><%= like.wish.user.age %></li>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
 </ul>

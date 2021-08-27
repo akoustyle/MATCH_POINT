@@ -11,7 +11,7 @@ require 'open-uri'
 
 puts "Destroying all Likes..."
 Like.destroy_all
-puts "All Likes destroyed successfully!"
+puts "All likes destroyed successfully!"
 
 puts "Destroying all Users..."
 User.destroy_all
