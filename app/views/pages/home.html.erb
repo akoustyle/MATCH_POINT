@@ -20,7 +20,7 @@
 </div>
 <div class="container px-5">
   <div class=" mt-2 mb-1 text-center">
-    <%= simple_form_for Wish.new, url: wishes_path, method: :post, remote: true do |f| %>
+    <%= simple_form_for Wish.new, url: wishes_path, method: :post do |f| %>
       <%= f.input :sport,
                   collection: Sport.all.pluck(:name),
                   prompt: "Select a sport",
