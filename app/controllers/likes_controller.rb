@@ -9,7 +9,7 @@ class LikesController < ApplicationController
       create_match(@wish)
 
       respond_to do |format|
-        # format.html {redirect_to match_path(@match)}
+        format.html {redirect_to match_path(@match)}
         format.json { render json: { ok: true } }
       end
     end
