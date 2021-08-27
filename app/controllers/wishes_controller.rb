@@ -2,12 +2,11 @@ class WishesController < ApplicationController
   def index
     @wishes = policy_scope(Wish).order(created_at: :desc)
 
-  #   if params.dig(:search, :query).present?
-  #     @wishes = @wishes.search_by_sport(params.dig(:search, :query))
+    #   if params.dig(:search, :query).present?
+    #     @wishes = @wishes.search_by_sport(params.dig(:search, :query))
   end
 
   def show
-
   end
 
   def new
@@ -23,8 +22,8 @@ class WishesController < ApplicationController
     authorize @wish
     if @wish.save
       redirect_to wishes_path
-     else
-      render :new
+    else
+      render 'pages/home'
     end
   end
 
