@@ -305,27 +305,27 @@ puts "Diane saved successfully!"
 
 puts "Users created successfully!"
 
-puts "Creating Charlotte's wish..."
-charlottes_wish = Wish.new(date: DateTime.now,
-                           sport_id: cycling.id,
-                           user_id: first_user.id,
-                           location: '16 villa gaudelet, paris')
-puts "saving Charlotte's wish..."
-charlottes_wish.save!
-puts "Wish saved successfully!"
+# puts "Creating Charlotte's wish..."
+# charlottes_wish = Wish.new(date: DateTime.now,
+#                            sport_id: cycling.id,
+#                            user_id: first_user.id,
+#                            location: '16 villa gaudelet, paris')
+# puts "saving Charlotte's wish..."
+# charlottes_wish.save!
+# puts "Wish saved successfully!"
 
-puts "Creating Diane's wish..."
-dianes_wish = Wish.new(date: DateTime.now,
-                       sport_id: cycling.id,
-                       user_id: second_user.id,
-                       location: '16 villa gaudelet, paris')
-puts "saving Diane's wish..."
-dianes_wish.save!
-puts "Wish saved successfully!"
+# puts "Creating Diane's wish..."
+# dianes_wish = Wish.new(date: DateTime.now,
+#                        sport_id: cycling.id,
+#                        user_id: second_user.id,
+#                        location: '16 villa gaudelet, paris')
+# puts "saving Diane's wish..."
+# dianes_wish.save!
+# puts "Wish saved successfully!"
 
-puts "creating diane's like toward charlotte's wish"
-Like.create!(wish: charlottes_wish, user: second_user)
-puts 'likes done!'
+# puts "creating diane's like toward charlotte's wish"
+# Like.create!(wish: charlottes_wish, user: second_user)
+# puts 'likes done!'
 # puts "Creating Le Wagon match"
 # le_wagon_match = Match.create!(location: location_cycling)
 # puts "Match created successfully!"
