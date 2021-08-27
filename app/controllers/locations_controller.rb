@@ -1,7 +1,7 @@
 class LocationsController < ApplicationController
   def index
-    @locations = Location.all
-    @markers = @flats.geocoded.map do |location|
+    @locations = policy_scope(Location)
+    @markers = @locations.geocoded.map do |location|
       {
         lat: location.latitude,
         lng: location.longitude,
