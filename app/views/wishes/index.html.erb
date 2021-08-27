@@ -5,11 +5,13 @@
         <div class="swiper-wrapper">
           <% @wishes.each do |wish|%>
             <div class="swiper-slide" data-swiper-target="wish" data-swiper-id=<%= wish.id %>>
-              <div class="wish-card-category" data-id="<%= wish.id %>" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path(wish.user.photo.key) %>)">
-                  <div class="wish-info d-flex justify-content-between">
+              <div class="wish-card-category" data-id="<%= wish.id %>">
+                  <div class="wish-info">
+                    <%= cl_image_tag wish.user.photo.key, class: 'card-cover' %>
                     <div class="wish-card-details">
-                    <h3><%= wish.user.username %>, <%= wish.user.age %> ans</h3>
-                    <h4><%= wish.sport.name %></h4>
+                    <h2><%= wish.user.username %>, <%= wish.user.age %> years old</h2>
+                    <p><i class="fas fa-stopwatch fax2"></i>  <%= wish.sport.name %></p>
+                    <p><i class="fas fa-street-view"></i>  <%= Geocoder::Calculations.distance_between([@user_wish.latitude, @user_wish.longitude], [wish.latitude,wish.longitude]).truncate(1) %>km</p>
                     </div>
                   </div>
               </div>
