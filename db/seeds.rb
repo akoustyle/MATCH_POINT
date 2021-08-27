@@ -233,7 +233,7 @@ puts "#{user.username} saved successfully!"
   puts "#{user.username} saved successfully!"
   sport = SPORTS_ARRAY.sample
   location = Location.where(sport_id: sport.id)
-  date = DateTime.now
+  date = Date.today
   puts "Creating first user wish..."
   first_wish = Wish.new(date: date,
                         sport_id: sport.id,
@@ -268,7 +268,7 @@ end
 # 6.times do
 #   puts "Creating cycling wish..."
 #   user = User.all.pluck(:id).sample
-#   wish = Wish.new(date: DateTime.now,
+#   wish = Wish.new(date: Date.today,
 #                   sport_id: cycling.id,
 #                   user_id: user,
 #                   location: Location.all.pluck(:address).sample)
@@ -306,7 +306,7 @@ puts "Diane saved successfully!"
 puts "Users created successfully!"
 
 # puts "Creating Charlotte's wish..."
-# charlottes_wish = Wish.new(date: DateTime.now,
+# charlottes_wish = Wish.new(date: Date.today,
 #                            sport_id: cycling.id,
 #                            user_id: first_user.id,
 #                            location: '16 villa gaudelet, paris')
@@ -315,7 +315,7 @@ puts "Users created successfully!"
 # puts "Wish saved successfully!"
 
 # puts "Creating Diane's wish..."
-# dianes_wish = Wish.new(date: DateTime.now,
+# dianes_wish = Wish.new(date: Date.today,
 #                        sport_id: cycling.id,
 #                        user_id: second_user.id,
 #                        location: '16 villa gaudelet, paris')
@@ -362,7 +362,7 @@ puts "Users created successfully!"
   puts "#{user_second.username} saved successfully!"
   sport = SPORTS_ARRAY[0]
   location = Location.where(sport_id: sport.id)
-  date = DateTime.now
+  date = Date.today
   puts "Creating first user wish..."
   first_wish = Wish.new(date: date,
                         sport_id: sport.id,
@@ -419,7 +419,7 @@ end
   puts "#{user_second.username} saved successfully!"
   sport = SPORTS_ARRAY[1]
   location = Location.where(sport_id: sport.id)
-  date = DateTime.now
+  date = Date.today
   puts "Creating first user wish..."
   first_wish = Wish.new(date: date,
                         sport_id: sport.id,
@@ -476,7 +476,7 @@ end
   puts "#{user_second.username} saved successfully!"
   sport = SPORTS_ARRAY[2]
   location = Location.where(sport_id: sport.id)
-  date = DateTime.now
+  date = Date.today
   puts "Creating first user wish..."
   first_wish = Wish.new(date: date,
                         sport_id: sport.id,
@@ -533,7 +533,7 @@ end
   puts "#{user_second.username} saved successfully!"
   sport = SPORTS_ARRAY[3]
   location = Location.where(sport_id: sport.id)
-  date = DateTime.now
+  date = Date.today
   puts "Creating first user wish..."
   first_wish = Wish.new(date: date,
                         sport_id: sport.id,
@@ -590,7 +590,7 @@ end
   puts "#{user_second.username} saved successfully!"
   sport = SPORTS_ARRAY[4]
   location = Location.where(sport_id: sport.id)
-  date = DateTime.now
+  date = Date.today
   puts "Creating first user wish..."
   first_wish = Wish.new(date: date,
                         sport_id: sport.id,
@@ -647,7 +647,7 @@ end
   puts "#{user_second.username} saved successfully!"
   sport = SPORTS_ARRAY[5]
   location = Location.where(sport_id: sport.id)
-  date = DateTime.now
+  date = Date.today
   puts "Creating first user wish..."
   first_wish = Wish.new(date: date,
                         sport_id: sport.id,
@@ -704,7 +704,7 @@ end
   puts "#{user_second.username} saved successfully!"
   sport = SPORTS_ARRAY[6]
   location = Location.where(sport_id: sport.id)
-  date = DateTime.now
+  date = Date.today
   puts "Creating first user wish..."
   first_wish = Wish.new(date: date,
                         sport_id: sport.id,
@@ -761,7 +761,7 @@ end
   puts "#{user_second.username} saved successfully!"
   sport = SPORTS_ARRAY[7]
   location = Location.where(sport_id: sport.id)
-  date = DateTime.now
+  date = Date.today
   puts "Creating first user wish..."
   first_wish = Wish.new(date: date,
                         sport_id: sport.id,
@@ -818,7 +818,7 @@ end
   puts "#{user_second.username} saved successfully!"
   sport = SPORTS_ARRAY[8]
   location = Location.where(sport_id: sport.id)
-  date = DateTime.now
+  date = Date.today
   puts "Creating first user wish..."
   first_wish = Wish.new(date: date,
                         sport_id: sport.id,
@@ -853,7 +853,7 @@ end
 5.times do
   sport = SPORTS_ARRAY.sample
   location = Location.where(sport_id: sport.id)
-  random_date = DateTime.now - (rand * 21)
+  random_date = Date.today - (rand * 21)
   puts "Creating Charlotte's past wish..."
   charlottes_wish = Wish.new(date: random_date,
                              sport_id: sport.id,
