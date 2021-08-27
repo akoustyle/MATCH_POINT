@@ -5,11 +5,12 @@
         <div class="swiper-wrapper">
           <% @wishes.each do |wish|%>
             <div class="swiper-slide" data-swiper-target="wish" data-swiper-id=<%= wish.id %>>
-              <div class="wish-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1552674605-db6ffd4facb5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80)" data-id="<%= wish.id %>">
-                  <div class="wish-info">
+              <div class="wish-card-category" data-id="<%= wish.id %>" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path(wish.user.photo.key) %>)">
+                  <div class="wish-info d-flex justify-content-between">
+                    <div class="wish-card-details">
                     <h3><%= wish.user.username %>, <%= wish.user.age %> ans</h3>
                     <h4><%= wish.sport.name %></h4>
-
+                    </div>
                   </div>
               </div>
             </div>
