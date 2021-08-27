@@ -13,7 +13,7 @@
   <%# <% end %>
 <%# </div> %>
 
-<ul>
+<ul class="flex-column">
   <% current_user.likes.where(liked: true).joins(wish: :match).each do |like| %>
     <%= link_to match_path(like.wish.match) do %>
       <div class="card-other-matches">
