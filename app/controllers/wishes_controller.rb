@@ -9,7 +9,6 @@ class WishesController < ApplicationController
 
 
   def show
-
   end
 
   def new
@@ -26,8 +25,8 @@ class WishesController < ApplicationController
     authorize @wish
     if @wish.save
       redirect_to wishes_path
-     else
-      render :new
+    else
+      render 'pages/home'
     end
   end
 
