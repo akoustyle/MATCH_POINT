@@ -2,28 +2,35 @@
   <ul>
     <li>
       <%= link_to root_path class: "btn" do %>
-          <i class="fas fa-home"></i>
-          <small class='text-muted'>Home</small>
+        <i class="fas fa-home"></i>
+        <small class='text-muted'>Home</small>
       <% end %>
     </li>
     <li>
       <%= link_to wishes_path class: "btn" do %>
-          <i class="fas fa-search"></i>
-          <small class='text-muted'>Search</small>
+        <i class="fas fa-search"></i>
+        <small class='text-muted'>Search</small>
       <% end %>
     </li>
     <li>
       <%= link_to matches_path class: "btn" do %>
-          <i class="fas fa-hands-helping"></i>
-          <small class='text-muted'>Buddies</small>
+        <i class="fas fa-hands-helping"></i>
+        <small class='text-muted'>Buddies</small>
       <% end %>
     </li>
-    </li>
-    <li>
-      <%= link_to root_path class: "btn" do %>
-          <i class="fas fa-user"></i>
-          <small class='text-muted'>Profile</small>
+  </li>
+  <li>
+    <% if user_signed_in? %>
+      <%= link_to destroy_user_session_path, method: :delete, data: { confirm: "Do you really want to sign out?" } do %>
+        <i class="fas fa-user"></i>
+        <small class='text-muted'>Sign out</small>
       <% end %>
-    </li>
-  </ul>
+    <% else %>
+      <%= link_to new_user_session_path class: "btn" do %>
+        <i class="fas fa-user"></i>
+        <small class='text-muted'>Sign in</small>
+      <% end %>
+    <% end %>
+  </li>
+</ul>
 </div>

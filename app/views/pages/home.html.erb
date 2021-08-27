@@ -25,7 +25,7 @@
                   collection: Sport.all.pluck(:name),
                   prompt: "Select a sport",
                   error: 'Please select a sport to begin your journey',
-                  required: false,
+                  required: true,
                   label: 'Find a sport buddy today',
                   autofocus: true %>
       <%= f.submit class: "btn btn-danger active w-100 btn-wish", value: 'Find your buddy' %>
