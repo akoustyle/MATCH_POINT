@@ -1,5 +1,5 @@
 <!-- <div class="align-items-center justify-content-center">
-  <div class="card m-2 rounded-3 shadow-sm">
+  <div class="card m-4 rounded-3 shadow-sm">
     <div class="card-header py-3">
       <h4 class="my-0 fw-normal">Join Match Point app for Women</h4>
     </div>
@@ -15,20 +15,28 @@
   </div>
 </div>
 -->
+<% if user_signed_in? %>
 <div class='p-4 mb-4 text-center'>
   <h3>Get motivated with us!</h3>
 </div>
-<div class="container px-5">
-  <div class=" mt-2 mb-1 text-center">
-    <%= simple_form_for Wish.new, url: wishes_path, method: :post do |f| %>
-      <%= f.input :sport,
-                  collection: Sport.all.pluck(:name),
-                  prompt: "Select a sport",
-                  error: 'Please select a sport to begin your journey',
-                  required: true,
-                  label: 'Find a sport buddy today',
-                  autofocus: true %>
-      <%= f.submit class: "btn btn-danger active w-100 btn-wish", value: 'Find your buddy' %>
-    <% end %>
-</div>
-</div>
+  <div class="container px-5">
+    <div class=" mt-2 mb-1 text-center">
+      <%= simple_form_for Wish.new, url: wishes_path, method: :post do |f| %>
+        <%= f.input :sport,
+                      collection: Sport.all.pluck(:name),
+                      prompt: "Select a sport",
+                      error: 'Please select a sport to begin your journey',
+                      required: false,
+                      label: 'Find a sport buddy today',
+                      autofocus: true %>
+        <%= f.submit class: "btn btn-danger active w-100 btn-wish", value: 'Find your buddy' %>
+      <% end %>
+    </div>
+  </div>
+<% else %>
+<div class="home-sign-out" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1488778578932-0f84d315fcae?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1229&q=80)">
+  <h3 class='m-0'>Find your sport buddy now!</h3><br><br>
+  <p>Match Point is the first sport app dedicated to women<br>Instantly get matched with people of your choice<br>
+  Join them in the provided location</p>
+  </div>
+<% end %>
