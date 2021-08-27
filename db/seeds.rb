@@ -218,6 +218,64 @@ puts "#{user.username} saved successfully!"
 
 
 
+puts "Creating Charlotte..."
+first_user = User.new(username: 'Charlotte',
+                      email: 'charlotte@lewagon.org',
+                      password: "123456",
+                      age: rand(27..30))
+user_photo = URI.open("https://ca.slack-edge.com/T02NE0241-U01HWUHQEMQ-396ed62d24ef-512")
+first_user.photo.attach(io: user_photo, filename: "Charlotte_photo.jpeg", content_type: 'image/jpeg')
+puts "attaching photo...."
+puts "saving Charlotte..."
+first_user.save!
+puts "Charlotte saved successfully!"
+
+puts "Creating Diane..."
+second_user = User.new(username: 'Diane',
+                       email: 'diane@lewagon.org',
+                       password: "123456",
+                       age: rand(27..30))
+user_photo = URI.open("https://ca.slack-edge.com/T02NE0241-UDF8DJTMM-26237fc8cffe-512")
+second_user.photo.attach(io: user_photo, filename: "Diane_photo.jpeg", content_type: 'image/jpeg')
+puts "attaching photo...."
+puts "saving Diane..."
+second_user.save!
+puts "Diane saved successfully!"
+
+puts "Users created successfully!"
+
+puts "Creating Charlotte's wish..."
+charlottes_wish = Wish.new(date: Date.today,
+                           sport_id: cycling.id,
+                           user_id: first_user.id,
+                           location: '16 villa gaudelet, paris')
+puts "saving Charlotte's wish..."
+charlottes_wish.save!
+puts "Wish saved successfully!"
+
+puts "Creating Diane's wish..."
+dianes_wish = Wish.new(date: Date.today,
+                       sport_id: cycling.id,
+                       user_id: second_user.id,
+                       location: '16 villa gaudelet, paris')
+puts "saving Diane's wish..."
+dianes_wish.save!
+puts "Wish saved successfully!"
+
+puts "creating diane's like toward charlotte's wish"
+Like.create!(wish: charlottes_wish, user: second_user)
+puts 'likes done!'
+puts "Creating Le Wagon match"
+le_wagon_match = Match.create!(location: location_cycling)
+puts "Match created successfully!"
+
+puts "updating charlottes_wish..."
+charlottes_wish.update(match: le_wagon_match)
+puts "charlottes_wish updated successfully!"
+puts "Updating dianes_wish..."
+dianes_wish.update(match: le_wagon_match)
+puts "dianes_wish updated successfully!"
+
 
 20.times do
   puts "Creating user..."
@@ -279,63 +337,6 @@ end
 #   puts "Wish put in cycling array!"
 # end
 
-puts "Creating Charlotte..."
-first_user = User.new(username: 'Charlotte',
-                      email: 'charlotte@lewagon.org',
-                      password: "123456",
-                      age: rand(27..30))
-user_photo = URI.open("https://ca.slack-edge.com/T02NE0241-U01HWUHQEMQ-396ed62d24ef-512")
-first_user.photo.attach(io: user_photo, filename: "Charlotte_photo.jpeg", content_type: 'image/jpeg')
-puts "attaching photo...."
-puts "saving Charlotte..."
-first_user.save!
-puts "Charlotte saved successfully!"
-
-puts "Creating Diane..."
-second_user = User.new(username: 'Diane',
-                       email: 'diane@lewagon.org',
-                       password: "123456",
-                       age: rand(27..30))
-user_photo = URI.open("https://ca.slack-edge.com/T02NE0241-UDF8DJTMM-26237fc8cffe-512")
-second_user.photo.attach(io: user_photo, filename: "Diane_photo.jpeg", content_type: 'image/jpeg')
-puts "attaching photo...."
-puts "saving Diane..."
-second_user.save!
-puts "Diane saved successfully!"
-
-puts "Users created successfully!"
-
-# puts "Creating Charlotte's wish..."
-# charlottes_wish = Wish.new(date: Date.today,
-#                            sport_id: cycling.id,
-#                            user_id: first_user.id,
-#                            location: '16 villa gaudelet, paris')
-# puts "saving Charlotte's wish..."
-# charlottes_wish.save!
-# puts "Wish saved successfully!"
-
-# puts "Creating Diane's wish..."
-# dianes_wish = Wish.new(date: Date.today,
-#                        sport_id: cycling.id,
-#                        user_id: second_user.id,
-#                        location: '16 villa gaudelet, paris')
-# puts "saving Diane's wish..."
-# dianes_wish.save!
-# puts "Wish saved successfully!"
-
-# puts "creating diane's like toward charlotte's wish"
-# Like.create!(wish: charlottes_wish, user: second_user)
-# puts 'likes done!'
-# puts "Creating Le Wagon match"
-# le_wagon_match = Match.create!(location: location_cycling)
-# puts "Match created successfully!"
-
-# puts "updating charlottes_wish..."
-# charlottes_wish.update(match: le_wagon_match)
-# puts "charlottes_wish updated successfully!"
-# puts "Updating dianes_wish..."
-# dianes_wish.update(match: le_wagon_match)
-# puts "dianes_wish updated successfully!"
 
 3.times do
   puts "Creating user..."
