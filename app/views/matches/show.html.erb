@@ -1,0 +1,23 @@
+<div class="card-current-match">
+    <%# Wish.where.not(user: self).where(match_id: @match.id).user.photo.key %>
+    <% @match.wishes.each do |wish| %>
+      <% if wish.user != current_user %>
+        <%= cl_image_tag wish.user.photo.key, class: 'img-index' %>
+        <ul>
+        <li><%= wish.user.username %></li>
+        <li><%= wish.user.age %></li>
+        <li><%= wish.sport.name %></li>
+        </ul>
+      <% end %>
+    <% end %>
+    <!--<img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg"> !-->
+  <div class="card-current-match-infos">
+    <div>
+      <%= render "recent_match" %>
+    </div>
+  </div>
+</div>
+<div id="map"
+     style="width: 100%; height: 300px;"
+     data-markers="<%= @marker.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>

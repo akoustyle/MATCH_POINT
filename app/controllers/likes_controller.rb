@@ -6,7 +6,7 @@ class LikesController < ApplicationController
     @wish = Wish.find(params[:wish_id])
     @like = Like.new(user: current_user, wish: @wish, liked: params[:liked])
     if @like.save!
-      create_match(@wish)
+      create_match(@wish) if mutual?(@wish)
 
       respond_to do |format|
         format.html {redirect_to match_path(@match)}
@@ -22,6 +22,15 @@ class LikesController < ApplicationController
     @match = Match.new(location: location)
     @match.save
     wish.update(match: @match)
+    other_like(wish).wish.update(match: @match)
+  end
+
+  def mutual?(wish)
+    params[:liked] == "true" && other_like(wish)
+  end
+
+  def other_like(wish)
+    wish.user.likes.where(liked: true).joins(:wish).where(wishes: { user_id: current_user.id }).first
   end
 
 end
