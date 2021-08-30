@@ -4,7 +4,7 @@
       <div class="swiper" data-controller="swiper">
         <div class="swiper-wrapper">
           <% @wishes.each do |wish|%>
-            <div class="swiper-slide" data-swiper-target="wish" data-swiper-id=<%= wish.id %>>
+            <div class="swiper-slide" data-swiper-target="wish" data-swiper-id=<%= wish.id %> data-wish-id="<%= wish.id %>">
               <div class="wish-card-category" data-wish-id="<%= wish.id %>">
                   <div class="wish-info">
                     <%= cl_image_tag wish.user.photo.key, class: 'card-cover' %>

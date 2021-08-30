@@ -35,12 +35,13 @@ export default class extends Controller {
 
     })
 
-    swiper.on('slidePrevTransitionEnd', () => {
+    swiper.on('slidePrevTransitionEnd', (e) => {
       // console.log("prev -> liked");
       // console.log(swiper.activeIndex)
       // console.log(this.wishTargets.length)
       // this.wishTarget.classList.add("d-none")
       // const wishId =
+      const wishId = swiper.slides[e.previousIndex].dataset.wishId;
       swiper.removeSlide(swiper.activeIndex)
 
       if (swiper.activeIndex === 1) {
