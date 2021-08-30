@@ -12,7 +12,19 @@ class LikesController < ApplicationController
 
       respond_to do |format|
         format.html {redirect_to match_path(@match)}
-        format.json { render json: { ok: true } }
+        format.json do
+          if @match
+            other_user = @match.wishes.where.not(user: current_user).first.user
+            swal_content = render_to_string(
+              partial: "matches/swal_content",
+              locals: {user: other_user},
+              formats: :html
+            )
+            render json: { match: true, swal_content: swal_content }
+          else
+            render json: {match: false}
+          end
+        end
       end
     end
   end
