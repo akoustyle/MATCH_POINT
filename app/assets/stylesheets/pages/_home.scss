@@ -17,6 +17,21 @@ div.p-2 h3 {
 
 }
 
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.red {
+  color: $red;
+  background: url(stroke2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
 .btn-wish {
   border-radius: 15px
 }
