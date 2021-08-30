@@ -1,3 +1,5 @@
+<%= render 'shared/navbar' %>
+<div class="matches-show">
 <div class="card-current-match">
     <%# Wish.where.not(user: self).where(match_id: @match.id).user.photo.key %>
     <% @match.wishes.each do |wish| %>
@@ -16,6 +18,7 @@
       <%= render "recent_match" %>
     </div>
   </div>
+  <%= link_to "Chat with your new buddy", chatroom_path(@match.chatroom) %>
 </div>
 
 <%# if policy(Match).destroy? %>
@@ -26,3 +29,4 @@
      style="width: 100%; height: 300px;"
      data-markers="<%= @marker.to_json %>"
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+</div>

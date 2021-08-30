@@ -8,7 +8,10 @@ class LikesController < ApplicationController
     @like = Like.new(user: current_user, wish: @wish, liked: params[:liked])
 
     if @like.save!
-      create_match(@wish) if mutual?(@wish)
+      if mutual?(@wish)
+        create_match(@wish)
+        create_chatroom(@wish)
+      end
 
       respond_to do |format|
         format.html {redirect_to match_path(@match)}
@@ -37,6 +40,20 @@ class LikesController < ApplicationController
     @match.save
     wish.update(match: @match)
     other_like(wish).wish.update(match: @match)
+  end
+
+  def create_chatroom(wish)
+    chatroom = Chatroom.where(
+      "(user1_id = :current_user_id AND user2_id = :other_user_id)
+        OR
+      (user1_id = :other_user_id AND user2_id = :current_user_id)",
+      current_user_id: current_user.id,
+      other_user_id: wish.user_id
+    )
+
+    unless chatroom.exists?
+      Chatroom.create!(user1: current_user, user2: wish.user)
+    end
   end
 
   def mutual?(wish)

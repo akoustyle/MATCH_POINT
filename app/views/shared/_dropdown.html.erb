@@ -1,0 +1,14 @@
+<div class="container px-5">
+  <div class="drop mt-2 mb-1 text-center select-box">
+    <%= simple_form_for Wish.new, url: wishes_path, method: :post, data: { controller: "wish-dropdown" } do |f| %>
+      <%= f.input :sport,
+                  collection: Sport.all.pluck(:name),
+                  prompt: "Select a sport",
+                  label: false,
+                  error: 'Please select a sport to begin your journey',
+                  required: false,
+                  input_html: { class: "wish-dropdown", data: { action: "input->wish-dropdown#submit" } } %>
+    <% end %>
+  </div>
+</div>
+</div>
