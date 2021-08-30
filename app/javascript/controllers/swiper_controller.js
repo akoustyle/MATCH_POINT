@@ -34,20 +34,22 @@ export default class extends Controller {
     swiper.removeSlide(swiper.activeIndex - 2)
 
     })
+
     swiper.on('slidePrevTransitionEnd', () => {
       // console.log("prev -> liked");
       // console.log(swiper.activeIndex)
       // console.log(this.wishTargets.length)
       // this.wishTarget.classList.add("d-none")
+      // const wishId =
       swiper.removeSlide(swiper.activeIndex)
 
       if (swiper.activeIndex === 1) {
         swiper.slideTo(swiper.activeIndex -1, 0, false)
       }
 
-      // 1. Recuperer l'id de la carte likee et je le stocke dans wishId
+    // 1. Recuperer l'id de la carte likee et je le stocke dans wishId
+    // const wishId = parseInt(this.wishTarget.dataset.swiperId, 10) - 1
 
-    const wishId = this.wishTarget.dataset.swiperId
     fetch(`/wishes/${wishId}/likes?liked=true`, {
         method: 'POST',
       headers: { 'Accept': "application/json", 'X-CSRF-Token': csrfToken() },
