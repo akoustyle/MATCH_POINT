@@ -262,19 +262,19 @@ puts "saving Diane's wish..."
 dianes_wish.save!
 puts "Wish saved successfully!"
 
-puts "creating diane's like toward charlotte's wish"
-Like.create!(wish: charlottes_wish, user: second_user)
-puts 'likes done!'
-puts "Creating Le Wagon match"
-le_wagon_match = Match.create!(location: location_cycling)
-puts "Match created successfully!"
+# puts "creating diane's like toward charlotte's wish"
+# Like.create!(wish: charlottes_wish, user: second_user)
+# puts 'likes done!'
+# puts "Creating Le Wagon match"
+# le_wagon_match = Match.create!(location: location_cycling)
+# puts "Match created successfully!"
 
-puts "updating charlottes_wish..."
-charlottes_wish.update(match: le_wagon_match)
-puts "charlottes_wish updated successfully!"
-puts "Updating dianes_wish..."
-dianes_wish.update(match: le_wagon_match)
-puts "dianes_wish updated successfully!"
+# puts "updating charlottes_wish..."
+# charlottes_wish.update(match: le_wagon_match)
+# puts "charlottes_wish updated successfully!"
+# puts "Updating dianes_wish..."
+# dianes_wish.update(match: le_wagon_match)
+# puts "dianes_wish updated successfully!"
 
 
 20.times do
@@ -318,9 +318,9 @@ puts "dianes_wish updated successfully!"
                         location: Location.all.pluck(:address).sample)
   puts "saving first_user's past wish..."
   second_wish.save!
-  puts "creating user's likes toward other's wish"
-  Like.create!(wish: first_wish, user: user_first)
-  puts 'likes done!'
+  # puts "creating user's likes toward other's wish"
+  # Like.create!(wish: first_wish, user: user_first)
+  # puts 'likes done!'
 end
 # cycling_wish = []
 # 6.times do
@@ -382,17 +382,17 @@ end
   second_wish.save!
   puts "Second wish saved successfully!"
 
-  puts "Creating first's match"
-  first_match = Match.create!(location: location.first)
-  puts "Match created successfully!"
+  # puts "Creating first's match"
+  # first_match = Match.create!(location: location.first)
+  # puts "Match created successfully!"
 
-  puts "updating first's wish..."
-  first_wish.update(match: first_match)
-  puts "first_wish updated successfully!"
+  # puts "updating first's wish..."
+  # first_wish.update(match: first_match)
+  # puts "first_wish updated successfully!"
 
-  puts "Updating second's wish..."
-  second_wish.update(match: first_match)
-  puts "second_wish updated successfully!"
+  # puts "Updating second's wish..."
+  # second_wish.update(match: first_match)
+  # puts "second_wish updated successfully!"
 end
 
 3.times do
@@ -439,17 +439,17 @@ end
   second_wish.save!
   puts "Second wish saved successfully!"
 
-  puts "Creating first's match"
-  first_match = Match.create!(location: location.first)
-  puts "Match created successfully!"
+  # puts "Creating first's match"
+  # first_match = Match.create!(location: location.first)
+  # puts "Match created successfully!"
 
-  puts "updating first's wish..."
-  first_wish.update(match: first_match)
-  puts "first_wish updated successfully!"
+  # puts "updating first's wish..."
+  # first_wish.update(match: first_match)
+  # puts "first_wish updated successfully!"
 
-  puts "Updating second's wish..."
-  second_wish.update(match: first_match)
-  puts "second_wish updated successfully!"
+  # puts "Updating second's wish..."
+  # second_wish.update(match: first_match)
+  # puts "second_wish updated successfully!"
 end
 
 3.times do
@@ -496,17 +496,17 @@ end
   second_wish.save!
   puts "Second wish saved successfully!"
 
-  puts "Creating first's match"
-  first_match = Match.create!(location: location.first)
-  puts "Match created successfully!"
+  # puts "Creating first's match"
+  # first_match = Match.create!(location: location.first)
+  # puts "Match created successfully!"
 
-  puts "updating first's wish..."
-  first_wish.update(match: first_match)
-  puts "first_wish updated successfully!"
+  # puts "updating first's wish..."
+  # first_wish.update(match: first_match)
+  # puts "first_wish updated successfully!"
 
-  puts "Updating second's wish..."
-  second_wish.update(match: first_match)
-  puts "second_wish updated successfully!"
+  # puts "Updating second's wish..."
+  # second_wish.update(match: first_match)
+  # puts "second_wish updated successfully!"
 end
 
 3.times do
@@ -553,17 +553,17 @@ end
   second_wish.save!
   puts "Second wish saved successfully!"
 
-  puts "Creating first's match"
-  first_match = Match.create!(location: location.first)
-  puts "Match created successfully!"
+  # puts "Creating first's match"
+  # first_match = Match.create!(location: location.first)
+  # puts "Match created successfully!"
 
-  puts "updating first's wish..."
-  first_wish.update(match: first_match)
-  puts "first_wish updated successfully!"
+  # puts "updating first's wish..."
+  # first_wish.update(match: first_match)
+  # puts "first_wish updated successfully!"
 
-  puts "Updating second's wish..."
-  second_wish.update(match: first_match)
-  puts "second_wish updated successfully!"
+  # puts "Updating second's wish..."
+  # second_wish.update(match: first_match)
+  # puts "second_wish updated successfully!"
 end
 
 3.times do
@@ -610,17 +610,17 @@ end
   second_wish.save!
   puts "Second wish saved successfully!"
 
-  puts "Creating first's match"
-  first_match = Match.create!(location: location.first)
-  puts "Match created successfully!"
+  # puts "Creating first's match"
+  # first_match = Match.create!(location: location.first)
+  # puts "Match created successfully!"
 
-  puts "updating first's wish..."
-  first_wish.update(match: first_match)
-  puts "first_wish updated successfully!"
+  # puts "updating first's wish..."
+  # first_wish.update(match: first_match)
+  # puts "first_wish updated successfully!"
 
-  puts "Updating second's wish..."
-  second_wish.update(match: first_match)
-  puts "second_wish updated successfully!"
+  # puts "Updating second's wish..."
+  # second_wish.update(match: first_match)
+  # puts "second_wish updated successfully!"
 end
 
 3.times do
@@ -667,17 +667,17 @@ end
   second_wish.save!
   puts "Second wish saved successfully!"
 
-  puts "Creating first's match"
-  first_match = Match.create!(location: location.first)
-  puts "Match created successfully!"
+  # puts "Creating first's match"
+  # first_match = Match.create!(location: location.first)
+  # puts "Match created successfully!"
 
-  puts "updating first's wish..."
-  first_wish.update(match: first_match)
-  puts "first_wish updated successfully!"
+  # puts "updating first's wish..."
+  # first_wish.update(match: first_match)
+  # puts "first_wish updated successfully!"
 
-  puts "Updating second's wish..."
-  second_wish.update(match: first_match)
-  puts "second_wish updated successfully!"
+  # puts "Updating second's wish..."
+  # second_wish.update(match: first_match)
+  # puts "second_wish updated successfully!"
 end
 
 3.times do
@@ -724,17 +724,17 @@ end
   second_wish.save!
   puts "Second wish saved successfully!"
 
-  puts "Creating first's match"
-  first_match = Match.create!(location: location.first)
-  puts "Match created successfully!"
+  # puts "Creating first's match"
+  # first_match = Match.create!(location: location.first)
+  # puts "Match created successfully!"
 
-  puts "updating first's wish..."
-  first_wish.update(match: first_match)
-  puts "first_wish updated successfully!"
+  # puts "updating first's wish..."
+  # first_wish.update(match: first_match)
+  # puts "first_wish updated successfully!"
 
-  puts "Updating second's wish..."
-  second_wish.update(match: first_match)
-  puts "second_wish updated successfully!"
+  # puts "Updating second's wish..."
+  # second_wish.update(match: first_match)
+  # puts "second_wish updated successfully!"
 end
 
 3.times do
@@ -781,17 +781,17 @@ end
   second_wish.save!
   puts "Second wish saved successfully!"
 
-  puts "Creating first's match"
-  first_match = Match.create!(location: location.first)
-  puts "Match created successfully!"
+  # puts "Creating first's match"
+  # first_match = Match.create!(location: location.first)
+  # puts "Match created successfully!"
 
-  puts "updating first's wish..."
-  first_wish.update(match: first_match)
-  puts "first_wish updated successfully!"
+  # puts "updating first's wish..."
+  # first_wish.update(match: first_match)
+  # puts "first_wish updated successfully!"
 
-  puts "Updating second's wish..."
-  second_wish.update(match: first_match)
-  puts "second_wish updated successfully!"
+  # puts "Updating second's wish..."
+  # second_wish.update(match: first_match)
+  # puts "second_wish updated successfully!"
 end
 
 3.times do
@@ -838,17 +838,17 @@ end
   second_wish.save!
   puts "Second wish saved successfully!"
 
-  puts "Creating first's match"
-  first_match = Match.create!(location: location.first)
-  puts "Match created successfully!"
+  # puts "Creating first's match"
+  # first_match = Match.create!(location: location.first)
+  # puts "Match created successfully!"
 
-  puts "updating first's wish..."
-  first_wish.update(match: first_match)
-  puts "first_wish updated successfully!"
+  # puts "updating first's wish..."
+  # first_wish.update(match: first_match)
+  # puts "first_wish updated successfully!"
 
-  puts "Updating second's wish..."
-  second_wish.update(match: first_match)
-  puts "second_wish updated successfully!"
+  # puts "Updating second's wish..."
+  # second_wish.update(match: first_match)
+  # puts "second_wish updated successfully!"
 end
 
 5.times do
@@ -874,17 +874,17 @@ end
   random_wish.save!
   puts "Past wish saved successfully!"
 
-  puts "Creating charlotte's match"
-  le_wagon_match = Match.create!(location: location.first)
-  puts "Match created successfully!"
+  # puts "Creating charlotte's match"
+  # le_wagon_match = Match.create!(location: location.first)
+  # puts "Match created successfully!"
 
-  puts "updating charlotte's wish..."
-  charlottes_wish.update(match: le_wagon_match)
-  puts "charlottes_wish updated successfully!"
+  # puts "updating charlotte's wish..."
+  # charlottes_wish.update(match: le_wagon_match)
+  # puts "charlottes_wish updated successfully!"
 
-  puts "Updating random's wish..."
-  random_wish.update(match: le_wagon_match)
-  puts "random_wish updated successfully!"
+  # puts "Updating random's wish..."
+  # random_wish.update(match: le_wagon_match)
+  # puts "random_wish updated successfully!"
 end
 
 puts "Et mercé les T-A !"
