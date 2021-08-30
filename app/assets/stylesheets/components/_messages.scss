@@ -15,15 +15,20 @@
    margin-bottom: 15px;
  }
   .message-currentuser {
-   align-self: flex-end;
-   border-radius: 7px;
-   color: white;
-   padding: 5px;
-   background-color: #F15555;
-   margin-bottom: 15px;
-   margin-right: 5px;
-      // &:after {
-      //   border-bottom-color: $blue;
-      //   left: 93%;
+    align-self: flex-end;
+    border-radius: 7px;
+    color: ffff;
+    .message-content {
+    align-self: flex-end;
+    color: white;
+    padding: 5px;
+    background-color: #F15555;
+    margin-bottom: 15px;
+    margin-right: 5px;
+       &:after {
+         border-bottom-color: $blue;
+         left: 93%;
+       }
+    }
  }
 }

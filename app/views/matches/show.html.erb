@@ -16,6 +16,7 @@
       <%= render "recent_match" %>
     </div>
   </div>
+  <%= link_to "Chat with your new buddy", chatroom_path(@match.chatroom) %>
 </div>
 
 <%# if policy(Match).destroy? %>
