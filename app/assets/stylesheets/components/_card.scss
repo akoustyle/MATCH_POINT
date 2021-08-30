@@ -65,6 +65,10 @@
   opacity: .7;
   margin: 0;
   }
+
+  ul {
+  padding: 0px 10px;
+  }
 }
 
 .card-current-match .card-current-match-infos {
@@ -73,6 +77,19 @@
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+
+  ul {
+  padding: 0px 10px;
+  }
+}
+
+.match-index {
+  padding: 0px 10px;
+  list-style-type: none;
+  li {
+    color: black;
+
+  }
 }
 
 .card-other-matches {
@@ -104,11 +121,11 @@
   margin-top: 8px;
   }
 
+  ul {
+  padding: 0px 10px;
+  }
+
   .card-other-matches-infos {
   padding: 16px;
   }
-}
-
-ul {
-  padding: 0px 10px;
 }
