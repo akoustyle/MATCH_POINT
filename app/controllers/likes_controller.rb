@@ -4,7 +4,9 @@ class LikesController < ApplicationController
     skip_authorization
 
     @wish = Wish.find(params[:wish_id])
+    # binding.pry
     @like = Like.new(user: current_user, wish: @wish, liked: params[:liked])
+
     if @like.save!
       create_match(@wish) if mutual?(@wish)
 
@@ -26,11 +28,11 @@ class LikesController < ApplicationController
   end
 
   def mutual?(wish)
+    # binding.pry
     params[:liked] == "true" && other_like(wish)
   end
 
   def other_like(wish)
     wish.user.likes.where(liked: true).joins(:wish).where(wishes: { user_id: current_user.id }).first
   end
-
 end
