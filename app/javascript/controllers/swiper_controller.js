@@ -80,6 +80,7 @@ export default class extends Controller {
           swal({
             title: "You have a match",
             content: html,
+            className: "match-swal",
             icon: "success"
           });
         }
