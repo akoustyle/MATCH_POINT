@@ -5,6 +5,7 @@ class User < ApplicationRecord
   has_many :matches, through: :wishes
   has_many :sports, through: :preferences
   has_one_attached :photo
+  has_many :chatrooms, through: :messages
 
 
   # Include default devise modules. Others available are:

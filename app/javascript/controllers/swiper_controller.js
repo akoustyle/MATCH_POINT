@@ -26,15 +26,21 @@ export default class extends Controller {
       grabCursor: true,
       loop: true,
     });
+    let swipeCount = 0;
     // console.log(swiper.activeIndex)
-    swiper.on('slideNextTransitionEnd',  () => {
+    swiper.on('slideNextTransitionEnd',  (e) => {
       // console.log("next -> disliked");
       // console.log(this.wishTargets.length)
       // console.log(swiper.activeIndex)
+    const wishesCount = swiper.slides[e.realIndex].dataset.wishesCount;
+    const homeUrl = swiper.slides[e.realIndex].dataset.homeUrl;
     swiper.removeSlide(swiper.activeIndex - 2)
+    swipeCount += 1
+    if (wishesCount == swipeCount) {
+      window.location.href = homeUrl
+    }
 
     })
-
     swiper.on('slidePrevTransitionEnd', (e) => {
       // console.log("prev -> liked");
       // console.log(swiper.activeIndex)
@@ -42,7 +48,15 @@ export default class extends Controller {
       // this.wishTarget.classList.add("d-none")
       // const wishId =
       const wishId = swiper.slides[e.previousIndex].dataset.wishId;
+      const wishesCount = swiper.slides[e.realIndex].dataset.wishesCount;
+      const homeUrl = swiper.slides[e.realIndex].dataset.homeUrl;
+
       swiper.removeSlide(swiper.activeIndex)
+      swipeCount += 1
+      if (wishesCount == swipeCount) {
+        window.location.href = homeUrl
+      }
+
 
       if (swiper.activeIndex === 1) {
         swiper.slideTo(swiper.activeIndex -1, 0, false)
@@ -58,10 +72,8 @@ export default class extends Controller {
       })
       .then(response => response.json())
       .then((data) => {
-        console.log(data);
       });
     })
-
 
   }
 }

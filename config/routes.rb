@@ -6,7 +6,11 @@ Rails.application.routes.draw do
     resources :likes, only: [:create]
   end
 
-  resources :matches, only: [:show, :index, :create] do
+  resources :matches, only: [:show, :index, :create, :destroy] do
     resources :locations, only: [:show, :index]
+  end
+
+  resources :chatrooms, only: :show do
+    resources :messages, only: :create
   end
 end
