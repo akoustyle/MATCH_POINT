@@ -26,6 +26,7 @@ require("channels")
 import "bootstrap";
 
 import { initMapbox } from '../plugins/init_mapbox';
+import { initChatroomCable } from '../channels/chatroom_channel';
 // import { initSwiper } from '../plugins/init_swiper';
 
 // Internal imports, e.g:
@@ -35,6 +36,7 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   initMapbox();
+  initChatroomCable();
   // initSwiper();
 });
 

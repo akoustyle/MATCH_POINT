@@ -36,6 +36,12 @@ ActiveRecord::Schema.define(version: 2021_08_30_144631) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "chatrooms", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "likes", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "wish_id", null: false
@@ -63,6 +69,16 @@ ActiveRecord::Schema.define(version: 2021_08_30_144631) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "status"
     t.index ["location_id"], name: "index_matches_on_location_id"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.string "content"
+    t.bigint "chatroom_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["chatroom_id"], name: "index_messages_on_chatroom_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
   create_table "preferences", force: :cascade do |t|
@@ -115,6 +131,8 @@ ActiveRecord::Schema.define(version: 2021_08_30_144631) do
   add_foreign_key "likes", "wishes"
   add_foreign_key "locations", "sports"
   add_foreign_key "matches", "locations"
+  add_foreign_key "messages", "chatrooms"
+  add_foreign_key "messages", "users"
   add_foreign_key "preferences", "sports"
   add_foreign_key "preferences", "users"
   add_foreign_key "wishes", "matches"
