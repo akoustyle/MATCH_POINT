@@ -17,4 +17,14 @@ class MatchesController < ApplicationController
   def index
     @matches = policy_scope(Match)
   end
+
+  def create
+  end
+
+  def destroy
+    @match = Match.find(params[:id])
+    authorize @match
+    @match.destroy
+    redirect_to matches_path
+  end
 end
