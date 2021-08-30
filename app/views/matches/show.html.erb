@@ -1,3 +1,5 @@
+<%= render 'shared/navbar' %>
+<div class="matches-show">
 <div class="card-current-match">
     <%# Wish.where.not(user: self).where(match_id: @match.id).user.photo.key %>
     <% @match.wishes.each do |wish| %>
@@ -21,3 +23,4 @@
      style="width: 100%; height: 300px;"
      data-markers="<%= @marker.to_json %>"
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+</div>
