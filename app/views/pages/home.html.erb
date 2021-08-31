@@ -17,9 +17,10 @@
 -->
 <%= render 'shared/navbar' %>
 <div class="banner">
+<div class="home-content">
 <% if user_signed_in? %>
 <div class='p-4 mb-4 text-center' >
-  <h1>Get motivated with us! Find a sport buddy today</h1>
+  <h1>Get <mark class="red">motivated</mark> with us! Find a sport buddy today</h1>
 </div>
   <%= render 'shared/dropdown' %>
 <% else %>
@@ -28,3 +29,4 @@
   Join them in the provided location</p>
   </div>
 <% end %>
+</div>
