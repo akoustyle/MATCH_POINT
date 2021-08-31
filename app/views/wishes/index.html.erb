@@ -6,12 +6,17 @@
           <% @wishes.each do |wish|%>
             <div class="swiper-slide" data-swiper-target="wish" data-home-url="<%= root_url %>" data-swiper-id=<%= wish.id %> data-wish-id="<%= wish.id %>" data-wishes-count=<%= @wishes.count %>>
               <div class="wish-card-category" data-wish-id="<%= wish.id %>">
-                <div class="wish-info">
+                <div class="wish-info" >
                   <%= cl_image_tag wish.user.photo.key, class: 'card-cover' %>
-                  <div class="wish-card-details">
-                    <h2><%= wish.user.username %>, <%= wish.user.age %> years old</h2>
-                    <p><i class="fas fa-stopwatch fax2"></i>  <%= wish.sport.name %></p>
-                    <p><i class="fas fa-street-view"></i>  <%= Geocoder::Calculations.distance_between([@user_wish.latitude, @user_wish.longitude], [wish.latitude,wish.longitude]).truncate(1) %>km</p>
+                  <div class="wish-username">
+                    <%= wish.user.username %>, <%= wish.user.age %> years
+                    <div class="wish-sport">
+                      <%= wish.sport.name %>
+                    </div>
+                    <div class="wish-km">
+                      <i class="fas fa-map-marker-alt"></i>    <%= Geocoder::Calculations.distance_between([@user_wish.latitude, @user_wish.longitude], [wish.latitude,wish.longitude]).truncate(1) %>km
+                    </div>
+
                   </div>
                 </div>
               </div>
@@ -19,6 +24,15 @@
           <% end %>
         </div>
       </div>
+      <div class="wish-button">
+        <div>
+          <a class="btn btn-ghost" href="#"><i class="fas fa-times"></i> Nope</a>
+        </div>
+        <div class="wish-button-match">
+          <a class="btn btn-flat" href="#"><i class="far fa-heart"></i> Match</a>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
