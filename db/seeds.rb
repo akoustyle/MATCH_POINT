@@ -13,13 +13,13 @@ puts "Destroying all Likes..."
 Like.destroy_all
 puts "All likes destroyed successfully!"
 
-puts "Destroying all Likes..."
+puts "Destroying all Messages..."
 Message.destroy_all
-puts "All likes destroyed successfully!"
+puts "All messages destroyed successfully!"
 
-puts "Destroying all Likes..."
+puts "Destroying all Chatrooms..."
 Chatroom.destroy_all
-puts "All likes destroyed successfully!"
+puts "All chatrooms destroyed successfully!"
 
 puts "Destroying all Wishes..."
 Wish.destroy_all

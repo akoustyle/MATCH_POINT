@@ -1,6 +1,6 @@
 class WishesController < ApplicationController
   def index
-    @wishes = policy_scope(Wish)
+    @wishes = policy_scope(Wish).where.not(id: current_user.likes.pluck(:wish_id))
     @user_wish = current_user.wishes.where(date: Date.today).last
   #   if params.dig(:search, :query).present?
   #     @wishes = @wishes.search_by_sport(params.dig(:search, :query))
