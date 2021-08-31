@@ -11,6 +11,7 @@ import { Controller } from "stimulus"
 import Swiper from 'swiper';
 import "swiper/swiper-bundle.min.css";
 import { csrfToken } from "@rails/ujs";
+import swal from 'sweetalert';
 
 export default class extends Controller {
   static targets = [ "wish" ]
@@ -72,6 +73,17 @@ export default class extends Controller {
       })
       .then(response => response.json())
       .then((data) => {
+        console.log(data)
+        if (data.match) {
+          const html = document.createElement("div");
+          html.innerHTML = data.swal_content;
+          swal({
+            title: "You have a match",
+            content: html,
+            className: "match-swal",
+            icon: "success"
+          });
+        }
       });
     })
 
