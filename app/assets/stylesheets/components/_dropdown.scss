@@ -1,15 +1,18 @@
 .wish-dropdown {
-  width: 300px;
   height: 56px;
   text-align-last: center;
   border-radius: 20px;
   color: $gray;
   font-weight: 700;
-  width: 100%;
   border: none;
-  position: absolute;
 }
 
 .wish_sport {
   margin: 0px;
+}
+
+.wish-form-group {
+  z-index: 9999;
+  padding: 15px;
+
 }
