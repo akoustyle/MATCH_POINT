@@ -5,7 +5,7 @@
   <div class="row">
     <div class="col-12">
       <div class="swiper" data-controller="swiper" >
-        <div class="py-5 swiper-wrapper">
+        <div class="pt-5 mt-4 swiper-wrapper">
           <% @wishes.each do |wish|%>
             <div class="swiper-slide" data-swiper-target="wish" data-home-url="<%= root_url %>" data-swiper-id=<%= wish.id %> data-wish-id="<%= wish.id %>" data-wishes-count=<%= @wishes.count %>>
               <div class="wish-card-category" data-wish-id="<%= wish.id %>">
