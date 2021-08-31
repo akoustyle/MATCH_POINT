@@ -8,9 +8,8 @@ body {
 }
 
 .content-wrapper {
-  min-height: calc(100vh - 70px);
-}
-
-.navbar-padding {
+  min-height: 100vh;
   padding-top: 56px;
+  padding-bottom: 70px;
+  // background-color: transparent;
 }
