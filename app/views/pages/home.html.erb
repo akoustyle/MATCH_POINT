@@ -1,32 +1,17 @@
-<!-- <div class="align-items-center justify-content-center">
-  <div class="card m-4 rounded-3 shadow-sm">
-    <div class="card-header py-3">
-      <h4 class="my-0 fw-normal">Join Match Point app for Women</h4>
-    </div>
-    <div class="card-body">
-      <h1 class="card-title pricing-card-title">Get starting for free<small class="text-muted fw-light"></small></h1>
-      <p>Release your potential and find a sports partner.</p>
-
-      <%= simple_form_for Wish.new, url: wishes_path, method: :post do |f| %>
-      <%= f.input :sport, collection: Sport.all.pluck(:name) %>
-      <%= f.submit %>
-      <% end %>
-    </div>
-  </div>
-</div>
--->
-<%= render 'shared/navbar' %>
 <div class="banner">
-<div class="home-content">
-<% if user_signed_in? %>
-<div class='p-4 mb-4 text-center' >
-  <h1>Get <mark class="red">motivated</mark> with us! Find a sport buddy today</h1>
-</div>
-  <%= render 'shared/dropdown' %>
-<% else %>
-  <h3 class='m-0'>Find your sport buddy now!</h3><br><br>
-  <p>Match Point is the first sport app dedicated to women<br>Instantly get matched with people of your choice<br>
-  Join them in the provided location</p>
+  <div class="home-content">
+    <% if user_signed_in? %>
+      <div class='p-4 mb-4 text-center' >
+        <h1>Get <mark class="red">motivated</mark> with us! Find a sport buddy today</h1>
+      </div>
+      <%= render 'shared/dropdown' %>
+    <% else %>
+      <h3 class='m-0'>Find your sport buddy now!</h3>
+      <br>
+      <br>
+      <p>Match Point is the first sport app dedicated to women<br>
+        Instantly get matched with people of your choice<br>
+        Join them in the provided location</p>
+    <% end %>
   </div>
-<% end %>
 </div>

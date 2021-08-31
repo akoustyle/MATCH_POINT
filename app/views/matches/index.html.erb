@@ -12,8 +12,7 @@
     <%# <h2><%= No Match found %>
   <%# <% end %>
 <%# </div> %>
-<%= render 'shared/navbar' %>
-<ul class="flex-column match-index nav-pad">
+<ul class="flex-column card-match">
   <% current_user.likes.where(liked: true).joins(wish: :match).each do |like| %>
     <%= link_to match_path(like.wish.match) do %>
       <div class="card-other-matches">

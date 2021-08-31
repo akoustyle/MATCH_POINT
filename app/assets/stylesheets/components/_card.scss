@@ -5,7 +5,7 @@
   display: flex;
   justify-content:flex-start;
   align-items:flex-end;
-  color: #F15555;
+  color: $red;
   font-size: 24px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
@@ -83,23 +83,32 @@
   }
 }
 
-.match-index {
-  padding: 0px 10px;
+.card-match {
+  padding: 56px 10px;
+
   list-style-type: none;
   li {
     color: black;
-
+  }
+  ul {
+    margin: 0px;
   }
 }
 
+.img-index {
+  width: 100px;
+  height: 100px;
+}
+
 .card-other-matches {
-  overflow: hidden;
-  margin-top: 10px;
-  height: 120px;
+  // overflow: hidden;
+  // height: 120px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
-  align-items: center;
+  margin: 15px;
+  border-radius: 10px;
+  // align-items: center;
 
   img {
   height: 100%;
