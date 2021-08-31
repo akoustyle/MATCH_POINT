@@ -5,30 +5,83 @@
   font: 14px/20px "Lato", Arial, sans-serif;
   padding: 40px 0;
   color: white;
-
+}
 
  .message-otheruser {
    align-self: flex-start;
-   background-color: #F15555;
-   color: chocolate;
-   border-bottom-right-radius: 10px;
+
    margin-bottom: 15px;
+   .message-content{
+     background-color: #F7F7F7;
+     color: #F15555;
+     border-radius: 10px;
+     margin-top: 10px;
+     padding: 1px;
+     padding-left: 5px;
+   }
+   .message-content:after {
+  content: "";
+  position: absolute;
+  border: 10px solid #FFF;
+  border-top: 10px solid #fff;
+  border-right: none;
+  bottom: -22px;
+  right: 10px;
+
+  right: auto;
+  bottom: auto;
+  top: -20px;
+  left: 9px;
+  border: 10px solid transparent;
+  border-bottom: 10px solid #FFF;
+  border-left: none;
+
+}
  }
   .message-currentuser {
     align-self: flex-end;
     border-radius: 7px;
     color: ffff;
-    .message-content {
-    align-self: flex-end;
-    color: white;
-    padding: 5px;
-    background-color: #F15555;
-    margin-bottom: 15px;
-    margin-right: 5px;
-       &:after {
-         border-bottom-color: $blue;
-         left: 93%;
-       }
-    }
- }
+    .message-content{
+     background-color: #F15555;
+     color: #fff;
+     border-radius: 10px;
+     margin-top: 10px;
+     text-align:right;
+     padding: 1px;
+     padding-right: 5px;
+   }
+   .message-content:after {
+  content: "";
+  position: absolute;
+  border: 10px solid transparent;
+  border-top: 10px solid #F15555;
+  border-left: none;
+  bottom: -5px;
+  left: 10px;
+
+  left: auto;
+  bottom: auto;
+  top: -20px;
+  right: 9px;
+  border: 10px solid transparent;
+  border-bottom: 10px solid #F15555;
+  border-right: none;
+  }
+}
+.message-content {
+  align-self: flex-end;
+  position:relative;
+  margin-bottom: 15px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.input-holder {
+  display: flex;
+  border-top: 1px solid rgba(0, 0, 0, .1);
+  align-items: center;
+  .form-group {
+    margin-bottom: 0;
+    flex-grow: 1;
+  }
 }
