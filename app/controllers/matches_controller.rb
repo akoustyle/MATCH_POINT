@@ -2,12 +2,14 @@ class MatchesController < ApplicationController
   def show
     @match = Match.find(params[:id])
     authorize @match
-    @match.wishes.each do |wish|
-      if wish.user != current_user
+    locations = Location.where(sport_id: @match.wishes.first.sport_id)
+    # @match.wishes.each do |wish|
+    locations.each do |location|
+      if @match.wishes.last.user != current_user
         @marker =[{
-          lat: wish.latitude,
-          lng: wish.longitude,
-          info_window: render_to_string(partial: "info_window", locals: { wish: wish }),
+          lat: location.latitude,
+          lng: location.longitude,
+          info_window: render_to_string(partial: "info_window", locals: { location: location }),
           image_url: helpers.asset_url('blue-marker.jpg')
         }]
       end

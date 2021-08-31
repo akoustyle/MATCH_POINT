@@ -14,18 +14,20 @@ class WishesController < ApplicationController
   end
 
   def create
-    @wish = Wish.new
-    @wish.user = current_user
     @sport = Sport.find_by(name: params[:wish][:sport])
-    @wish.sport = @sport
-    @wish.date = Date.today
-    @wish.location = Location.last.address
-    authorize @wish
-    if @wish.save
-      redirect_to wishes_path
+    @wish = Wish.find_by(user: current_user, sport: @sport, date: Date.today)
+    if @wish
+      authorize @wish
     else
-      render 'pages/home'
+      @wish = Wish.new
+      @wish.date = Date.today
+      @wish.user = current_user
+      @wish.sport = @sport
+      @wish.location = Location.last.address
+      authorize @wish
+      @wish.save
     end
+    redirect_to wishes_path
   end
 
   # private
