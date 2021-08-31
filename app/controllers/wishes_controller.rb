@@ -1,12 +1,10 @@
 class WishesController < ApplicationController
   def index
-    @wishes = policy_scope(Wish).order(created_at: :desc)
+    @wishes = policy_scope(Wish)
     @user_wish = current_user.wishes.where(date: Date.today).last
   #   if params.dig(:search, :query).present?
   #     @wishes = @wishes.search_by_sport(params.dig(:search, :query))
   end
-
-
 
   def show
   end
@@ -16,18 +14,20 @@ class WishesController < ApplicationController
   end
 
   def create
-    @wish = Wish.new
-    @wish.user = current_user
     @sport = Sport.find_by(name: params[:wish][:sport])
-    @wish.sport = @sport
-    @wish.date = Date.today
-    @wish.location = Location.last.address
-    authorize @wish
-    if @wish.save
-      redirect_to wishes_path
+    @wish = Wish.find_by(user: current_user, sport: @sport, date: Date.today)
+    if @wish
+      authorize @wish
     else
-      render 'pages/home'
+      @wish = Wish.new
+      @wish.date = Date.today
+      @wish.user = current_user
+      @wish.sport = @sport
+      @wish.location = Location.last.address
+      authorize @wish
+      @wish.save
     end
+    redirect_to wishes_path
   end
 
   # private

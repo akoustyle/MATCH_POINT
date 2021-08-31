@@ -1,10 +1,20 @@
-.wish-dropdown {
+.home-dropdown {
   height: 56px;
   text-align-last: center;
   border-radius: 20px;
   color: $gray;
   font-weight: 700;
   border: none;
+  margin: 0px;
+
+}
+
+.wish-index-dropdown {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
 }
 
 .wish_sport {
@@ -13,6 +23,5 @@
 
 .wish-form-group {
   z-index: 9999;
-  padding: 14px;
   padding-bottom: 0px;
 }

@@ -87,7 +87,7 @@
 }
 
 .card-match {
-  padding: 56px 10px;
+  padding: 0px 10px;
 
   list-style-type: none;
   li {
@@ -110,6 +110,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   margin: 15px;
+  margin-top: 0px;
   border-radius: 10px;
   // align-items: center;
 
