@@ -81,8 +81,11 @@ export default class extends Controller {
             title: "You have a match",
             content: html,
             className: "match-swal",
-            icon: "success"
-          });
+            icon: "success",
+            button: {
+              visible: false
+            }
+          })
         }
       });
     })
