@@ -4,11 +4,17 @@
     <% @match.wishes.each do |wish| %>
       <% if wish.user != current_user %>
         <%= cl_image_tag wish.user.photo.key, class: 'img-index' %>
-        <ul>
+       <!-- <ul>
         <li><%= wish.user.username %></li>
         <li><%= wish.user.age %></li>
         <li><%= wish.sport.name %></li>
         </ul>
+        Je tente un truc de style pour faire comme l'index des wishes,
+        Bisous Cricri-->
+        <div class="match-card-details">
+          <h2><%= wish.user.username %>, <%= wish.user.age %> years old</h2>
+          <p><i class="fas fa-stopwatch fax2"></i>  <%= wish.sport.name %></p>
+        </div>
       <% end %>
     <% end %>
     <!--<img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg"> !-->
@@ -17,7 +23,7 @@
       <%= render "recent_match" %>
     </div>
   </div>
-  <%= link_to "Chat with your new buddy", chatroom_path(@match.chatroom) %>
+  <i class="far fa-comments"><%= link_to chatroom_path(@match.chatroom), class: "chat-button-show" %></i>
 </div>
 
 <%# if policy(Match).destroy? %>

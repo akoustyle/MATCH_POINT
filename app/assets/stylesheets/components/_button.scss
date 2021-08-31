@@ -8,5 +8,18 @@
   padding: 5px 100px;
   border: none;
   margin-top: 20px;
-  background-color: #F15555;
+  background-color: $red;
+}
+
+.chat-button-show {
+  text-align-last: center;
+  border-radius: 20px;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  width: 100%;
+  padding: 5px 100px;
+  border: none;
+  margin-top: 20px;
+  background-color: $red;
 }
