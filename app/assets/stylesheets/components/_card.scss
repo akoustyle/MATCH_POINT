@@ -1,35 +1,38 @@
 .wish-card-category {
   background-size: cover;
   background-position: center;
-  height: 60vh;
+  height: 52vh;
   display: flex;
   justify-content:flex-start;
   align-items:flex-end;
-  color: #F15555;
+  color: $red;
   font-size: 24px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin-top: 70px;
 }
 
 .wish-info {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 1px rgba(0,0,0,0.2);
+  border-radius: 5px;
 }
 
 .wish-info > img {
   height: 374px;
-  width: 350px;
+  width: 345px;
   object-fit: cover;
   border-radius: 5px;
+  background-position: center;
+  background-size: cover;
 }
 .wish-card-details {
   width: 100%;
 	padding: 2.125rem 1.25rem 2.625rem 1.25rem;
-	border-radius: 0 0 12px 12px;
+	// border-radius: 0 0 12px 12px;
 }
 .wish-info h2 {
   font-size: 16px;
@@ -83,23 +86,32 @@
   }
 }
 
-.match-index {
-  padding: 0px 10px;
+.card-match {
+  padding: 56px 10px;
+
   list-style-type: none;
   li {
     color: black;
-
+  }
+  ul {
+    margin: 0px;
   }
 }
 
+.img-index {
+  width: 100px;
+  height: 100px;
+}
+
 .card-other-matches {
-  overflow: hidden;
-  margin-top: 10px;
-  height: 120px;
+  // overflow: hidden;
+  // height: 120px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
-  align-items: center;
+  margin: 15px;
+  border-radius: 10px;
+  // align-items: center;
 
   img {
   height: 100%;

@@ -18,6 +18,11 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
     <%= favicon_link_tag asset_path('icon.png') %>  </head>
   <body>
+    <% if controller_name == "wishes" && action_name == "index" %>
+      <%= render "shared/dropdown" %>
+    <% else %>
+      <%= render "shared/navbar" %>
+    <% end %>
     <div class="content-wrapper">
       <%= yield %>
     </div>

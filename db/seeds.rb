@@ -292,7 +292,7 @@ puts "Wish saved successfully!"
                   password: "123456",
                   age: rand(18..45))
   puts 'attaching photos on user...'
-  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
   user_first.photo.attach(io: user_photo, filename: "#{user.username}_#{user.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user.username}..."
   user_first.save!
@@ -313,7 +313,7 @@ puts "Wish saved successfully!"
                   password: "123456",
                   age: rand(18..45))
   puts 'attaching photos on user...'
-  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
   user.photo.attach(io: user_photo, filename: "#{user.username}_#{user.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user.username}..."
   user.save!
@@ -353,7 +353,7 @@ end
                   password: "123456",
                   age: rand(18..45))
   puts 'attaching photos on first user...'
-  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
   user_first.photo.attach(io: user_photo, filename: "#{user_first.username}_#{user_first.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user_first.username}..."
   user_first.save!
@@ -364,7 +364,7 @@ end
                   password: "123456",
                   age: rand(18..45))
   puts 'attaching photos on second user....'
-  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
   user_second.photo.attach(io: user_photo, filename: "#{user_second.username}_#{user_second.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user_second.username}..."
   user_second.save!
@@ -410,7 +410,7 @@ end
                   password: "123456",
                   age: rand(18..45))
   puts 'attaching photos on first user...'
-  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
   user_first.photo.attach(io: user_photo, filename: "#{user_first.username}_#{user_first.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user_first.username}..."
   user_first.save!
@@ -421,7 +421,7 @@ end
                   password: "123456",
                   age: rand(18..45))
   puts 'attaching photos on second user....'
-  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
   user_second.photo.attach(io: user_photo, filename: "#{user_second.username}_#{user_second.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user_second.username}..."
   user_second.save!
@@ -467,7 +467,7 @@ end
                   password: "123456",
                   age: rand(18..45))
   puts 'attaching photos on first user...'
-  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
   user_first.photo.attach(io: user_photo, filename: "#{user_first.username}_#{user_first.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user_first.username}..."
   user_first.save!
@@ -478,7 +478,7 @@ end
                   password: "123456",
                   age: rand(18..45))
   puts 'attaching photos on second user....'
-  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
   user_second.photo.attach(io: user_photo, filename: "#{user_second.username}_#{user_second.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user_second.username}..."
   user_second.save!
@@ -524,7 +524,7 @@ end
                   password: "123456",
                   age: rand(18..45))
   puts 'attaching photos on first user...'
-  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
   user_first.photo.attach(io: user_photo, filename: "#{user_first.username}_#{user_first.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user_first.username}..."
   user_first.save!
@@ -535,7 +535,7 @@ end
                   password: "123456",
                   age: rand(18..45))
   puts 'attaching photos on second user....'
-  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
   user_second.photo.attach(io: user_photo, filename: "#{user_second.username}_#{user_second.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user_second.username}..."
   user_second.save!
@@ -581,7 +581,7 @@ end
                   password: "123456",
                   age: rand(18..45))
   puts 'attaching photos on first user...'
-  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
   user_first.photo.attach(io: user_photo, filename: "#{user_first.username}_#{user_first.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user_first.username}..."
   user_first.save!
@@ -592,7 +592,7 @@ end
                   password: "123456",
                   age: rand(18..45))
   puts 'attaching photos on second user....'
-  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
   user_second.photo.attach(io: user_photo, filename: "#{user_second.username}_#{user_second.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user_second.username}..."
   user_second.save!
@@ -638,7 +638,7 @@ end
                   password: "123456",
                   age: rand(18..45))
   puts 'attaching photos on first user...'
-  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
   user_first.photo.attach(io: user_photo, filename: "#{user_first.username}_#{user_first.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user_first.username}..."
   user_first.save!
@@ -649,7 +649,7 @@ end
                   password: "123456",
                   age: rand(18..45))
   puts 'attaching photos on second user....'
-  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
   user_second.photo.attach(io: user_photo, filename: "#{user_second.username}_#{user_second.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user_second.username}..."
   user_second.save!
@@ -695,7 +695,7 @@ end
                   password: "123456",
                   age: rand(18..45))
   puts 'attaching photos on first user...'
-  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
   user_first.photo.attach(io: user_photo, filename: "#{user_first.username}_#{user_first.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user_first.username}..."
   user_first.save!
@@ -706,7 +706,7 @@ end
                   password: "123456",
                   age: rand(18..45))
   puts 'attaching photos on second user....'
-  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
   user_second.photo.attach(io: user_photo, filename: "#{user_second.username}_#{user_second.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user_second.username}..."
   user_second.save!
@@ -752,7 +752,7 @@ end
                   password: "123456",
                   age: rand(18..45))
   puts 'attaching photos on first user...'
-  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
   user_first.photo.attach(io: user_photo, filename: "#{user_first.username}_#{user_first.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user_first.username}..."
   user_first.save!
@@ -763,7 +763,7 @@ end
                   password: "123456",
                   age: rand(18..45))
   puts 'attaching photos on second user....'
-  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
   user_second.photo.attach(io: user_photo, filename: "#{user_second.username}_#{user_second.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user_second.username}..."
   user_second.save!
@@ -809,7 +809,7 @@ end
                   password: "123456",
                   age: rand(18..45))
   puts 'attaching photos on first user...'
-  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
   user_first.photo.attach(io: user_photo, filename: "#{user_first.username}_#{user_first.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user_first.username}..."
   user_first.save!
@@ -820,7 +820,7 @@ end
                   password: "123456",
                   age: rand(18..45))
   puts 'attaching photos on second user....'
-  user_photo = URI.open("https://source.unsplash.com/collection/12137073/girl")
+  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
   user_second.photo.attach(io: user_photo, filename: "#{user_second.username}_#{user_second.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user_second.username}..."
   user_second.save!

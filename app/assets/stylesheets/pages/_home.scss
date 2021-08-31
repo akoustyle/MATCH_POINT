@@ -36,27 +36,21 @@ div.p-2 h3 {
   border-radius: 15px
 }
 
+.home-content p {
+  font-family: 'Noto Sans HK', sans-serif;
+  font-size: 20px;
+}
+
 h3 {
   margin-top: 40px;
   font-size: 26px;
   font-family: 'Noto Sans HK', sans-serif;
 }
 
-// .home-sign-out {
-//   background-image: center;
-//   color: white;
-//   padding-bottom: 237px;
-//   padding-top: 237px;
-//   text-align: center;
-//   background-size: cover;
-//   font-family: 'Noto Sans HK', sans-serif;
-// }
-
-
-// .center-ok {
-//   text-align: -webkit-center;
-// }
-
-// .new_wish {
-//   width: fit-content;
-// }
+.sign-out-h1 {
+  padding-top: 70px;
+}
+ .home-content p {
+    font-size: 20px;
+    padding: 0px 20px 0px 20px;
+ }

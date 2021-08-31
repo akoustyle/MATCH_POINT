@@ -7,14 +7,6 @@ body {
   height: 100vh;
 }
 
-delete-button {
-position: absolute;
-width: 131px;
-height: 48px;
-left: 169px;
-top: 426px;
-
-background: #EC1A1A;
-border: 8px solid #FFD1D1;
-border-radius: 30px;
+.content-wrapper {
+  min-height: calc(100vh - 70px);
 }
