@@ -2,7 +2,7 @@ import { Controller } from "stimulus"
 import { csrfToken } from "@rails/ujs";
 
 export default class extends Controller {
-  static targets = [ "wish" ]
+  static targets = [ "wish", "select" ]
 
   connect() {
     // this.outputTarget.textContent = 'Hello, Stimulus!'
@@ -18,5 +18,9 @@ export default class extends Controller {
     this.element.submit();
   }
 
+  show() {
+    const event = new MouseEvent("mousedown")
+    this.selectTarget.dispatchEvent(event);
+  }
 
   }

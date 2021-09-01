@@ -24,6 +24,18 @@ div.p-2 h3 {
   justify-content: center;
 }
 
+#page-form #new_wish {
+  position: relative;
+
+  i {
+    position: absolute;
+    right: 83px;
+    top: 23px;
+    color: $red;
+    pointer-events: none
+  }
+}
+
 .red {
   color: $red;
   background: url(stroke2.png);

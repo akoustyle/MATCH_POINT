@@ -10,8 +10,8 @@
                   error: 'Please select a sport to begin your journey',
                   required: false,
                   wrapper_html: { class: 'wish-form-group' },
-                  input_html: { class: "home-dropdown #{"wish-index-dropdown" if controller_name == "wishes" && action_name == "index"}", data: { action: "input->wish-dropdown#submit" } } %>
-      <i class="fas fa-angle-down", data-action="input->wish-dropdown#submit" ></i>
+                  input_html: { class: "home-dropdown #{"wish-index-dropdown" if controller_name == "wishes" && action_name == "index"}", data: { action: "input->wish-dropdown#submit", wish_dropdown_target: 'select' } } %>
+      <i class="fas fa-angle-down"></i>
     <% end %>
   </div>
 </div>

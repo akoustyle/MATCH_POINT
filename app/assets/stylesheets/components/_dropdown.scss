@@ -11,6 +11,19 @@
   line-height: 2;
 }
 
+
+#page-form #new_wish {
+  position: relative;
+
+  i {
+    position: absolute;
+    right: 83px;
+    top: 23px;
+    color: $red;
+    pointer-events: none
+  }
+}
+
 #new_wish {
   position: relative;
 
@@ -19,6 +32,7 @@
     right: 83px;
     top: 37px;
     color: $red;
+    pointer-events: none
   }
 }
 
@@ -37,7 +51,4 @@
 .wish-form-group {
   z-index: 9999;
   padding-bottom: 0px;
-}
-
-.arrow {
 }
