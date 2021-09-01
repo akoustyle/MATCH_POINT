@@ -5,17 +5,18 @@
         <div class="pt-5 mt-4 swiper-wrapper">
           <% @wishes.each do |wish|%>
             <div class="swiper-slide" data-swiper-target="wish" data-home-url="<%= root_url %>" data-swiper-id=<%= wish.id %> data-wish-id="<%= wish.id %>" data-wishes-count=<%= @wishes.count %>>
-              <div class="wish-card-category" data-wish-id="<%= wish.id %>">
+              <div class="wish-card-category" data-wish-id="<%= wish.id %>" style="background-image: url(<%= cl_image_path wish.user.photo.key %>)">
+                    <div class="tag">
+                      <div class="wish-tag">
+                        <%= wish.sport.name %>
+                      </div>
+                      <div class="wish-tag">
+                        <i class="fas fa-map-marker-alt"></i><%= Geocoder::Calculations.distance_between([@user_wish.latitude, @user_wish.longitude], [wish.latitude,wish.longitude]).truncate(1) %>km
+                      </div>
+                    </div>
                 <div class="wish-info" >
-                  <%= cl_image_tag wish.user.photo.key, class: 'card-cover' %>
                   <div class="wish-username">
                     <%= wish.user.username %>, <%= wish.user.age %> years old
-                    <div class="wish-sport">
-                      <%= wish.sport.name %>
-                    </div>
-                    <div class="wish-km">
-                      <i class="fas fa-map-marker-alt"></i><%= Geocoder::Calculations.distance_between([@user_wish.latitude, @user_wish.longitude], [wish.latitude,wish.longitude]).truncate(1) %>km
-                    </div>
                   </div>
                 </div>
               </div>

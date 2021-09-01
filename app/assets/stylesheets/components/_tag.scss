@@ -1,0 +1,27 @@
+.wish-tag {
+  height: 35px;
+  width: fit-content;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  padding: 8px;
+  color: #8D2929;
+  background: #EFDDDD;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+  i {
+    margin-right: 2px;
+  }
+}
+
+.tag {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  // position: absolute;
+  // top: -285px;
+}
