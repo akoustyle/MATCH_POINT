@@ -2,22 +2,21 @@
   background-size: cover;
   background-position: center;
   height: 52vh;
+  width: 92vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items:flex-start;
+  align-items: flex-start;
   color: $red;
   font-size: 24px;
   font-weight: bolder;
-  border-radius: 8px;
-  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
   padding: 20px;
 }
 
 .wish-info {
   overflow: hidden;
   // background: white;
-  box-shadow: 0 0 1px rgba(0,0,0,0.2);
+  // box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 }
 
@@ -31,29 +30,29 @@
 }
 .wish-card-details {
   width: 100%;
-	padding: 2.125rem 1.25rem 2.625rem 1.25rem;
-	// border-radius: 0 0 12px 12px;
+  padding: 2.125rem 1.25rem 2.625rem 1.25rem;
+  // border-radius: 0 0 12px 12px;
 }
 
 .wish-username {
-/* position: absolute;
+  /* position: absolute;
 width: 257px;
 height: 54px;
 left: 13px;
 top: 351px; */
 
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-/* line-height: 18px; */
-/* or 150% */
-color: #FFFFFF;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  /* line-height: 18px; */
+  /* or 150% */
+  color: #ffffff;
 }
 
 .match-card-details {
   width: 100%;
-	padding: 15px;
-h2 {
+  padding: 15px;
+  h2 {
     padding-bottom: 15px;
   }
 }
@@ -61,34 +60,34 @@ h2 {
 .card-current-match {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 
   img {
-  height: 200px;
-  width: 100%;
-  object-fit: cover;
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
   }
 
   h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
   }
 
   p {
-  font-size: 12px;
-  opacity: .7;
-  margin: 0;
+    font-size: 12px;
+    opacity: 0.7;
+    margin: 0;
   }
 
   ul {
-  padding: 0px 10px;
+    padding: 0px 10px;
   }
 
   li {
-  font-family: "Noto Sans HK", "sans-serif";
-  color: $red;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    font-family: "Noto Sans HK", "sans-serif";
+    color: $red;
+    // text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -98,7 +97,6 @@ h2 {
     color: $red;
   }
 }
-
 
 // .card-current-match .card-current-match-infos {
 //   padding: 16px;
@@ -133,7 +131,7 @@ h2 {
   // overflow: hidden;
   // height: 120px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   display: flex;
   margin: 15px;
   margin-top: 0px;
@@ -141,30 +139,30 @@ h2 {
   // align-items: center;
 
   img {
-  height: 100%;
-  width: 120px;
-  object-fit: cover;
+    height: 100%;
+    width: 120px;
+    object-fit: cover;
   }
 
   h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
   }
 
   p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
+    font-size: 12px;
+    line-height: 1.4;
+    opacity: 0.7;
+    margin-bottom: 0;
+    margin-top: 8px;
   }
 
   ul {
-  padding: 0px 10px;
+    padding: 0px 10px;
   }
 
   .card-other-matches-infos {
-  padding: 16px;
+    padding: 16px;
   }
 }
