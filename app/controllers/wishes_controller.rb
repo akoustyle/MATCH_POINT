@@ -1,10 +1,16 @@
 class WishesController < ApplicationController
   def index
-    @wishes = policy_scope(Wish).where.not(id: current_user.likes.pluck(:wish_id))
+    @wishes = policy_scope(Wish).where(sport: params[:sport] ? Sport.find(params[:sport]) : current_user.wishes.last.sport, date: Date.today).where.not(user: current_user).order(created_at: :desc).where.not(id: current_user.likes.pluck(:wish_id))
     # if params[:sport]
     #   @wishes = @wishes.select { |wish| wish.sport_id == params[:sport].to_i }
     # end
-    @user_wish = current_user.wishes.where(date: Date.today).last
+
+    if params[:sport]
+      @sport = Sport.find(params[:sport])
+      @user_wish = current_user.wishes.where(date: Date.today, sport: @sport).last
+    else
+      @user_wish = current_user.wishes.where(date: Date.today).last
+    end
   end
 
   def show
