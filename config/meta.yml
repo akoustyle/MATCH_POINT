@@ -1,0 +1,5 @@
+meta_product_name: "MatchPoint"
+meta_title: "MatchPoint - Sport app for women"
+meta_description: "Match Point is the first sport app dedicated to women! Instantly get matched with people of your choice! Join them in the provided location!"
+meta_image: "cover.png" # should exist in `app/assets/images/`
+twitter_account: "@lewagonparis"   # required for Twitter Cards
