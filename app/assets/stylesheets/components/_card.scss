@@ -3,18 +3,20 @@
   background-position: center;
   height: 52vh;
   display: flex;
-  justify-content:flex-start;
-  align-items:flex-end;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items:flex-start;
   color: $red;
   font-size: 24px;
   font-weight: bolder;
   border-radius: 8px;
   // box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 20px;
 }
 
 .wish-info {
   overflow: hidden;
-  background: white;
+  // background: white;
   box-shadow: 0 0 1px rgba(0,0,0,0.2);
   border-radius: 5px;
 }
@@ -32,48 +34,18 @@
 	padding: 2.125rem 1.25rem 2.625rem 1.25rem;
 	// border-radius: 0 0 12px 12px;
 }
-.wish-km {
-display: flex;
-flex-direction: row;
-align-items: baseline;
-justify-content: space-around;
-padding: 8px;
-color: #8D2929;
-position: absolute;
-width: 91px;
-height: 34px;
-left: 117px;
-top: -285px;
 
-background: #EFDDDD;
-border-radius: 6px;
-}
-.wish-sport {
-  display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 8px;
-color: #8D2929;
-position: absolute;
-width: 101px;
-height: 34px;
-left: 8px;
-top: -285px;
-
-background: #EFDDDD;
-border-radius: 6px;
-}
 .wish-username {
-position: absolute;
+/* position: absolute;
 width: 257px;
 height: 54px;
 left: 13px;
-top: 351px;
+top: 351px; */
 
 font-style: normal;
 font-weight: normal;
 font-size: 18px;
-line-height: 18px;
+/* line-height: 18px; */
 /* or 150% */
 color: #FFFFFF;
 }
@@ -119,6 +91,14 @@ h2 {
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   }
 }
+
+.card-current-match .container {
+  text-align: right;
+  #chat-link {
+    color: $red;
+  }
+}
+
 
 // .card-current-match .card-current-match-infos {
 //   padding: 16px;
