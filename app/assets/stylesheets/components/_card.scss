@@ -50,6 +50,14 @@ font-size: 18px;
 color: #FFFFFF;
 }
 
+.match-card-details {
+  width: 100%;
+	padding: 15px;
+h2 {
+    padding-bottom: 15px;
+  }
+}
+
 .card-current-match {
   overflow: hidden;
   background: white;
@@ -76,19 +84,33 @@ color: #FFFFFF;
   ul {
   padding: 0px 10px;
   }
-}
 
-.card-current-match .card-current-match-infos {
-  padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
-
-  ul {
-  padding: 0px 10px;
+  li {
+  font-family: "Noto Sans HK", "sans-serif";
+  color: $red;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   }
 }
+
+.card-current-match .container {
+  text-align: right;
+  #chat-link {
+    color: $red;
+  }
+}
+
+
+// .card-current-match .card-current-match-infos {
+//   padding: 16px;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: flex-end;
+//   position: relative;
+
+//   ul {
+//   padding: 0px 10px;
+//   }
+// }
 
 .card-match {
   padding: 0px 10px;
