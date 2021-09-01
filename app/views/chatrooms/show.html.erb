@@ -1,6 +1,6 @@
 <div class="chat-wrap">
   <h1><%= @chatroom.name %></h1>
-  <div class="container" id="messages" data-chatroom-id="<%= @chatroom.id %>">
+  <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
     <% @chatroom.messages.each do |message| %>
       <%= render 'messages/messages', message: message %>
     <% end %>

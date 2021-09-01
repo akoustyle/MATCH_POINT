@@ -23,3 +23,41 @@
   margin-top: 20px;
   background-color: $red;
 }
+.wish-button {
+  display:flex;
+  justify-content: center;
+  align-content: space-between;
+  margin-top: 10px;
+}
+.wish-button-match{
+background: $red;
+// border: 8px solid #FFD1D1;
+border-radius: 30px;
+}
+.btn-ghost {
+  color: black;
+  border: 1px solid #9d9b9be7;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  background: #9d9b9be7;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  margin-right: 10px;
+}
+
+.btn-ghost:hover {
+  opacity: 1;
+}
+.btn-flat {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 50px;
+  background: $red;
+  transition: background 0.3s ease;
+}
+
+.btn-flat:hover {
+  background: $red;
+  color: white;
+}
