@@ -14,7 +14,7 @@
                       <%= wish.sport.name %>
                     </div>
                     <div class="wish-km">
-                      <i class="fas fa-map-marker-alt"></i><%= @user_wish.id %>--  <%= wish.id %>    <%= Geocoder::Calculations.distance_between([@user_wish.latitude, @user_wish.longitude], [wish.latitude,wish.longitude]).truncate(1) %>km
+                      <i class="fas fa-map-marker-alt"></i><%= Geocoder::Calculations.distance_between([@user_wish.latitude, @user_wish.longitude], [wish.latitude,wish.longitude]).truncate(1) %>km
                     </div>
                   </div>
                 </div>
