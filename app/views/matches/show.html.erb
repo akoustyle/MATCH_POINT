@@ -1,5 +1,5 @@
 <div class="matches-show navbar-padding">
-<div class="card-current-match">
+  <div class="card-current-match">
     <%# Wish.where.not(user: self).where(match_id: @match.id).user.photo.key %>
     <% @match.wishes.each do |wish| %>
       <% if wish.user != current_user %>
@@ -8,30 +8,32 @@
         <li><%= wish.user.username %></li>
         <li><%= wish.user.age %></li>
         <li><%= wish.sport.name %></li>
-        </ul>
-        Je tente un truc de style pour faire comme l'index des wishes,
-        Bisous Cricri-->
+        </ul>-->
         <div class="match-card-details">
           <h2><%= wish.user.username %>, <%= wish.user.age %> years old</h2>
-          <p><i class="fas fa-stopwatch fax2"></i>  <%= wish.sport.name %></p>
+          <p><i class="fas fa-stopwatch fax2"></i> <%= wish.sport.name %></p>
         </div>
       <% end %>
     <% end %>
-    <!--<img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg"> !-->
-  <div class="card-current-match-infos">
-    <div>
-      <%= render "recent_match" %>
+    <div class="card-current-match-infos">
+      <div>
+        <%= render "recent_match" %>
+      </div>
+    </div>
+    <div class="container">
+      <%= link_to chatroom_path(@match.chatroom) do %>
+        <i id="chat-link" class="far fa-comments fa-3x"></i>
+      <% end %>
     </div>
   </div>
-  <i class="far fa-comments"><%= link_to chatroom_path(@match.chatroom), class: "chat-button-show" %></i>
-</div>
 
 <%# if policy(Match).destroy? %>
   <%#= link_to "Delete", matches_path, class: "delete-button", :confirm => 'Are you sure?', :method => :destroy %>
 <%# end %>
 
-<div id="map"
+  <div id="map"
      style="width: 100%; height: 300px;"
      data-markers="<%= @marker.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
 </div>

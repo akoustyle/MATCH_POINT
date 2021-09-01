@@ -120,6 +120,14 @@ h2 {
   }
 }
 
+.card-current-match .container {
+  text-align: right;
+  #chat-link {
+    color: $red;
+  }
+}
+
+
 // .card-current-match .card-current-match-infos {
 //   padding: 16px;
 //   display: flex;
