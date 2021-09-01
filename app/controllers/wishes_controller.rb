@@ -1,9 +1,16 @@
 class WishesController < ApplicationController
   def index
-    @wishes = policy_scope(Wish).where.not(id: current_user.likes.pluck(:wish_id))
-    @user_wish = current_user.wishes.where(date: Date.today).last
-  #   if params.dig(:search, :query).present?
-  #     @wishes = @wishes.search_by_sport(params.dig(:search, :query))
+    @wishes = policy_scope(Wish).where(sport: params[:sport] ? Sport.find(params[:sport]) : current_user.wishes.last.sport, date: Date.today).where.not(user: current_user).order(created_at: :desc).where.not(id: current_user.likes.pluck(:wish_id))
+    # if params[:sport]
+    #   @wishes = @wishes.select { |wish| wish.sport_id == params[:sport].to_i }
+    # end
+
+    if params[:sport]
+      @sport = Sport.find(params[:sport])
+      @user_wish = current_user.wishes.where(date: Date.today, sport: @sport).last
+    else
+      @user_wish = current_user.wishes.where(date: Date.today).last
+    end
   end
 
   def show
@@ -16,18 +23,16 @@ class WishesController < ApplicationController
   def create
     @sport = Sport.find_by(name: params[:wish][:sport])
     @wish = Wish.find_by(user: current_user, sport: @sport, date: Date.today)
-    if @wish
-      authorize @wish
-    else
+    if !@wish
       @wish = Wish.new
       @wish.date = Date.today
       @wish.user = current_user
       @wish.sport = @sport
       @wish.location = Location.last.address
-      authorize @wish
       @wish.save
     end
-    redirect_to wishes_path
+    authorize @wish
+    redirect_to wishes_path(sport: @sport)
   end
 
   # private

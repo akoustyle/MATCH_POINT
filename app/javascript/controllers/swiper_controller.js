@@ -37,9 +37,9 @@ export default class extends Controller {
     const homeUrl = swiper.slides[e.realIndex].dataset.homeUrl;
     swiper.removeSlide(swiper.activeIndex - 2)
     swipeCount += 1
-    if (wishesCount == swipeCount) {
-      window.location.href = homeUrl
-    }
+    // if (wishesCount == swipeCount) {
+    //   window.location.href = homeUrl
+    // }
 
     })
     swiper.on('slidePrevTransitionEnd', (e) => {
@@ -54,9 +54,9 @@ export default class extends Controller {
 
       swiper.removeSlide(swiper.activeIndex)
       swipeCount += 1
-      if (wishesCount == swipeCount) {
-        window.location.href = homeUrl
-      }
+      // if (wishesCount == swipeCount) {
+      //   window.location.href = homeUrl
+      // }
 
 
       if (swiper.activeIndex === 1) {
