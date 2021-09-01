@@ -63,6 +63,8 @@ SPORTS_ARRAY << horse_riding = Sport.create!(name: 'horse riding')
 puts "Sport: #{horse_riding.name} created !"
 SPORTS_ARRAY << golf = Sport.create!(name: 'golf')
 puts "Sport: #{golf.name} created !"
+SPORTS_ARRAY << surf = Sport.create!(name: 'surf')
+puts "Sport: #{surf.name} created !"
 puts "All sports created successfully!"
 # SPORTS_ARRAY = [cycling, football, tennis, running, basketball, petanque, ping_pong, horse_riding, golf]
 
@@ -420,23 +422,23 @@ puts "Rania saved successfully!"
 
 puts "Users created successfully!"
 
-# puts "Creating Charlotte's wish..."
-# charlottes_wish = Wish.new(date: Date.today,
-#                            sport_id: cycling.id,
-#                            user_id: first_user.id,
-#                            location: '16 villa gaudelet, paris')
-# puts "saving Charlotte's wish..."
-# charlottes_wish.save!
-# puts "Wish saved successfully!"
+puts "Creating Charlotte's wish..."
+charlottes_wish = Wish.new(date: Date.today,
+                           sport_id: surf.id,
+                           user_id: first_user.id,
+                           location: '16 villa gaudelet, paris')
+puts "saving Charlotte's wish..."
+charlottes_wish.save!
+puts "Wish saved successfully!"
 
-# puts "Creating Diane's wish..."
-# dianes_wish = Wish.new(date: Date.today,
-#                        sport_id: cycling.id,
-#                        user_id: second_user.id,
-#                        location: '16 villa gaudelet, paris')
-# puts "saving Diane's wish..."
-# dianes_wish.save!
-# puts "Wish saved successfully!"
+puts "Creating Diane's wish..."
+dianes_wish = Wish.new(date: Date.today,
+                       sport_id: surf.id,
+                       user_id: second_user.id,
+                       location: '16 villa gaudelet, paris')
+puts "saving Diane's wish..."
+dianes_wish.save!
+puts "Wish saved successfully!"
 
 # puts "creating diane's like toward charlotte's wish"
 # Like.create!(wish: charlottes_wish, user: second_user)
@@ -525,7 +527,7 @@ football_wish = []
   wish.save!
   puts "Wish saved successfully!"
   football_wish << wish
-  puts "Wish put in cycling array!"
+  puts "Wish put in football array!"
 end
 
 basketball_wish = []
@@ -540,7 +542,7 @@ basketball_wish = []
   wish.save!
   puts "Wish saved successfully!"
   basketball_wish << wish
-  puts "Wish put in cycling array!"
+  puts "Wish put in basketball array!"
 end
 
 tennis_wish = []
@@ -555,7 +557,7 @@ tennis_wish = []
   wish.save!
   puts "Wish saved successfully!"
   tennis_wish << wish
-  puts "Wish put in cycling array!"
+  puts "Wish put in tennis array!"
 end
 
 running_wish = []
@@ -570,7 +572,7 @@ running_wish = []
   wish.save!
   puts "Wish saved successfully!"
   running_wish << wish
-  puts "Wish put in cycling array!"
+  puts "Wish put in running array!"
 end
 
 petanque_wish = []
@@ -585,7 +587,7 @@ petanque_wish = []
   wish.save!
   puts "Wish saved successfully!"
   petanque_wish << wish
-  puts "Wish put in cycling array!"
+  puts "Wish put in petanque array!"
 end
 
 horse_riding_wish = []
@@ -600,7 +602,7 @@ horse_riding_wish = []
   wish.save!
   puts "Wish saved successfully!"
   horse_riding_wish << wish
-  puts "Wish put in cycling array!"
+  puts "Wish put in horse riding array!"
 end
 
 ping_pong_wish = []
@@ -615,7 +617,7 @@ ping_pong_wish = []
   wish.save!
   puts "Wish saved successfully!"
   ping_pong_wish << wish
-  puts "Wish put in cycling array!"
+  puts "Wish put in ping pong array!"
 end
 
 golf_wish = []
@@ -630,7 +632,7 @@ golf_wish = []
   wish.save!
   puts "Wish saved successfully!"
   golf_wish << wish
-  puts "Wish put in cycling array!"
+  puts "Wish put in golf array!"
 end
 
 
