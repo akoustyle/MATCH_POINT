@@ -250,25 +250,193 @@ puts "saving Diane..."
 second_user.save!
 puts "Diane saved successfully!"
 
+puts "Creating Catherine..."
+third_user = User.new(username: 'Cath',
+                      email: 'catherine@lewagon.org',
+                      password: "123456",
+                      age: rand(27..30))
+user_photo = URI.open("https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1694&q=80.jpeg")
+third_user.photo.attach(io: user_photo, filename: "Catherine_photo.jpeg", content_type: 'image/jpeg')
+puts "attaching photo...."
+puts "saving Catherine..."
+third_user.save!
+puts "Catherine saved successfully!"
+
+puts "Creating Kelly..."
+forth_user = User.new(username: 'Kelly',
+                      email: 'Kelly@lewagon.org',
+                      password: "123456",
+                      age: rand(27..30))
+user_photo = URI.open("https://images.unsplash.com/photo-1465310477141-6fb93167a273?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80.jpeg")
+forth_user.photo.attach(io: user_photo, filename: "Kelly_photo.jpeg", content_type: 'image/jpeg')
+puts "attaching photo...."
+puts "saving Kelly..."
+first_user.save!
+puts "Kelly saved successfully!"
+
+puts "Creating Paume..."
+fifth_user = User.new(username: 'Paume',
+                      email: 'Paume@lewagon.org',
+                      password: "123456",
+                      age: rand(27..30))
+user_photo = URI.open("https://images.unsplash.com/photo-1593353918842-5e2cb1366a2c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1653&q=80.jpeg")
+fifth_user.photo.attach(io: user_photo, filename: "Paume_photo.jpeg", content_type: 'image/jpeg')
+puts "attaching photo...."
+puts "saving Paume..."
+first_user.save!
+puts "Paume saved successfully!"
+
+puts "Creating Perle..."
+sixth_user = User.new(username: 'Bijoux',
+                      email: 'Perle@lewagon.org',
+                      password: "123456",
+                      age: rand(27..30))
+user_photo = URI.open("https://images.unsplash.com/photo-1552674605-db6ffd4facb5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80.jpeg")
+sixth_user.photo.attach(io: user_photo, filename: "Perle_photo.jpeg", content_type: 'image/jpeg')
+puts "attaching photo...."
+puts "saving Perle..."
+sixth_user.save!
+puts "Perle saved successfully!"
+
+puts "Creating Anne..."
+seventh_user = User.new(username: 'Anne',
+                      email: 'Anne@lewagon.org',
+                      password: "123456",
+                      age: rand(27..30))
+user_photo = URI.open("https://images.unsplash.com/photo-1610859875432-59b4c246808f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTF8fHdvbWVuJTIwc3BvcnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60.jpeg")
+seventh_user.photo.attach(io: user_photo, filename: "Anne_photo.jpeg", content_type: 'image/jpeg')
+puts "attaching photo...."
+puts "saving Anne..."
+seventh_user.save!
+puts "Anne saved successfully!"
+
+puts "Creating Christelle..."
+heigth_user = User.new(username: 'CriCri',
+                      email: 'Christelle@lewagon.org',
+                      password: "123456",
+                      age: rand(27..30))
+user_photo = URI.open("https://images.unsplash.com/photo-1506984548480-17c160170c06?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1100&q=80.jpeg")
+heigth_user.photo.attach(io: user_photo, filename: "Christelle_photo.jpeg", content_type: 'image/jpeg')
+puts "attaching photo...."
+puts "saving Christelle..."
+heigth_user.save!
+puts "Christelle saved successfully!"
+
+puts "Creating Paula..."
+nineth_user = User.new(username: 'Popo',
+                      email: 'Paula@lewagon.org',
+                      password: "123456",
+                      age: rand(27..30))
+user_photo = URI.open("https://images.unsplash.com/photo-1542145748-bd00b11de29d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80.jpeg")
+nineth_user.photo.attach(io: user_photo, filename: "Paula_photo.jpeg", content_type: 'image/jpeg')
+puts "attaching photo...."
+puts "saving Paula..."
+nineth_user.save!
+puts "Paula saved successfully!"
+
+puts "Creating Christina..."
+tenth_user = User.new(username: 'Popo',
+                      email: 'Christina@lewagon.org',
+                      password: "123456",
+                      age: rand(27..30))
+user_photo = URI.open("https://images.unsplash.com/photo-1415394171664-b29caa4dca77?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1651&q=80.jpeg")
+tenth_user.photo.attach(io: user_photo, filename: "Christina_photo.jpeg", content_type: 'image/jpeg')
+puts "attaching photo...."
+puts "saving Christina..."
+tenth_user.save!
+puts "Christina saved successfully!"
+
+puts "Creating Terry..."
+eleventh_user = User.new(username: 'Terry',
+                      email: 'Terry@lewagon.org',
+                      password: "123456",
+                      age: rand(27..30))
+user_photo = URI.open("https://images.unsplash.com/photo-1612962385616-a160d4a6e767?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80.jpeg")
+eleventh_user.photo.attach(io: user_photo, filename: "Terry_photo.jpeg", content_type: 'image/jpeg')
+puts "attaching photo...."
+puts "saving Terry..."
+eleventh_user.save!
+puts "Terry saved successfully!"
+
+puts "Creating Delphine..."
+eleventh_user = User.new(username: 'Delphine',
+                      email: 'Delphine@lewagon.org',
+                      password: "123456",
+                      age: rand(27..30))
+user_photo = URI.open("https://images.unsplash.com/photo-1519088641655-a49257c008e4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1334&q=80.jpeg")
+eleventh_user.photo.attach(io: user_photo, filename: "Delphine_photo.jpeg", content_type: 'image/jpeg')
+puts "attaching photo...."
+puts "saving Delphine..."
+eleventh_user.save!
+puts "Delphine saved successfully!"
+
+puts "Creating Marie..."
+twelveth_user = User.new(username: 'Mamamia',
+                      email: 'Marie@lewagon.org',
+                      password: "123456",
+                      age: rand(27..30))
+user_photo = URI.open("https://images.unsplash.com/photo-1623171901016-06d5e9e870e9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80.jpeg")
+twelveth_user.photo.attach(io: user_photo, filename: "Marie_photo.jpeg", content_type: 'image/jpeg')
+puts "attaching photo...."
+puts "saving Marie..."
+twelveth_user.save!
+puts "Marie saved successfully!"
+
+puts "Creating Hortence..."
+thirteenth_user = User.new(username: 'Hortie',
+                      email: 'Hortence@lewagon.org',
+                      password: "123456",
+                      age: rand(27..30))
+user_photo = URI.open("https://images.unsplash.com/photo-1622206509367-cb16e7f50e69?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80.jpeg")
+thirteenth_user.photo.attach(io: user_photo, filename: "Hortence_photo.jpeg", content_type: 'image/jpeg')
+puts "attaching photo...."
+puts "saving Hortence..."
+thirteenth_user.save!
+puts "Hortence saved successfully!"
+
+puts "Creating Laura..."
+forteenth_user = User.new(username: 'Lolo',
+                      email: 'Laura@lewagon.org',
+                      password: "123456",
+                      age: rand(27..30))
+user_photo = URI.open("https://images.unsplash.com/photo-1622206509367-cb16e7f50e69?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80.jpeg")
+forteenth_user.photo.attach(io: user_photo, filename: "Laura_photo.jpeg", content_type: 'image/jpeg')
+puts "attaching photo...."
+puts "saving Laura..."
+forteenth_user.save!
+puts "Laura saved successfully!"
+
+puts "Creating Rania..."
+thirteenth_user = User.new(username: 'Rania',
+                      email: 'Rania@lewagon.org',
+                      password: "123456",
+                      age: rand(27..30))
+user_photo = URI.open("https://images.unsplash.com/photo-1620226017713-b7de2cdd476c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=678&q=80.jpeg")
+thirteenth_user.photo.attach(io: user_photo, filename: "Rania_photo.jpeg", content_type: 'image/jpeg')
+puts "attaching photo...."
+puts "saving Rania..."
+thirteenth_user.save!
+puts "Rania saved successfully!"
+
 puts "Users created successfully!"
 
-puts "Creating Charlotte's wish..."
-charlottes_wish = Wish.new(date: Date.today,
-                           sport_id: cycling.id,
-                           user_id: first_user.id,
-                           location: '16 villa gaudelet, paris')
-puts "saving Charlotte's wish..."
-charlottes_wish.save!
-puts "Wish saved successfully!"
+# puts "Creating Charlotte's wish..."
+# charlottes_wish = Wish.new(date: Date.today,
+#                            sport_id: cycling.id,
+#                            user_id: first_user.id,
+#                            location: '16 villa gaudelet, paris')
+# puts "saving Charlotte's wish..."
+# charlottes_wish.save!
+# puts "Wish saved successfully!"
 
-puts "Creating Diane's wish..."
-dianes_wish = Wish.new(date: Date.today,
-                       sport_id: cycling.id,
-                       user_id: second_user.id,
-                       location: '16 villa gaudelet, paris')
-puts "saving Diane's wish..."
-dianes_wish.save!
-puts "Wish saved successfully!"
+# puts "Creating Diane's wish..."
+# dianes_wish = Wish.new(date: Date.today,
+#                        sport_id: cycling.id,
+#                        user_id: second_user.id,
+#                        location: '16 villa gaudelet, paris')
+# puts "saving Diane's wish..."
+# dianes_wish.save!
+# puts "Wish saved successfully!"
 
 # puts "creating diane's like toward charlotte's wish"
 # Like.create!(wish: charlottes_wish, user: second_user)
@@ -285,614 +453,735 @@ puts "Wish saved successfully!"
 # puts "dianes_wish updated successfully!"
 
 
-20.times do
-  puts "Creating user..."
-  user_first = User.new(username: Faker::Name.unique.female_first_name,
-                  email: Faker::Internet.unique.email,
-                  password: "123456",
-                  age: rand(18..45))
-  puts 'attaching photos on user...'
-  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
-  user_first.photo.attach(io: user_photo, filename: "#{user.username}_#{user.email}_photo.jpeg", content_type: 'image/jpeg')
-  puts "saving #{user.username}..."
-  user_first.save!
-  puts "#{user.username} saved successfully!"
-  sport = SPORTS_ARRAY.sample
-  location = Location.where(sport_id: sport.id)
-  date = Date.today
-  puts "Creating first user wish..."
-  first_wish = Wish.new(date: date,
-                        sport_id: sport.id,
-                        user_id: user.id,
-                        location: Location.all.pluck(:address).sample)
-  puts "saving first_user's past wish..."
-  first_wish.save!
-  puts "Creating user..."
-  user = User.new(username: Faker::Name.unique.female_first_name,
-                  email: Faker::Internet.unique.email,
-                  password: "123456",
-                  age: rand(18..45))
-  puts 'attaching photos on user...'
-  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
-  user.photo.attach(io: user_photo, filename: "#{user.username}_#{user.email}_photo.jpeg", content_type: 'image/jpeg')
-  puts "saving #{user.username}..."
-  user.save!
-  puts "#{user.username} saved successfully!"
-  location = Location.where(sport_id: sport.id)
-  puts "Creating first user wish..."
-  second_wish = Wish.new(date: date,
-                        sport_id: sport.id,
-                        user_id: user.id,
-                        location: Location.all.pluck(:address).sample)
-  puts "saving first_user's past wish..."
-  second_wish.save!
-  # puts "creating user's likes toward other's wish"
-  # Like.create!(wish: first_wish, user: user_first)
-  # puts 'likes done!'
+# 20.times do
+#   puts "Creating user..."
+#   user_first = User.new(username: Faker::Name.unique.female_first_name,
+#                   email: Faker::Internet.unique.email,
+#                   password: "123456",
+#                   age: rand(18..45))
+#   puts 'attaching photos on user...'
+#   user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
+#   user_first.photo.attach(io: user_photo, filename: "#{user.username}_#{user.email}_photo.jpeg", content_type: 'image/jpeg')
+#   puts "saving #{user.username}..."
+#   user_first.save!
+#   puts "#{user.username} saved successfully!"
+#   sport = SPORTS_ARRAY.sample
+#   location = Location.where(sport_id: sport.id)
+#   date = Date.today
+#   puts "Creating first user wish..."
+#   first_wish = Wish.new(date: date,
+#                         sport_id: sport.id,
+#                         user_id: user.id,
+#                         location: Location.all.pluck(:address).sample)
+#   puts "saving first_user's past wish..."
+#   first_wish.save!
+#   puts "Creating user..."
+#   user = User.new(username: Faker::Name.unique.female_first_name,
+#                   email: Faker::Internet.unique.email,
+#                   password: "123456",
+#                   age: rand(18..45))
+#   puts 'attaching photos on user...'
+#   user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
+#   user.photo.attach(io: user_photo, filename: "#{user.username}_#{user.email}_photo.jpeg", content_type: 'image/jpeg')
+#   puts "saving #{user.username}..."
+#   user.save!
+#   puts "#{user.username} saved successfully!"
+#   location = Location.where(sport_id: sport.id)
+#   puts "Creating first user wish..."
+#   second_wish = Wish.new(date: date,
+#                         sport_id: sport.id,
+#                         user_id: user.id,
+#                         location: Location.all.pluck(:address).sample)
+#   puts "saving first_user's past wish..."
+#   second_wish.save!
+#   # puts "creating user's likes toward other's wish"
+#   # Like.create!(wish: first_wish, user: user_first)
+#   # puts 'likes done!'
+# end
+cycling_wish = []
+10.times do
+  puts "Creating cycling wish..."
+  user = User.all.pluck(:id).sample
+  wish = Wish.new(date: Date.today,
+                  sport_id: cycling.id,
+                  user_id: user,
+                  location: Location.all.pluck(:address).sample)
+  puts "saving wish for #{cycling.name}"
+  wish.save!
+  puts "Wish saved successfully!"
+  cycling_wish << wish
+  puts "Wish put in cycling array!"
 end
-# cycling_wish = []
-# 6.times do
-#   puts "Creating cycling wish..."
-#   user = User.all.pluck(:id).sample
-#   wish = Wish.new(date: Date.today,
-#                   sport_id: cycling.id,
-#                   user_id: user,
-#                   location: Location.all.pluck(:address).sample)
-#   puts "saving wish for #{cycling.name}"
-#   wish.save!
-#   puts "Wish saved successfully!"
-#   cycling_wish << wish
-#   puts "Wish put in cycling array!"
+
+football_wish = []
+12.times do
+  puts "Creating football wish..."
+  user = User.all.pluck(:id).sample
+  wish = Wish.new(date: Date.today,
+                  sport_id: football.id,
+                  user_id: user,
+                  location: Location.all.pluck(:address).sample)
+  puts "saving wish for #{football.name}"
+  wish.save!
+  puts "Wish saved successfully!"
+  football_wish << wish
+  puts "Wish put in cycling array!"
+end
+
+basketball_wish = []
+11.times do
+  puts "Creating basketball wish..."
+  user = User.all.pluck(:id).sample
+  wish = Wish.new(date: Date.today,
+                  sport_id: basketball.id,
+                  user_id: user,
+                  location: Location.all.pluck(:address).sample)
+  puts "saving wish for #{basketball.name}"
+  wish.save!
+  puts "Wish saved successfully!"
+  basketball_wish << wish
+  puts "Wish put in cycling array!"
+end
+
+tennis_wish = []
+10.times do
+  puts "Creating tennis wish..."
+  user = User.all.pluck(:id).sample
+  wish = Wish.new(date: Date.today,
+                  sport_id: tennis.id,
+                  user_id: user,
+                  location: Location.all.pluck(:address).sample)
+  puts "saving wish for #{tennis.name}"
+  wish.save!
+  puts "Wish saved successfully!"
+  tennis_wish << wish
+  puts "Wish put in cycling array!"
+end
+
+running_wish = []
+6.times do
+  puts "Creating running wish..."
+  user = User.all.pluck(:id).sample
+  wish = Wish.new(date: Date.today,
+                  sport_id: running.id,
+                  user_id: user,
+                  location: Location.all.pluck(:address).sample)
+  puts "saving wish for #{running.name}"
+  wish.save!
+  puts "Wish saved successfully!"
+  running_wish << wish
+  puts "Wish put in cycling array!"
+end
+
+petanque_wish = []
+5.times do
+  puts "Creating petanque wish..."
+  user = User.all.pluck(:id).sample
+  wish = Wish.new(date: Date.today,
+                  sport_id: petanque.id,
+                  user_id: user,
+                  location: Location.all.pluck(:address).sample)
+  puts "saving wish for #{petanque.name}"
+  wish.save!
+  puts "Wish saved successfully!"
+  petanque_wish << wish
+  puts "Wish put in cycling array!"
+end
+
+horse_riding_wish = []
+3.times do
+  puts "Creating horse_riding wish..."
+  user = User.all.pluck(:id).sample
+  wish = Wish.new(date: Date.today,
+                  sport_id: horse_riding.id,
+                  user_id: user,
+                  location: Location.all.pluck(:address).sample)
+  puts "saving wish for #{horse_riding.name}"
+  wish.save!
+  puts "Wish saved successfully!"
+  horse_riding_wish << wish
+  puts "Wish put in cycling array!"
+end
+
+ping_pong_wish = []
+4.times do
+  puts "Creating ping_pong wish..."
+  user = User.all.pluck(:id).sample
+  wish = Wish.new(date: Date.today,
+                  sport_id: ping_pong.id,
+                  user_id: user,
+                  location: Location.all.pluck(:address).sample)
+  puts "saving wish for #{ping_pong.name}"
+  wish.save!
+  puts "Wish saved successfully!"
+  ping_pong_wish << wish
+  puts "Wish put in cycling array!"
+end
+
+golf_wish = []
+8.times do
+  puts "Creating golf wish..."
+  user = User.all.pluck(:id).sample
+  wish = Wish.new(date: Date.today,
+                  sport_id: golf.id,
+                  user_id: user,
+                  location: Location.all.pluck(:address).sample)
+  puts "saving wish for #{golf.name}"
+  wish.save!
+  puts "Wish saved successfully!"
+  golf_wish << wish
+  puts "Wish put in cycling array!"
+end
+
+
+# 3.times do
+#   puts "Creating user..."
+#   user_first = User.new(username: Faker::Name.unique.female_first_name,
+#                   email: Faker::Internet.unique.email,
+#                   password: "123456",
+#                   age: rand(18..45))
+#   puts 'attaching photos on first user...'
+#   user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
+#   user_first.photo.attach(io: user_photo, filename: "#{user_first.username}_#{user_first.email}_photo.jpeg", content_type: 'image/jpeg')
+#   puts "saving #{user_first.username}..."
+#   user_first.save!
+#   puts "#{user_first.username} saved successfully!"
+#   puts "Creating user..."
+#   user_second = User.new(username: Faker::Name.unique.female_first_name,
+#                   email: Faker::Internet.unique.email,
+#                   password: "123456",
+#                   age: rand(18..45))
+#   puts 'attaching photos on second user....'
+#   user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
+#   user_second.photo.attach(io: user_photo, filename: "#{user_second.username}_#{user_second.email}_photo.jpeg", content_type: 'image/jpeg')
+#   puts "saving #{user_second.username}..."
+#   user_second.save!
+#   puts "#{user_second.username} saved successfully!"
+#   sport = SPORTS_ARRAY[0]
+#   location = Location.where(sport_id: sport.id)
+#   date = Date.today
+#   puts "Creating first user wish..."
+#   first_wish = Wish.new(date: date,
+#                         sport_id: sport.id,
+#                         user_id: user_first.id,
+#                         location: Location.all.pluck(:address).sample)
+#   puts "saving first_user's past wish..."
+#   first_wish.save!
+#   puts "Past wish saved successfully!"
+#   puts "choose random user..."
+#   puts "Creating second's past wish..."
+#   second_wish = Wish.new(date: date,
+#                          sport_id: sport.id,
+#                          user_id: user_second.id,
+#                          location: Location.all.pluck(:address).sample)
+#   puts "saving second's past wish..."
+#   second_wish.save!
+#   puts "Second wish saved successfully!"
+
+  # puts "Creating first's match"
+  # first_match = Match.create!(location: location.first)
+  # puts "Match created successfully!"
+
+  # puts "updating first's wish..."
+  # first_wish.update(match: first_match)
+  # puts "first_wish updated successfully!"
+
+  # puts "Updating second's wish..."
+  # second_wish.update(match: first_match)
+  # puts "second_wish updated successfully!"
 # end
 
+# 3.times do
+#   puts "Creating user..."
+#   user_first = User.new(username: Faker::Name.unique.female_first_name,
+#                   email: Faker::Internet.unique.email,
+#                   password: "123456",
+#                   age: rand(18..45))
+#   puts 'attaching photos on first user...'
+#   user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
+#   user_first.photo.attach(io: user_photo, filename: "#{user_first.username}_#{user_first.email}_photo.jpeg", content_type: 'image/jpeg')
+#   puts "saving #{user_first.username}..."
+#   user_first.save!
+#   puts "#{user_first.username} saved successfully!"
+#   puts "Creating user..."
+#   user_second = User.new(username: Faker::Name.unique.female_first_name,
+#                   email: Faker::Internet.unique.email,
+#                   password: "123456",
+#                   age: rand(18..45))
+#   puts 'attaching photos on second user....'
+#   user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
+#   user_second.photo.attach(io: user_photo, filename: "#{user_second.username}_#{user_second.email}_photo.jpeg", content_type: 'image/jpeg')
+#   puts "saving #{user_second.username}..."
+#   user_second.save!
+#   puts "#{user_second.username} saved successfully!"
+#   sport = SPORTS_ARRAY[1]
+#   location = Location.where(sport_id: sport.id)
+#   date = Date.today
+#   puts "Creating first user wish..."
+#   first_wish = Wish.new(date: date,
+#                         sport_id: sport.id,
+#                         user_id: user_first.id,
+#                         location: Location.all.pluck(:address).sample)
+#   puts "saving first_user's past wish..."
+#   first_wish.save!
+#   puts "Past wish saved successfully!"
+#   puts "choose second user..."
+#   puts "Creating second's past wish..."
+#   second_wish = Wish.new(date: date,
+#                          sport_id: sport.id,
+#                          user_id: user_second.id,
+#                          location: Location.all.pluck(:address).sample)
+#   puts "saving second's past wish..."
+#   second_wish.save!
+#   puts "Second wish saved successfully!"
 
-3.times do
-  puts "Creating user..."
-  user_first = User.new(username: Faker::Name.unique.female_first_name,
-                  email: Faker::Internet.unique.email,
-                  password: "123456",
-                  age: rand(18..45))
-  puts 'attaching photos on first user...'
-  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
-  user_first.photo.attach(io: user_photo, filename: "#{user_first.username}_#{user_first.email}_photo.jpeg", content_type: 'image/jpeg')
-  puts "saving #{user_first.username}..."
-  user_first.save!
-  puts "#{user_first.username} saved successfully!"
-  puts "Creating user..."
-  user_second = User.new(username: Faker::Name.unique.female_first_name,
-                  email: Faker::Internet.unique.email,
-                  password: "123456",
-                  age: rand(18..45))
-  puts 'attaching photos on second user....'
-  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
-  user_second.photo.attach(io: user_photo, filename: "#{user_second.username}_#{user_second.email}_photo.jpeg", content_type: 'image/jpeg')
-  puts "saving #{user_second.username}..."
-  user_second.save!
-  puts "#{user_second.username} saved successfully!"
-  sport = SPORTS_ARRAY[0]
-  location = Location.where(sport_id: sport.id)
-  date = Date.today
-  puts "Creating first user wish..."
-  first_wish = Wish.new(date: date,
-                        sport_id: sport.id,
-                        user_id: user_first.id,
-                        location: Location.all.pluck(:address).sample)
-  puts "saving first_user's past wish..."
-  first_wish.save!
-  puts "Past wish saved successfully!"
-  puts "choose random user..."
-  puts "Creating second's past wish..."
-  second_wish = Wish.new(date: date,
-                         sport_id: sport.id,
-                         user_id: user_second.id,
-                         location: Location.all.pluck(:address).sample)
-  puts "saving second's past wish..."
-  second_wish.save!
-  puts "Second wish saved successfully!"
+#   # puts "Creating first's match"
+#   # first_match = Match.create!(location: location.first)
+#   # puts "Match created successfully!"
 
-  # puts "Creating first's match"
-  # first_match = Match.create!(location: location.first)
-  # puts "Match created successfully!"
+#   # puts "updating first's wish..."
+#   # first_wish.update(match: first_match)
+#   # puts "first_wish updated successfully!"
 
-  # puts "updating first's wish..."
-  # first_wish.update(match: first_match)
-  # puts "first_wish updated successfully!"
+#   # puts "Updating second's wish..."
+#   # second_wish.update(match: first_match)
+#   # puts "second_wish updated successfully!"
+# end
 
-  # puts "Updating second's wish..."
-  # second_wish.update(match: first_match)
-  # puts "second_wish updated successfully!"
-end
+# 3.times do
+#   puts "Creating user..."
+#   user_first = User.new(username: Faker::Name.unique.female_first_name,
+#                   email: Faker::Internet.unique.email,
+#                   password: "123456",
+#                   age: rand(18..45))
+#   puts 'attaching photos on first user...'
+#   user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
+#   user_first.photo.attach(io: user_photo, filename: "#{user_first.username}_#{user_first.email}_photo.jpeg", content_type: 'image/jpeg')
+#   puts "saving #{user_first.username}..."
+#   user_first.save!
+#   puts "#{user_first.username} saved successfully!"
+#   puts "Creating user..."
+#   user_second = User.new(username: Faker::Name.unique.female_first_name,
+#                   email: Faker::Internet.unique.email,
+#                   password: "123456",
+#                   age: rand(18..45))
+#   puts 'attaching photos on second user....'
+#   user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
+#   user_second.photo.attach(io: user_photo, filename: "#{user_second.username}_#{user_second.email}_photo.jpeg", content_type: 'image/jpeg')
+#   puts "saving #{user_second.username}..."
+#   user_second.save!
+#   puts "#{user_second.username} saved successfully!"
+#   sport = SPORTS_ARRAY[2]
+#   location = Location.where(sport_id: sport.id)
+#   date = Date.today
+#   puts "Creating first user wish..."
+#   first_wish = Wish.new(date: date,
+#                         sport_id: sport.id,
+#                         user_id: user_first.id,
+#                         location: Location.all.pluck(:address).sample)
+#   puts "saving first_user's past wish..."
+#   first_wish.save!
+#   puts "Past wish saved successfully!"
+#   puts "choose second user..."
+#   puts "Creating second's past wish..."
+#   second_wish = Wish.new(date: date,
+#                          sport_id: sport.id,
+#                          user_id: user_second.id,
+#                          location: Location.all.pluck(:address).sample)
+#   puts "saving second's past wish..."
+#   second_wish.save!
+#   puts "Second wish saved successfully!"
 
-3.times do
-  puts "Creating user..."
-  user_first = User.new(username: Faker::Name.unique.female_first_name,
-                  email: Faker::Internet.unique.email,
-                  password: "123456",
-                  age: rand(18..45))
-  puts 'attaching photos on first user...'
-  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
-  user_first.photo.attach(io: user_photo, filename: "#{user_first.username}_#{user_first.email}_photo.jpeg", content_type: 'image/jpeg')
-  puts "saving #{user_first.username}..."
-  user_first.save!
-  puts "#{user_first.username} saved successfully!"
-  puts "Creating user..."
-  user_second = User.new(username: Faker::Name.unique.female_first_name,
-                  email: Faker::Internet.unique.email,
-                  password: "123456",
-                  age: rand(18..45))
-  puts 'attaching photos on second user....'
-  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
-  user_second.photo.attach(io: user_photo, filename: "#{user_second.username}_#{user_second.email}_photo.jpeg", content_type: 'image/jpeg')
-  puts "saving #{user_second.username}..."
-  user_second.save!
-  puts "#{user_second.username} saved successfully!"
-  sport = SPORTS_ARRAY[1]
-  location = Location.where(sport_id: sport.id)
-  date = Date.today
-  puts "Creating first user wish..."
-  first_wish = Wish.new(date: date,
-                        sport_id: sport.id,
-                        user_id: user_first.id,
-                        location: Location.all.pluck(:address).sample)
-  puts "saving first_user's past wish..."
-  first_wish.save!
-  puts "Past wish saved successfully!"
-  puts "choose second user..."
-  puts "Creating second's past wish..."
-  second_wish = Wish.new(date: date,
-                         sport_id: sport.id,
-                         user_id: user_second.id,
-                         location: Location.all.pluck(:address).sample)
-  puts "saving second's past wish..."
-  second_wish.save!
-  puts "Second wish saved successfully!"
+#   # puts "Creating first's match"
+#   # first_match = Match.create!(location: location.first)
+#   # puts "Match created successfully!"
 
-  # puts "Creating first's match"
-  # first_match = Match.create!(location: location.first)
-  # puts "Match created successfully!"
+#   # puts "updating first's wish..."
+#   # first_wish.update(match: first_match)
+#   # puts "first_wish updated successfully!"
 
-  # puts "updating first's wish..."
-  # first_wish.update(match: first_match)
-  # puts "first_wish updated successfully!"
+#   # puts "Updating second's wish..."
+#   # second_wish.update(match: first_match)
+#   # puts "second_wish updated successfully!"
+# end
 
-  # puts "Updating second's wish..."
-  # second_wish.update(match: first_match)
-  # puts "second_wish updated successfully!"
-end
+# 3.times do
+#   puts "Creating user..."
+#   user_first = User.new(username: Faker::Name.unique.female_first_name,
+#                   email: Faker::Internet.unique.email,
+#                   password: "123456",
+#                   age: rand(18..45))
+#   puts 'attaching photos on first user...'
+#   user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
+#   user_first.photo.attach(io: user_photo, filename: "#{user_first.username}_#{user_first.email}_photo.jpeg", content_type: 'image/jpeg')
+#   puts "saving #{user_first.username}..."
+#   user_first.save!
+#   puts "#{user_first.username} saved successfully!"
+#   puts "Creating user..."
+#   user_second = User.new(username: Faker::Name.unique.female_first_name,
+#                   email: Faker::Internet.unique.email,
+#                   password: "123456",
+#                   age: rand(18..45))
+#   puts 'attaching photos on second user....'
+#   user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
+#   user_second.photo.attach(io: user_photo, filename: "#{user_second.username}_#{user_second.email}_photo.jpeg", content_type: 'image/jpeg')
+#   puts "saving #{user_second.username}..."
+#   user_second.save!
+#   puts "#{user_second.username} saved successfully!"
+#   sport = SPORTS_ARRAY[3]
+#   location = Location.where(sport_id: sport.id)
+#   date = Date.today
+#   puts "Creating first user wish..."
+#   first_wish = Wish.new(date: date,
+#                         sport_id: sport.id,
+#                         user_id: user_first.id,
+#                         location: Location.all.pluck(:address).sample)
+#   puts "saving first_user's past wish..."
+#   first_wish.save!
+#   puts "Past wish saved successfully!"
+#   puts "choose second user..."
+#   puts "Creating second's past wish..."
+#   second_wish = Wish.new(date: date,
+#                          sport_id: sport.id,
+#                          user_id: user_second.id,
+#                          location: Location.all.pluck(:address).sample)
+#   puts "saving second's past wish..."
+#   second_wish.save!
+#   puts "Second wish saved successfully!"
 
-3.times do
-  puts "Creating user..."
-  user_first = User.new(username: Faker::Name.unique.female_first_name,
-                  email: Faker::Internet.unique.email,
-                  password: "123456",
-                  age: rand(18..45))
-  puts 'attaching photos on first user...'
-  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
-  user_first.photo.attach(io: user_photo, filename: "#{user_first.username}_#{user_first.email}_photo.jpeg", content_type: 'image/jpeg')
-  puts "saving #{user_first.username}..."
-  user_first.save!
-  puts "#{user_first.username} saved successfully!"
-  puts "Creating user..."
-  user_second = User.new(username: Faker::Name.unique.female_first_name,
-                  email: Faker::Internet.unique.email,
-                  password: "123456",
-                  age: rand(18..45))
-  puts 'attaching photos on second user....'
-  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
-  user_second.photo.attach(io: user_photo, filename: "#{user_second.username}_#{user_second.email}_photo.jpeg", content_type: 'image/jpeg')
-  puts "saving #{user_second.username}..."
-  user_second.save!
-  puts "#{user_second.username} saved successfully!"
-  sport = SPORTS_ARRAY[2]
-  location = Location.where(sport_id: sport.id)
-  date = Date.today
-  puts "Creating first user wish..."
-  first_wish = Wish.new(date: date,
-                        sport_id: sport.id,
-                        user_id: user_first.id,
-                        location: Location.all.pluck(:address).sample)
-  puts "saving first_user's past wish..."
-  first_wish.save!
-  puts "Past wish saved successfully!"
-  puts "choose second user..."
-  puts "Creating second's past wish..."
-  second_wish = Wish.new(date: date,
-                         sport_id: sport.id,
-                         user_id: user_second.id,
-                         location: Location.all.pluck(:address).sample)
-  puts "saving second's past wish..."
-  second_wish.save!
-  puts "Second wish saved successfully!"
+#   # puts "Creating first's match"
+#   # first_match = Match.create!(location: location.first)
+#   # puts "Match created successfully!"
 
-  # puts "Creating first's match"
-  # first_match = Match.create!(location: location.first)
-  # puts "Match created successfully!"
+#   # puts "updating first's wish..."
+#   # first_wish.update(match: first_match)
+#   # puts "first_wish updated successfully!"
 
-  # puts "updating first's wish..."
-  # first_wish.update(match: first_match)
-  # puts "first_wish updated successfully!"
+#   # puts "Updating second's wish..."
+#   # second_wish.update(match: first_match)
+#   # puts "second_wish updated successfully!"
+# end
 
-  # puts "Updating second's wish..."
-  # second_wish.update(match: first_match)
-  # puts "second_wish updated successfully!"
-end
+# 3.times do
+#   puts "Creating user..."
+#   user_first = User.new(username: Faker::Name.unique.female_first_name,
+#                   email: Faker::Internet.unique.email,
+#                   password: "123456",
+#                   age: rand(18..45))
+#   puts 'attaching photos on first user...'
+#   user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
+#   user_first.photo.attach(io: user_photo, filename: "#{user_first.username}_#{user_first.email}_photo.jpeg", content_type: 'image/jpeg')
+#   puts "saving #{user_first.username}..."
+#   user_first.save!
+#   puts "#{user_first.username} saved successfully!"
+#   puts "Creating user..."
+#   user_second = User.new(username: Faker::Name.unique.female_first_name,
+#                   email: Faker::Internet.unique.email,
+#                   password: "123456",
+#                   age: rand(18..45))
+#   puts 'attaching photos on second user....'
+#   user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
+#   user_second.photo.attach(io: user_photo, filename: "#{user_second.username}_#{user_second.email}_photo.jpeg", content_type: 'image/jpeg')
+#   puts "saving #{user_second.username}..."
+#   user_second.save!
+#   puts "#{user_second.username} saved successfully!"
+#   sport = SPORTS_ARRAY[4]
+#   location = Location.where(sport_id: sport.id)
+#   date = Date.today
+#   puts "Creating first user wish..."
+#   first_wish = Wish.new(date: date,
+#                         sport_id: sport.id,
+#                         user_id: user_first.id,
+#                         location: Location.all.pluck(:address).sample)
+#   puts "saving first_user's past wish..."
+#   first_wish.save!
+#   puts "Past wish saved successfully!"
+#   puts "choose second user..."
+#   puts "Creating second's past wish..."
+#   second_wish = Wish.new(date: date,
+#                          sport_id: sport.id,
+#                          user_id: user_second.id,
+#                          location: Location.all.pluck(:address).sample)
+#   puts "saving second's past wish..."
+#   second_wish.save!
+#   puts "Second wish saved successfully!"
 
-3.times do
-  puts "Creating user..."
-  user_first = User.new(username: Faker::Name.unique.female_first_name,
-                  email: Faker::Internet.unique.email,
-                  password: "123456",
-                  age: rand(18..45))
-  puts 'attaching photos on first user...'
-  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
-  user_first.photo.attach(io: user_photo, filename: "#{user_first.username}_#{user_first.email}_photo.jpeg", content_type: 'image/jpeg')
-  puts "saving #{user_first.username}..."
-  user_first.save!
-  puts "#{user_first.username} saved successfully!"
-  puts "Creating user..."
-  user_second = User.new(username: Faker::Name.unique.female_first_name,
-                  email: Faker::Internet.unique.email,
-                  password: "123456",
-                  age: rand(18..45))
-  puts 'attaching photos on second user....'
-  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
-  user_second.photo.attach(io: user_photo, filename: "#{user_second.username}_#{user_second.email}_photo.jpeg", content_type: 'image/jpeg')
-  puts "saving #{user_second.username}..."
-  user_second.save!
-  puts "#{user_second.username} saved successfully!"
-  sport = SPORTS_ARRAY[3]
-  location = Location.where(sport_id: sport.id)
-  date = Date.today
-  puts "Creating first user wish..."
-  first_wish = Wish.new(date: date,
-                        sport_id: sport.id,
-                        user_id: user_first.id,
-                        location: Location.all.pluck(:address).sample)
-  puts "saving first_user's past wish..."
-  first_wish.save!
-  puts "Past wish saved successfully!"
-  puts "choose second user..."
-  puts "Creating second's past wish..."
-  second_wish = Wish.new(date: date,
-                         sport_id: sport.id,
-                         user_id: user_second.id,
-                         location: Location.all.pluck(:address).sample)
-  puts "saving second's past wish..."
-  second_wish.save!
-  puts "Second wish saved successfully!"
+#   # puts "Creating first's match"
+#   # first_match = Match.create!(location: location.first)
+#   # puts "Match created successfully!"
 
-  # puts "Creating first's match"
-  # first_match = Match.create!(location: location.first)
-  # puts "Match created successfully!"
+#   # puts "updating first's wish..."
+#   # first_wish.update(match: first_match)
+#   # puts "first_wish updated successfully!"
 
-  # puts "updating first's wish..."
-  # first_wish.update(match: first_match)
-  # puts "first_wish updated successfully!"
+#   # puts "Updating second's wish..."
+#   # second_wish.update(match: first_match)
+#   # puts "second_wish updated successfully!"
+# end
 
-  # puts "Updating second's wish..."
-  # second_wish.update(match: first_match)
-  # puts "second_wish updated successfully!"
-end
+# 3.times do
+#   puts "Creating user..."
+#   user_first = User.new(username: Faker::Name.unique.female_first_name,
+#                   email: Faker::Internet.unique.email,
+#                   password: "123456",
+#                   age: rand(18..45))
+#   puts 'attaching photos on first user...'
+#   user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
+#   user_first.photo.attach(io: user_photo, filename: "#{user_first.username}_#{user_first.email}_photo.jpeg", content_type: 'image/jpeg')
+#   puts "saving #{user_first.username}..."
+#   user_first.save!
+#   puts "#{user_first.username} saved successfully!"
+#   puts "Creating user..."
+#   user_second = User.new(username: Faker::Name.unique.female_first_name,
+#                   email: Faker::Internet.unique.email,
+#                   password: "123456",
+#                   age: rand(18..45))
+#   puts 'attaching photos on second user....'
+#   user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
+#   user_second.photo.attach(io: user_photo, filename: "#{user_second.username}_#{user_second.email}_photo.jpeg", content_type: 'image/jpeg')
+#   puts "saving #{user_second.username}..."
+#   user_second.save!
+#   puts "#{user_second.username} saved successfully!"
+#   sport = SPORTS_ARRAY[5]
+#   location = Location.where(sport_id: sport.id)
+#   date = Date.today
+#   puts "Creating first user wish..."
+#   first_wish = Wish.new(date: date,
+#                         sport_id: sport.id,
+#                         user_id: user_first.id,
+#                         location: Location.all.pluck(:address).sample)
+#   puts "saving first_user's past wish..."
+#   first_wish.save!
+#   puts "Past wish saved successfully!"
+#   puts "choose second user..."
+#   puts "Creating second's past wish..."
+#   second_wish = Wish.new(date: date,
+#                          sport_id: sport.id,
+#                          user_id: user_second.id,
+#                          location: Location.all.pluck(:address).sample)
+#   puts "saving second's past wish..."
+#   second_wish.save!
+#   puts "Second wish saved successfully!"
 
-3.times do
-  puts "Creating user..."
-  user_first = User.new(username: Faker::Name.unique.female_first_name,
-                  email: Faker::Internet.unique.email,
-                  password: "123456",
-                  age: rand(18..45))
-  puts 'attaching photos on first user...'
-  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
-  user_first.photo.attach(io: user_photo, filename: "#{user_first.username}_#{user_first.email}_photo.jpeg", content_type: 'image/jpeg')
-  puts "saving #{user_first.username}..."
-  user_first.save!
-  puts "#{user_first.username} saved successfully!"
-  puts "Creating user..."
-  user_second = User.new(username: Faker::Name.unique.female_first_name,
-                  email: Faker::Internet.unique.email,
-                  password: "123456",
-                  age: rand(18..45))
-  puts 'attaching photos on second user....'
-  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
-  user_second.photo.attach(io: user_photo, filename: "#{user_second.username}_#{user_second.email}_photo.jpeg", content_type: 'image/jpeg')
-  puts "saving #{user_second.username}..."
-  user_second.save!
-  puts "#{user_second.username} saved successfully!"
-  sport = SPORTS_ARRAY[4]
-  location = Location.where(sport_id: sport.id)
-  date = Date.today
-  puts "Creating first user wish..."
-  first_wish = Wish.new(date: date,
-                        sport_id: sport.id,
-                        user_id: user_first.id,
-                        location: Location.all.pluck(:address).sample)
-  puts "saving first_user's past wish..."
-  first_wish.save!
-  puts "Past wish saved successfully!"
-  puts "choose second user..."
-  puts "Creating second's past wish..."
-  second_wish = Wish.new(date: date,
-                         sport_id: sport.id,
-                         user_id: user_second.id,
-                         location: Location.all.pluck(:address).sample)
-  puts "saving second's past wish..."
-  second_wish.save!
-  puts "Second wish saved successfully!"
+#   # puts "Creating first's match"
+#   # first_match = Match.create!(location: location.first)
+#   # puts "Match created successfully!"
 
-  # puts "Creating first's match"
-  # first_match = Match.create!(location: location.first)
-  # puts "Match created successfully!"
+#   # puts "updating first's wish..."
+#   # first_wish.update(match: first_match)
+#   # puts "first_wish updated successfully!"
 
-  # puts "updating first's wish..."
-  # first_wish.update(match: first_match)
-  # puts "first_wish updated successfully!"
+#   # puts "Updating second's wish..."
+#   # second_wish.update(match: first_match)
+#   # puts "second_wish updated successfully!"
+# end
 
-  # puts "Updating second's wish..."
-  # second_wish.update(match: first_match)
-  # puts "second_wish updated successfully!"
-end
+# 3.times do
+#   puts "Creating user..."
+#   user_first = User.new(username: Faker::Name.unique.female_first_name,
+#                   email: Faker::Internet.unique.email,
+#                   password: "123456",
+#                   age: rand(18..45))
+#   puts 'attaching photos on first user...'
+#   user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
+#   user_first.photo.attach(io: user_photo, filename: "#{user_first.username}_#{user_first.email}_photo.jpeg", content_type: 'image/jpeg')
+#   puts "saving #{user_first.username}..."
+#   user_first.save!
+#   puts "#{user_first.username} saved successfully!"
+#   puts "Creating user..."
+#   user_second = User.new(username: Faker::Name.unique.female_first_name,
+#                   email: Faker::Internet.unique.email,
+#                   password: "123456",
+#                   age: rand(18..45))
+#   puts 'attaching photos on second user....'
+#   user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
+#   user_second.photo.attach(io: user_photo, filename: "#{user_second.username}_#{user_second.email}_photo.jpeg", content_type: 'image/jpeg')
+#   puts "saving #{user_second.username}..."
+#   user_second.save!
+#   puts "#{user_second.username} saved successfully!"
+#   sport = SPORTS_ARRAY[6]
+#   location = Location.where(sport_id: sport.id)
+#   date = Date.today
+#   puts "Creating first user wish..."
+#   first_wish = Wish.new(date: date,
+#                         sport_id: sport.id,
+#                         user_id: user_first.id,
+#                         location: Location.all.pluck(:address).sample)
+#   puts "saving first_user's past wish..."
+#   first_wish.save!
+#   puts "Past wish saved successfully!"
+#   puts "choose second user..."
+#   puts "Creating second's past wish..."
+#   second_wish = Wish.new(date: date,
+#                          sport_id: sport.id,
+#                          user_id: user_second.id,
+#                          location: Location.all.pluck(:address).sample)
+#   puts "saving second's past wish..."
+#   second_wish.save!
+#   puts "Second wish saved successfully!"
 
-3.times do
-  puts "Creating user..."
-  user_first = User.new(username: Faker::Name.unique.female_first_name,
-                  email: Faker::Internet.unique.email,
-                  password: "123456",
-                  age: rand(18..45))
-  puts 'attaching photos on first user...'
-  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
-  user_first.photo.attach(io: user_photo, filename: "#{user_first.username}_#{user_first.email}_photo.jpeg", content_type: 'image/jpeg')
-  puts "saving #{user_first.username}..."
-  user_first.save!
-  puts "#{user_first.username} saved successfully!"
-  puts "Creating user..."
-  user_second = User.new(username: Faker::Name.unique.female_first_name,
-                  email: Faker::Internet.unique.email,
-                  password: "123456",
-                  age: rand(18..45))
-  puts 'attaching photos on second user....'
-  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
-  user_second.photo.attach(io: user_photo, filename: "#{user_second.username}_#{user_second.email}_photo.jpeg", content_type: 'image/jpeg')
-  puts "saving #{user_second.username}..."
-  user_second.save!
-  puts "#{user_second.username} saved successfully!"
-  sport = SPORTS_ARRAY[5]
-  location = Location.where(sport_id: sport.id)
-  date = Date.today
-  puts "Creating first user wish..."
-  first_wish = Wish.new(date: date,
-                        sport_id: sport.id,
-                        user_id: user_first.id,
-                        location: Location.all.pluck(:address).sample)
-  puts "saving first_user's past wish..."
-  first_wish.save!
-  puts "Past wish saved successfully!"
-  puts "choose second user..."
-  puts "Creating second's past wish..."
-  second_wish = Wish.new(date: date,
-                         sport_id: sport.id,
-                         user_id: user_second.id,
-                         location: Location.all.pluck(:address).sample)
-  puts "saving second's past wish..."
-  second_wish.save!
-  puts "Second wish saved successfully!"
+#   # puts "Creating first's match"
+#   # first_match = Match.create!(location: location.first)
+#   # puts "Match created successfully!"
 
-  # puts "Creating first's match"
-  # first_match = Match.create!(location: location.first)
-  # puts "Match created successfully!"
+#   # puts "updating first's wish..."
+#   # first_wish.update(match: first_match)
+#   # puts "first_wish updated successfully!"
 
-  # puts "updating first's wish..."
-  # first_wish.update(match: first_match)
-  # puts "first_wish updated successfully!"
+#   # puts "Updating second's wish..."
+#   # second_wish.update(match: first_match)
+#   # puts "second_wish updated successfully!"
+# end
 
-  # puts "Updating second's wish..."
-  # second_wish.update(match: first_match)
-  # puts "second_wish updated successfully!"
-end
+# 3.times do
+#   puts "Creating user..."
+#   user_first = User.new(username: Faker::Name.unique.female_first_name,
+#                   email: Faker::Internet.unique.email,
+#                   password: "123456",
+#                   age: rand(18..45))
+#   puts 'attaching photos on first user...'
+#   user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
+#   user_first.photo.attach(io: user_photo, filename: "#{user_first.username}_#{user_first.email}_photo.jpeg", content_type: 'image/jpeg')
+#   puts "saving #{user_first.username}..."
+#   user_first.save!
+#   puts "#{user_first.username} saved successfully!"
+#   puts "Creating user..."
+#   user_second = User.new(username: Faker::Name.unique.female_first_name,
+#                   email: Faker::Internet.unique.email,
+#                   password: "123456",
+#                   age: rand(18..45))
+#   puts 'attaching photos on second user....'
+#   user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
+#   user_second.photo.attach(io: user_photo, filename: "#{user_second.username}_#{user_second.email}_photo.jpeg", content_type: 'image/jpeg')
+#   puts "saving #{user_second.username}..."
+#   user_second.save!
+#   puts "#{user_second.username} saved successfully!"
+#   sport = SPORTS_ARRAY[7]
+#   location = Location.where(sport_id: sport.id)
+#   date = Date.today
+#   puts "Creating first user wish..."
+#   first_wish = Wish.new(date: date,
+#                         sport_id: sport.id,
+#                         user_id: user_first.id,
+#                         location: Location.all.pluck(:address).sample)
+#   puts "saving first_user's past wish..."
+#   first_wish.save!
+#   puts "Past wish saved successfully!"
+#   puts "choose second user..."
+#   puts "Creating second's past wish..."
+#   second_wish = Wish.new(date: date,
+#                          sport_id: sport.id,
+#                          user_id: user_second.id,
+#                          location: Location.all.pluck(:address).sample)
+#   puts "saving second's past wish..."
+#   second_wish.save!
+#   puts "Second wish saved successfully!"
 
-3.times do
-  puts "Creating user..."
-  user_first = User.new(username: Faker::Name.unique.female_first_name,
-                  email: Faker::Internet.unique.email,
-                  password: "123456",
-                  age: rand(18..45))
-  puts 'attaching photos on first user...'
-  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
-  user_first.photo.attach(io: user_photo, filename: "#{user_first.username}_#{user_first.email}_photo.jpeg", content_type: 'image/jpeg')
-  puts "saving #{user_first.username}..."
-  user_first.save!
-  puts "#{user_first.username} saved successfully!"
-  puts "Creating user..."
-  user_second = User.new(username: Faker::Name.unique.female_first_name,
-                  email: Faker::Internet.unique.email,
-                  password: "123456",
-                  age: rand(18..45))
-  puts 'attaching photos on second user....'
-  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
-  user_second.photo.attach(io: user_photo, filename: "#{user_second.username}_#{user_second.email}_photo.jpeg", content_type: 'image/jpeg')
-  puts "saving #{user_second.username}..."
-  user_second.save!
-  puts "#{user_second.username} saved successfully!"
-  sport = SPORTS_ARRAY[6]
-  location = Location.where(sport_id: sport.id)
-  date = Date.today
-  puts "Creating first user wish..."
-  first_wish = Wish.new(date: date,
-                        sport_id: sport.id,
-                        user_id: user_first.id,
-                        location: Location.all.pluck(:address).sample)
-  puts "saving first_user's past wish..."
-  first_wish.save!
-  puts "Past wish saved successfully!"
-  puts "choose second user..."
-  puts "Creating second's past wish..."
-  second_wish = Wish.new(date: date,
-                         sport_id: sport.id,
-                         user_id: user_second.id,
-                         location: Location.all.pluck(:address).sample)
-  puts "saving second's past wish..."
-  second_wish.save!
-  puts "Second wish saved successfully!"
+#   # puts "Creating first's match"
+#   # first_match = Match.create!(location: location.first)
+#   # puts "Match created successfully!"
 
-  # puts "Creating first's match"
-  # first_match = Match.create!(location: location.first)
-  # puts "Match created successfully!"
+#   # puts "updating first's wish..."
+#   # first_wish.update(match: first_match)
+#   # puts "first_wish updated successfully!"
 
-  # puts "updating first's wish..."
-  # first_wish.update(match: first_match)
-  # puts "first_wish updated successfully!"
+#   # puts "Updating second's wish..."
+#   # second_wish.update(match: first_match)
+#   # puts "second_wish updated successfully!"
+# end
 
-  # puts "Updating second's wish..."
-  # second_wish.update(match: first_match)
-  # puts "second_wish updated successfully!"
-end
+# 3.times do
+#   puts "Creating user..."
+#   user_first = User.new(username: Faker::Name.female_first_name,
+#                   email: Faker::Internet.unique.email,
+#                   password: "123456",
+#                   age: rand(18..45))
+#   puts 'attaching photos on first user...'
+#   user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
+#   user_first.photo.attach(io: user_photo, filename: "#{user_first.username}_#{user_first.email}_photo.jpeg", content_type: 'image/jpeg')
+#   puts "saving #{user_first.username}..."
+#   user_first.save!
+#   puts "#{user_first.username} saved successfully!"
+#   puts "Creating user..."
+#   user_second = User.new(username: Faker::Name.female_first_name,
+#                   email: Faker::Internet.unique.email,
+#                   password: "123456",
+#                   age: rand(18..45))
+#   puts 'attaching photos on second user....'
+#   user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
+#   user_second.photo.attach(io: user_photo, filename: "#{user_second.username}_#{user_second.email}_photo.jpeg", content_type: 'image/jpeg')
+#   puts "saving #{user_second.username}..."
+#   user_second.save!
+#   puts "#{user_second.username} saved successfully!"
+#   sport = SPORTS_ARRAY[8]
+#   location = Location.where(sport_id: sport.id)
+#   date = Date.today
+#   puts "Creating first user wish..."
+#   first_wish = Wish.new(date: date,
+#                         sport_id: sport.id,
+#                         user_id: user_first.id,
+#                         location: Location.all.pluck(:address).sample)
+#   puts "saving first_user's past wish..."
+#   first_wish.save!
+#   puts "Past wish saved successfully!"
+#   puts "choose second user..."
+#   puts "Creating second's past wish..."
+#   second_wish = Wish.new(date: date,
+#                          sport_id: sport.id,
+#                          user_id: user_second.id,
+#                          location: Location.all.pluck(:address).sample)
+#   puts "saving second's past wish..."
+#   second_wish.save!
+#   puts "Second wish saved successfully!"
 
-3.times do
-  puts "Creating user..."
-  user_first = User.new(username: Faker::Name.unique.female_first_name,
-                  email: Faker::Internet.unique.email,
-                  password: "123456",
-                  age: rand(18..45))
-  puts 'attaching photos on first user...'
-  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
-  user_first.photo.attach(io: user_photo, filename: "#{user_first.username}_#{user_first.email}_photo.jpeg", content_type: 'image/jpeg')
-  puts "saving #{user_first.username}..."
-  user_first.save!
-  puts "#{user_first.username} saved successfully!"
-  puts "Creating user..."
-  user_second = User.new(username: Faker::Name.unique.female_first_name,
-                  email: Faker::Internet.unique.email,
-                  password: "123456",
-                  age: rand(18..45))
-  puts 'attaching photos on second user....'
-  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
-  user_second.photo.attach(io: user_photo, filename: "#{user_second.username}_#{user_second.email}_photo.jpeg", content_type: 'image/jpeg')
-  puts "saving #{user_second.username}..."
-  user_second.save!
-  puts "#{user_second.username} saved successfully!"
-  sport = SPORTS_ARRAY[7]
-  location = Location.where(sport_id: sport.id)
-  date = Date.today
-  puts "Creating first user wish..."
-  first_wish = Wish.new(date: date,
-                        sport_id: sport.id,
-                        user_id: user_first.id,
-                        location: Location.all.pluck(:address).sample)
-  puts "saving first_user's past wish..."
-  first_wish.save!
-  puts "Past wish saved successfully!"
-  puts "choose second user..."
-  puts "Creating second's past wish..."
-  second_wish = Wish.new(date: date,
-                         sport_id: sport.id,
-                         user_id: user_second.id,
-                         location: Location.all.pluck(:address).sample)
-  puts "saving second's past wish..."
-  second_wish.save!
-  puts "Second wish saved successfully!"
+#   # puts "Creating first's match"
+#   # first_match = Match.create!(location: location.first)
+#   # puts "Match created successfully!"
 
-  # puts "Creating first's match"
-  # first_match = Match.create!(location: location.first)
-  # puts "Match created successfully!"
+#   # puts "updating first's wish..."
+#   # first_wish.update(match: first_match)
+#   # puts "first_wish updated successfully!"
 
-  # puts "updating first's wish..."
-  # first_wish.update(match: first_match)
-  # puts "first_wish updated successfully!"
+#   # puts "Updating second's wish..."
+#   # second_wish.update(match: first_match)
+#   # puts "second_wish updated successfully!"
+# end
 
-  # puts "Updating second's wish..."
-  # second_wish.update(match: first_match)
-  # puts "second_wish updated successfully!"
-end
+# 5.times do
+#   sport = SPORTS_ARRAY.sample
+#   location = Location.where(sport_id: sport.id)
+#   random_date = Date.today - (rand * 21)
+#   puts "Creating Charlotte's past wish..."
+#   charlottes_wish = Wish.new(date: random_date,
+#                              sport_id: sport.id,
+#                              user_id: first_user.id,
+#                              location: '16 villa gaudelet, paris')
+#   puts "saving Charlotte's past wish..."
+#   charlottes_wish.save!
+#   puts "Past wish saved successfully!"
+#   puts "choose random user..."
+#   random_user = User.all.pluck(:id).sample
+#   puts "Creating random's past wish..."
+#   random_wish = Wish.new(date: random_date,
+#                          sport_id: sport.id,
+#                          user_id: random_user,
+#                          location: Location.all.pluck(:address).sample)
+#   puts "saving random's past wish..."
+#   random_wish.save!
+#   puts "Past wish saved successfully!"
 
-3.times do
-  puts "Creating user..."
-  user_first = User.new(username: Faker::Name.female_first_name,
-                  email: Faker::Internet.unique.email,
-                  password: "123456",
-                  age: rand(18..45))
-  puts 'attaching photos on first user...'
-  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
-  user_first.photo.attach(io: user_photo, filename: "#{user_first.username}_#{user_first.email}_photo.jpeg", content_type: 'image/jpeg')
-  puts "saving #{user_first.username}..."
-  user_first.save!
-  puts "#{user_first.username} saved successfully!"
-  puts "Creating user..."
-  user_second = User.new(username: Faker::Name.female_first_name,
-                  email: Faker::Internet.unique.email,
-                  password: "123456",
-                  age: rand(18..45))
-  puts 'attaching photos on second user....'
-  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
-  user_second.photo.attach(io: user_photo, filename: "#{user_second.username}_#{user_second.email}_photo.jpeg", content_type: 'image/jpeg')
-  puts "saving #{user_second.username}..."
-  user_second.save!
-  puts "#{user_second.username} saved successfully!"
-  sport = SPORTS_ARRAY[8]
-  location = Location.where(sport_id: sport.id)
-  date = Date.today
-  puts "Creating first user wish..."
-  first_wish = Wish.new(date: date,
-                        sport_id: sport.id,
-                        user_id: user_first.id,
-                        location: Location.all.pluck(:address).sample)
-  puts "saving first_user's past wish..."
-  first_wish.save!
-  puts "Past wish saved successfully!"
-  puts "choose second user..."
-  puts "Creating second's past wish..."
-  second_wish = Wish.new(date: date,
-                         sport_id: sport.id,
-                         user_id: user_second.id,
-                         location: Location.all.pluck(:address).sample)
-  puts "saving second's past wish..."
-  second_wish.save!
-  puts "Second wish saved successfully!"
+#   # puts "Creating charlotte's match"
+#   # le_wagon_match = Match.create!(location: location.first)
+#   # puts "Match created successfully!"
 
-  # puts "Creating first's match"
-  # first_match = Match.create!(location: location.first)
-  # puts "Match created successfully!"
+#   # puts "updating charlotte's wish..."
+#   # charlottes_wish.update(match: le_wagon_match)
+#   # puts "charlottes_wish updated successfully!"
 
-  # puts "updating first's wish..."
-  # first_wish.update(match: first_match)
-  # puts "first_wish updated successfully!"
+#   # puts "Updating random's wish..."
+#   # random_wish.update(match: le_wagon_match)
+#   # puts "random_wish updated successfully!"
+# end
 
-  # puts "Updating second's wish..."
-  # second_wish.update(match: first_match)
-  # puts "second_wish updated successfully!"
-end
-
-5.times do
-  sport = SPORTS_ARRAY.sample
-  location = Location.where(sport_id: sport.id)
-  random_date = Date.today - (rand * 21)
-  puts "Creating Charlotte's past wish..."
-  charlottes_wish = Wish.new(date: random_date,
-                             sport_id: sport.id,
-                             user_id: first_user.id,
-                             location: '16 villa gaudelet, paris')
-  puts "saving Charlotte's past wish..."
-  charlottes_wish.save!
-  puts "Past wish saved successfully!"
-  puts "choose random user..."
-  random_user = User.all.pluck(:id).sample
-  puts "Creating random's past wish..."
-  random_wish = Wish.new(date: random_date,
-                         sport_id: sport.id,
-                         user_id: random_user,
-                         location: Location.all.pluck(:address).sample)
-  puts "saving random's past wish..."
-  random_wish.save!
-  puts "Past wish saved successfully!"
-
-  # puts "Creating charlotte's match"
-  # le_wagon_match = Match.create!(location: location.first)
-  # puts "Match created successfully!"
-
-  # puts "updating charlotte's wish..."
-  # charlottes_wish.update(match: le_wagon_match)
-  # puts "charlottes_wish updated successfully!"
-
-  # puts "Updating random's wish..."
-  # random_wish.update(match: le_wagon_match)
-  # puts "random_wish updated successfully!"
-end
 
 puts "Et mercé les T-A !"
