@@ -1,4 +1,5 @@
 .home-dropdown {
+  font-family: "Noto Sans HK", sans-serif;
   height: 56px;
   text-align-last: center;
   border-radius: 20px;
@@ -6,7 +7,19 @@
   font-weight: 700;
   border: none;
   margin: 0px;
+  -webkit-appearance: none;
+  line-height: 2;
+}
 
+#new_wish {
+  position: relative;
+
+  i {
+    position: absolute;
+    right: 83px;
+    top: 37px;
+    color: $red;
+  }
 }
 
 .wish-index-dropdown {
@@ -14,7 +27,7 @@
   top: 15px;
   left: 50%;
   transform: translateX(-50%);
-  width: 80%;
+  width: 92%;
 }
 
 .wish_sport {
@@ -24,4 +37,7 @@
 .wish-form-group {
   z-index: 9999;
   padding-bottom: 0px;
+}
+
+.arrow {
 }

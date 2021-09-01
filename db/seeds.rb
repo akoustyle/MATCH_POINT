@@ -292,7 +292,7 @@ puts "Wish saved successfully!"
                   password: "123456",
                   age: rand(18..45))
   puts 'attaching photos on user...'
-  user_photo = URI.open("https://source.unsplash.com/collection/1712483/girl")
+  user_photo = URI.open("https://source.unsplash.com/s/photos/girl-sport")
   user_first.photo.attach(io: user_photo, filename: "#{user.username}_#{user.email}_photo.jpeg", content_type: 'image/jpeg')
   puts "saving #{user.username}..."
   user_first.save!

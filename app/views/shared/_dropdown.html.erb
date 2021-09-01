@@ -1,5 +1,5 @@
-<div class="">
-<% toto = @user_wish&.sport&.name %>
+<div class="arrow">
+  <% toto = @user_wish&.sport&.name %>
   <div class="text-center select-box">
     <%= simple_form_for Wish.new, url: wishes_path, method: :post, data: { controller: "wish-dropdown" } do |f| %>
       <%= f.input :sport,
@@ -11,6 +11,7 @@
                   required: false,
                   wrapper_html: { class: 'wish-form-group' },
                   input_html: { class: "home-dropdown #{"wish-index-dropdown" if controller_name == "wishes" && action_name == "index"}", data: { action: "input->wish-dropdown#submit" } } %>
+      <i class="fas fa-angle-down", data-action="input->wish-dropdown#submit" ></i>
     <% end %>
   </div>
 </div>
