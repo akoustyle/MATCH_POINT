@@ -6,6 +6,7 @@ class MatchesController < ApplicationController
     # @match.wishes.each do |wish|
     locations.each do |location|
       if @match.wishes.last.user != current_user
+        @location = location
         @marker =[{
           lat: location.latitude,
           lng: location.longitude,

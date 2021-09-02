@@ -60,7 +60,7 @@ top: 351px; */
 .card-current-match {
   overflow: hidden;
   background: white;
-  width: 80%;
+  width: 90%;
   margin: auto;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 
@@ -89,6 +89,31 @@ top: 351px; */
   li {
     font-family: "Noto Sans HK", "sans-serif";
     color: $red;
+  }
+
+  .btn-flat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    i {
+      margin-right: 5px;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.match-card-location {
+  > i {
+    font-size: 1rem;
+  }
+  > div {
+    flex-grow: 1;
+    i {
+      opacity: 0.7;
+    }
   }
 }
 
