@@ -28,7 +28,8 @@ class WishesController < ApplicationController
       @wish.date = Date.today
       @wish.user = current_user
       @wish.sport = @sport
-      @wish.location = Location.last.address
+      @wish.latitude = request.location.latitude
+      @wish.longitude = request.location.longitude
       @wish.save
     end
     authorize @wish
