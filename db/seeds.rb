@@ -265,15 +265,15 @@ third_user.save!
 puts "Catherine saved successfully!"
 
 puts "Creating Kelly..."
-forth_user = User.new(username: 'Kelly',
+fourth_user = User.new(username: 'Kelly',
                       email: 'Kelly@lewagon.org',
                       password: "123456",
                       age: rand(27..30))
 user_photo = URI.open("https://images.unsplash.com/photo-1465310477141-6fb93167a273?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80.jpeg")
-forth_user.photo.attach(io: user_photo, filename: "Kelly_photo.jpeg", content_type: 'image/jpeg')
+fourth_user.photo.attach(io: user_photo, filename: "Kelly_photo.jpeg", content_type: 'image/jpeg')
 puts "attaching photo...."
 puts "saving Kelly..."
-first_user.save!
+fourth_user.save!
 puts "Kelly saved successfully!"
 
 puts "Creating Paume..."
@@ -285,7 +285,7 @@ user_photo = URI.open("https://images.unsplash.com/photo-1593353918842-5e2cb1366
 fifth_user.photo.attach(io: user_photo, filename: "Paume_photo.jpeg", content_type: 'image/jpeg')
 puts "attaching photo...."
 puts "saving Paume..."
-first_user.save!
+fifth_user.save!
 puts "Paume saved successfully!"
 
 puts "Creating Perle..."
@@ -313,27 +313,27 @@ seventh_user.save!
 puts "Anne saved successfully!"
 
 puts "Creating Christelle..."
-heigth_user = User.new(username: 'CriCri',
+eigth_user = User.new(username: 'CriCri',
                       email: 'Christelle@lewagon.org',
                       password: "123456",
                       age: rand(27..30))
 user_photo = URI.open("https://images.unsplash.com/photo-1506984548480-17c160170c06?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1100&q=80.jpeg")
-heigth_user.photo.attach(io: user_photo, filename: "Christelle_photo.jpeg", content_type: 'image/jpeg')
+eigth_user.photo.attach(io: user_photo, filename: "Christelle_photo.jpeg", content_type: 'image/jpeg')
 puts "attaching photo...."
 puts "saving Christelle..."
-heigth_user.save!
+eigth_user.save!
 puts "Christelle saved successfully!"
 
 puts "Creating Paula..."
-nineth_user = User.new(username: 'Popo',
+ninth_user = User.new(username: 'Popo',
                       email: 'Paula@lewagon.org',
                       password: "123456",
                       age: rand(27..30))
 user_photo = URI.open("https://images.unsplash.com/photo-1542145748-bd00b11de29d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80.jpeg")
-nineth_user.photo.attach(io: user_photo, filename: "Paula_photo.jpeg", content_type: 'image/jpeg')
+ninth_user.photo.attach(io: user_photo, filename: "Paula_photo.jpeg", content_type: 'image/jpeg')
 puts "attaching photo...."
 puts "saving Paula..."
-nineth_user.save!
+ninth_user.save!
 puts "Paula saved successfully!"
 
 puts "Creating Christina..."
@@ -373,15 +373,15 @@ eleventh_user.save!
 puts "Delphine saved successfully!"
 
 puts "Creating Marie..."
-twelveth_user = User.new(username: 'Mamamia',
+twelfth_user = User.new(username: 'Mamamia',
                       email: 'Marie@lewagon.org',
                       password: "123456",
                       age: rand(27..30))
 user_photo = URI.open("https://images.unsplash.com/photo-1623171901016-06d5e9e870e9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80.jpeg")
-twelveth_user.photo.attach(io: user_photo, filename: "Marie_photo.jpeg", content_type: 'image/jpeg')
+twelfth_user.photo.attach(io: user_photo, filename: "Marie_photo.jpeg", content_type: 'image/jpeg')
 puts "attaching photo...."
 puts "saving Marie..."
-twelveth_user.save!
+twelfth_user.save!
 puts "Marie saved successfully!"
 
 puts "Creating Hortence..."
@@ -397,27 +397,27 @@ thirteenth_user.save!
 puts "Hortence saved successfully!"
 
 puts "Creating Laura..."
-forteenth_user = User.new(username: 'Lolo',
+fourteenth_user = User.new(username: 'Lolo',
                       email: 'Laura@lewagon.org',
                       password: "123456",
                       age: rand(27..30))
 user_photo = URI.open("https://images.unsplash.com/photo-1622206509367-cb16e7f50e69?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80.jpeg")
-forteenth_user.photo.attach(io: user_photo, filename: "Laura_photo.jpeg", content_type: 'image/jpeg')
+fourteenth_user.photo.attach(io: user_photo, filename: "Laura_photo.jpeg", content_type: 'image/jpeg')
 puts "attaching photo...."
 puts "saving Laura..."
-forteenth_user.save!
+fourteenth_user.save!
 puts "Laura saved successfully!"
 
 puts "Creating Rania..."
-thirteenth_user = User.new(username: 'Rania',
+fifteenth_user = User.new(username: 'Rania',
                       email: 'Rania@lewagon.org',
                       password: "123456",
                       age: rand(27..30))
 user_photo = URI.open("https://images.unsplash.com/photo-1620226017713-b7de2cdd476c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=678&q=80.jpeg")
-thirteenth_user.photo.attach(io: user_photo, filename: "Rania_photo.jpeg", content_type: 'image/jpeg')
+fifteenth_user.photo.attach(io: user_photo, filename: "Rania_photo.jpeg", content_type: 'image/jpeg')
 puts "attaching photo...."
 puts "saving Rania..."
-thirteenth_user.save!
+fifteenth_user.save!
 puts "Rania saved successfully!"
 
 puts "Users created successfully!"
