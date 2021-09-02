@@ -16,11 +16,10 @@
   <% current_user.likes.where(liked: true).joins(wish: :match).each do |like| %>
     <%= link_to match_path(like.wish.match) do %>
       <div class="card-other-matches">
-        <%= cl_image_tag like.wish.user.photo.key, class: 'img-index' %>
+        <%= cl_image_tag like.wish.user.photo.key, class: 'img-index ml-2' %>
         <div class="card-other-matches-infos">
-          <li><%= like.wish.sport.name %></li>
-          <li><%= like.wish.user.username %></li>
-          <li><%= like.wish.user.age %></li>
+          <li><p><%= like.wish.user.username %>, <%= like.wish.user.age %> years old</p></li>
+          <li class="tag wish-tag" style="color: #8d2929"><%= like.wish.sport.name %></li>
         </div>
       </div>
     <% end %>
