@@ -2,33 +2,33 @@
   <ul>
     <li>
       <%= link_to root_path, class: "btn #{action_name == "home" ? "active" : ""}" do %>
-        <i class="fas fa-home"></i>
-        <small class='text-muted'>Home</small>
+        <i class="mb-1 mt-1  fas fa-home"></i>
+        <p class='text-muted footer-font'>Home</p>
       <% end %>
     </li>
     <li>
       <%= link_to matches_path, class: "btn #{controller_name == "matches" ? "active" : ""}" do %>
-        <i class="fas fa-hands-helping"></i>
-        <small class='text-muted'>Buddies</small>
+        <i class="mb-1 mt-1  fas fa-hands-helping"></i>
+        <p class='text-muted footer-font'>Buddies</p>
       <% end %>
     </li>
     <li>
       <%= link_to wishes_path, class: "btn #{controller_name == "wishes" && action_name == "index" ? "active" : ""}" do %>
-        <i class="fas fa-search"></i>
-        <small class='text-muted'>Search</small>
+        <i class="mb-1 mt-1  fas fa-search"></i>
+        <p class='text-muted footer-font'>Search</p>
       <% end %>
     </li>
   </li>
   <li>
     <% if user_signed_in? %>
       <%= link_to destroy_user_session_path, method: :delete, data: { confirm: "Do you really want to sign out?" } do %>
-        <i class="fas fa-user"></i>
-        <small class='text-muted'>Sign out</small>
+        <i class="mb-1 mt-1  fas fa-user"></i>
+        <p class='text-muted footer-font'>Sign out</p>
       <% end %>
     <% else %>
       <%= link_to new_user_session_path, class: "btn" do %>
-        <i class="fas fa-user"></i>
-        <small class='text-muted'>Sign in</small>
+        <i class="mb-1 mt-1  fas fa-user"></i>
+        <p class='text-muted footer-font'>Sign in</p>
       <% end %>
     <% end %>
   </li>
