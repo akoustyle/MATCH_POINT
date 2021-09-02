@@ -537,96 +537,96 @@ Perles_wish.save!
 puts "Wish saved successfully!"
 puts "Surf Wishes saved successfully"
 
-puts "Creating Charlotte's wish..."
-charlottes_wish = Wish.new(date: Date.today,
-                           sport_id: football.id,
-                           user_id: first_user.id,
-                           location: '16 villa gaudelet, paris')
-puts "saving Charlotte's wish..."
-charlottes_wish.save!
-puts "Wish saved successfully!"
+# puts "Creating Charlotte's wish..."
+# charlottes_wish = Wish.new(date: Date.today,
+#                            sport_id: football.id,
+#                            user_id: first_user.id,
+#                            location: '16 villa gaudelet, paris')
+# puts "saving Charlotte's wish..."
+# charlottes_wish.save!
+# puts "Wish saved successfully!"
 
-puts "Creating Diane's wish..."
-dianes_wish = Wish.new(date: Date.today,
-                       sport_id: football.id,
-                       user_id: second_user.id,
-                       location: 'Pl. des Vosges, 75003 Paris')
-puts "saving Diane's wish..."
-dianes_wish.save!
-puts "Wish saved successfully!"
+# puts "Creating Diane's wish..."
+# dianes_wish = Wish.new(date: Date.today,
+#                        sport_id: football.id,
+#                        user_id: second_user.id,
+#                        location: 'Pl. des Vosges, 75003 Paris')
+# puts "saving Diane's wish..."
+# dianes_wish.save!
+# puts "Wish saved successfully!"
 
-puts "Creating Catherine's wish..."
-catherines_wish = Wish.new(date: Date.today,
-                       sport_id: football.id,
-                       user_id: third_user.id,
-                       location: '3 Rue de Vaugirard, 75006 Paris')
-puts "saving Catherine's wish..."
-catherines_wish.save!
-puts "Wish saved successfully!"
+# puts "Creating Catherine's wish..."
+# catherines_wish = Wish.new(date: Date.today,
+#                        sport_id: football.id,
+#                        user_id: third_user.id,
+#                        location: '3 Rue de Vaugirard, 75006 Paris')
+# puts "saving Catherine's wish..."
+# catherines_wish.save!
+# puts "Wish saved successfully!"
 
-puts "Creating Camille's wish..."
-camilles_wish = Wish.new(date: Date.today,
-                       sport_id: football.id,
-                       user_id: eighteenth_user.id,
-                       location: '2-12 Imp. Baudran, 75013 Paris')
-puts "saving Camille's wish..."
-camilles_wish.save!
-puts "Wish saved successfully!"
+# puts "Creating Camille's wish..."
+# camilles_wish = Wish.new(date: Date.today,
+#                        sport_id: football.id,
+#                        user_id: eighteenth_user.id,
+#                        location: '2-12 Imp. Baudran, 75013 Paris')
+# puts "saving Camille's wish..."
+# camilles_wish.save!
+# puts "Wish saved successfully!"
 
-puts "Creating Kelly's wish..."
-kellys_wish = Wish.new(date: Date.today,
-                       sport_id: football.id,
-                       user_id: fourth_user.id,
-                       location: '45-43 Rue de la Procession, 75015 Paris')
-puts "saving Kelly's wish..."
-kellys_wish.save!
-puts "Wish saved successfully!"
+# puts "Creating Kelly's wish..."
+# kellys_wish = Wish.new(date: Date.today,
+#                        sport_id: football.id,
+#                        user_id: fourth_user.id,
+#                        location: '45-43 Rue de la Procession, 75015 Paris')
+# puts "saving Kelly's wish..."
+# kellys_wish.save!
+# puts "Wish saved successfully!"
 
-puts "Creating Stella's wish..."
-stellas_wish = Wish.new(date: Date.today,
-                       sport_id: football.id,
-                       user_id: seventeenth_user.id,
-                       location: '28-40 Av. de la Bourdonnais, 75007 Paris')
-puts "saving Stella's wish..."
-stellas_wish.save!
-puts "Wish saved successfully!"
+# puts "Creating Stella's wish..."
+# stellas_wish = Wish.new(date: Date.today,
+#                        sport_id: football.id,
+#                        user_id: seventeenth_user.id,
+#                        location: '28-40 Av. de la Bourdonnais, 75007 Paris')
+# puts "saving Stella's wish..."
+# stellas_wish.save!
+# puts "Wish saved successfully!"
 
-puts "Creating Paume's wish..."
-paumes_wish = Wish.new(date: Date.today,
-                       sport_id: football.id,
-                       user_id: fifth_user.id,
-                       location: '43-39 Rue François 1er, 75008 Paris')
-puts "saving Paume's wish..."
-paumes_wish.save!
-puts "Wish saved successfully!"
+# puts "Creating Paume's wish..."
+# paumes_wish = Wish.new(date: Date.today,
+#                        sport_id: football.id,
+#                        user_id: fifth_user.id,
+#                        location: '43-39 Rue François 1er, 75008 Paris')
+# puts "saving Paume's wish..."
+# paumes_wish.save!
+# puts "Wish saved successfully!"
 
-puts "Creating Laura's wish..."
-lauras_wish = Wish.new(date: Date.today,
-                       sport_id: football.id,
-                       user_id: fifteenth_user.id,
-                       location: 'Rue de Berri, 75008 Paris')
-puts "saving Laura's wish..."
-lauras_wish.save!
-puts "Wish saved successfully!"
+# puts "Creating Laura's wish..."
+# lauras_wish = Wish.new(date: Date.today,
+#                        sport_id: football.id,
+#                        user_id: fifteenth_user.id,
+#                        location: 'Rue de Berri, 75008 Paris')
+# puts "saving Laura's wish..."
+# lauras_wish.save!
+# puts "Wish saved successfully!"
 
-puts "Creating Perle's wish..."
-perles_wish = Wish.new(date: Date.today,
-                       sport_id: football.id,
-                       user_id: sixth_user.id,
-                       location: '130 Rue du Chemin Vert, 75011 Paris')
-puts "saving Perle's wish..."
-perles_wish.save!
-puts "Wish saved successfully!"
+# puts "Creating Perle's wish..."
+# perles_wish = Wish.new(date: Date.today,
+#                        sport_id: football.id,
+#                        user_id: sixth_user.id,
+#                        location: '130 Rue du Chemin Vert, 75011 Paris')
+# puts "saving Perle's wish..."
+# perles_wish.save!
+# puts "Wish saved successfully!"
 
-puts "Creating Rania's wish..."
-ranias_wish = Wish.new(date: Date.today,
-                       sport_id: football.id,
-                       user_id: sixteenth_user.id,
-                       location: '32 Rue Jean-Pierre Timbaud, 75011 Paris')
-puts "saving Rania's wish..."
-ranias_wish.save!
-puts "Wish saved successfully!"
-puts "Football Wishes saved successfuly!"
+# puts "Creating Rania's wish..."
+# ranias_wish = Wish.new(date: Date.today,
+#                        sport_id: football.id,
+#                        user_id: sixteenth_user.id,
+#                        location: '32 Rue Jean-Pierre Timbaud, 75011 Paris')
+# puts "saving Rania's wish..."
+# ranias_wish.save!
+# puts "Wish saved successfully!"
+# puts "Football Wishes saved successfuly!"
 
 puts "Creating Charlotte's wish..."
 charlottes_wish = Wish.new(date: Date.today,
@@ -1066,6 +1066,170 @@ ranias_wish.save!
 puts "Wish saved successfully!"
 puts "petanque Wishes saved successfuly!"
 
+# puts "Creating Charlotte's wish..."
+# charlottes_wish = Wish.new(date: Date.today,
+#                            sport_id: ping_pong.id,
+#                            user_id: first_user.id,
+#                            location: '16 villa gaudelet, paris')
+# puts "saving Charlotte's wish..."
+# charlottes_wish.save!
+# puts "Wish saved successfully!"
+
+# puts "Creating Diane's wish..."
+# dianes_wish = Wish.new(date: Date.today,
+#                        sport_id: ping_pong.id,
+#                        user_id: second_user.id,
+#                        location: 'Pl. des Vosges, 75003 Paris')
+# puts "saving Diane's wish..."
+# dianes_wish.save!
+# puts "Wish saved successfully!"
+
+# puts "Creating Anne's wish..."
+# annes_wish = Wish.new(date: Date.today,
+#                        sport_id: ping_pong.id,
+#                        user_id: seventh_user.id,
+#                        location: '2-14 Rue Fromentin, 75009 Paris')
+# puts "saving Anne's wish..."
+# annes_wish.save!
+# puts "Wish saved successfully!"
+
+# puts "Creating Christelle's wish..."
+# christelles_wish = Wish.new(date: Date.today,
+#                        sport_id: ping_pong.id,
+#                        user_id: eigth_user.id,
+#                        location: '14 Rue Ballu, 75009 Paris')
+# puts "saving Christelle's wish..."
+# christelles_wish.save!
+# puts "Wish saved successfully!"
+
+# puts "Creating Paula's wish..."
+# paulas_wish = Wish.new(date: Date.today,
+#                        sport_id: ping_pong.id,
+#                        user_id: nineth_user.id,
+#                        location: '2 Rue de Birague, 75004 Paris')
+# puts "saving Paula's wish..."
+# paulas_wish.save!
+# puts "Wish saved successfully!"
+
+# puts "Creating christina's wish..."
+# christinas_wish = Wish.new(date: Date.today,
+#                        sport_id: ping_pong.id,
+#                        user_id: tenth_user.id,
+#                        location: '14 Rue Saint-Louis, 75004 Paris')
+# puts "saving christina's wish..."
+# christinas_wish.save!
+# puts "Wish saved successfully!"
+
+# puts "Creating Terry's wish..."
+# terrys_wish = Wish.new(date: Date.today,
+#                        sport_id: ping_pong.id,
+#                        user_id: eleventh_user.id,
+#                        location: '4-14 Rue Messidor, 75012 Paris')
+# puts "saving Terry's wish..."
+# terrys_wish.save!
+# puts "Wish saved successfully!"
+
+# puts "Creating Delphine's wish..."
+# delphines_wish = Wish.new(date: Date.today,
+#                        sport_id: ping_pong.id,
+#                        user_id: twelveth_user.id,
+#                        location: '25 Bd de Reuilly, 75012 Paris')
+# puts "saving Delphine's wish..."
+# delphines_wish.save!
+# puts "Wish saved successfully!"
+
+# puts "Creating Marie's wish..."
+# maries_wish = Wish.new(date: Date.today,
+#                        sport_id: ping_pong.id,
+#                        user_id: thirteenth_user.id,
+#                        location: '176 Rue de Paris, 94220 Charenton-le-Pont')
+# puts "saving Marie's wish..."
+# maries_wish.save!
+# puts "Wish saved successfully!"
+# puts "ping pong Wishes saved successfuly!"
+
+puts "Creating Charlotte's wish..."
+charlottes_wish = Wish.new(date: Date.today,
+                           sport_id: horse_riding.id,
+                           user_id: first_user.id,
+                           location: '16 villa gaudelet, paris')
+puts "saving Charlotte's wish..."
+charlottes_wish.save!
+puts "Wish saved successfully!"
+
+puts "Creating Diane's wish..."
+dianes_wish = Wish.new(date: Date.today,
+                       sport_id: horse_riding.id,
+                       user_id: second_user.id,
+                       location: 'Pl. des Vosges, 75003 Paris')
+puts "saving Diane's wish..."
+dianes_wish.save!
+puts "Wish saved successfully!"
+
+puts "Creating Hortence's wish..."
+hortences_wish = Wish.new(date: Date.today,
+                       sport_id: horse_riding.id,
+                       user_id: fourteenth_user.id,
+                       location: '108 Av. de France, 75013 Paris')
+puts "saving Hortence's wish..."
+hortences_wish.save!
+puts "Wish saved successfully!"
+
+puts "Creating Maud's wish..."
+mauds_wish = Wish.new(date: Date.today,
+                       sport_id: horse_riding.id,
+                       user_id: nineteenth_user.id,
+                       location: '15 Rue Maurice de la Sizeranne, 75015 Paris')
+puts "saving Maud's wish..."
+mauds_wish.save!
+puts "Wish saved successfully!"
+
+puts "Creating Rania's wish..."
+ranias_wish = Wish.new(date: Date.today,
+                       sport_id: horse_riding.id,
+                       user_id: sixteenth_user.id,
+                       location: '32 Rue Jean-Pierre Timbaud, 75011 Paris')
+puts "saving Rania's wish..."
+ranias_wish.save!
+puts "Wish saved successfully!"
+
+puts "Creating Catherine's wish..."
+catherines_wish = Wish.new(date: Date.today,
+                       sport_id: horse_riding.id,
+                       user_id: third_user.id,
+                       location: '3 Rue de Vaugirard, 75006 Paris')
+puts "saving Catherine's wish..."
+catherines_wish.save!
+puts "Wish saved successfully!"
+
+puts "Creating Camille's wish..."
+camilles_wish = Wish.new(date: Date.today,
+                       sport_id: horse_riding.id,
+                       user_id: eighteenth_user.id,
+                       location: '2-12 Imp. Baudran, 75013 Paris')
+puts "saving Camille's wish..."
+camilles_wish.save!
+puts "Wish saved successfully!"
+
+puts "Creating Kelly's wish..."
+kellys_wish = Wish.new(date: Date.today,
+                       sport_id: horse_riding.id,
+                       user_id: fourth_user.id,
+                       location: '45-43 Rue de la Procession, 75015 Paris')
+puts "saving Kelly's wish..."
+kellys_wish.save!
+puts "Wish saved successfully!"
+
+puts "Creating Stella's wish..."
+stellas_wish = Wish.new(date: Date.today,
+                       sport_id: horse_riding.id,
+                       user_id: seventeenth_user.id,
+                       location: '28-40 Av. de la Bourdonnais, 75007 Paris')
+puts "saving Stella's wish..."
+stellas_wish.save!
+puts "Wish saved successfully!"
+puts "Horse riding Wishes saved successfuly!"
+
 puts "Creating Charlotte's wish..."
 charlottes_wish = Wish.new(date: Date.today,
                            sport_id: ping_pong.id,
@@ -1150,7 +1314,7 @@ puts "ping pong Wishes saved successfuly!"
 
 puts "Creating Charlotte's wish..."
 charlottes_wish = Wish.new(date: Date.today,
-                           sport_id: horse_riding.id,
+                           sport_id: golf.id,
                            user_id: first_user.id,
                            location: '16 villa gaudelet, paris')
 puts "saving Charlotte's wish..."
@@ -1159,76 +1323,158 @@ puts "Wish saved successfully!"
 
 puts "Creating Diane's wish..."
 dianes_wish = Wish.new(date: Date.today,
-                       sport_id: horse_riding.id,
+                       sport_id: golf.id,
                        user_id: second_user.id,
                        location: 'Pl. des Vosges, 75003 Paris')
 puts "saving Diane's wish..."
 dianes_wish.save!
 puts "Wish saved successfully!"
 
-puts "Creating Hortence's wish..."
+puts "Creating paume's wish..."
+paumes_wish = Wish.new(date: Date.today,
+                       sport_id: golf.id,
+                       user_id: fifth_user.id,
+                       location: '43-39 Rue François 1er, 75008 Paris')
+puts "saving paume's wish..."
+paumes_wish.save!
+puts "Wish saved successfully!"
+
+puts "Creating laura's wish..."
+lauras_wish = Wish.new(date: Date.today,
+                       sport_id: golf.id,
+                       user_id: fifteenth_user.id,
+                       location: 'Rue de Berri, 75008 Paris')
+puts "saving laura's wish..."
+lauras_wish.save!
+puts "Wish saved successfully!"
+
+puts "Creating perle's wish..."
+perles_wish = Wish.new(date: Date.today,
+                       sport_id: golf.id,
+                       user_id: sixth_user.id,
+                       location: '130 Rue du Chemin Vert, 75011 Paris')
+puts "saving perle's wish..."
+perles_wish.save!
+puts "Wish saved successfully!"
+
+puts "Creating anne's wish..."
+annes_wish = Wish.new(date: Date.today,
+                       sport_id: golf.id,
+                       user_id: seventh_user.id,
+                       location: '2-14 Rue Fromentin, 75009 Paris')
+puts "saving anne's wish..."
+annes_wish.save!
+puts "Wish saved successfully!"
+
+puts "Creating christelle's wish..."
+christelles_wish = Wish.new(date: Date.today,
+                       sport_id: golf.id,
+                       user_id: eigth_user.id,
+                       location: '14 Rue Ballu, 75009 Paris')
+puts "saving christelle's wish..."
+christelles_wish.save!
+puts "Wish saved successfully!"
+
+puts "Creating paula's wish..."
+paulas_wish = Wish.new(date: Date.today,
+                       sport_id: golf.id,
+                       user_id: nineth_user.id,
+                       location: '2 Rue de Birague, 75004 Paris')
+puts "saving paula's wish..."
+paulas_wish.save!
+puts "Wish saved successfully!"
+
+puts "Creating christina's wish..."
+christinas_wish = Wish.new(date: Date.today,
+                       sport_id: golf.id,
+                       user_id: tenth_user.id,
+                       location: '14 Rue Saint-Louis, 75004 Paris')
+puts "saving christina's wish..."
+christinas_wish.save!
+puts "Wish saved successfully!"
+puts "Golf Wishes saved successfuly!"
+
+puts "Creating Charlotte's wish..."
+charlottes_wish = Wish.new(date: Date.today,
+                           sport_id: cycling.id,
+                           user_id: first_user.id,
+                           location: '16 villa gaudelet, paris')
+puts "saving Charlotte's wish..."
+charlottes_wish.save!
+puts "Wish saved successfully!"
+
+puts "Creating Diane's wish..."
+dianes_wish = Wish.new(date: Date.today,
+                       sport_id: cycling.id,
+                       user_id: second_user.id,
+                       location: 'Pl. des Vosges, 75003 Paris')
+puts "saving Diane's wish..."
+dianes_wish.save!
+puts "Wish saved successfully!"
+
+puts "Creating terry's wish..."
+terrys_wish = Wish.new(date: Date.today,
+                       sport_id: cycling.id,
+                       user_id: eleventh_user.id,
+                       location: '4-14 Rue Messidor, 75012 Paris')
+puts "saving terry's wish..."
+terrys_wish.save!
+puts "Wish saved successfully!"
+
+puts "Creating delphine's wish..."
+delphines_wish = Wish.new(date: Date.today,
+                       sport_id: cycling.id,
+                       user_id: twelveth_user.id,
+                       location: '25 Bd de Reuilly, 75012 Paris')
+puts "saving delphine's wish..."
+delphines_wish.save!
+puts "Wish saved successfully!"
+
+puts "Creating marie's wish..."
+maries_wish = Wish.new(date: Date.today,
+                       sport_id: cycling.id,
+                       user_id: thirteenth_user.id,
+                       location: '176 Rue de Paris, 94220 Charenton-le-Pont')
+puts "saving marie's wish..."
+maries_wish.save!
+puts "Wish saved successfully!"
+
+puts "Creating hortence's wish..."
 hortences_wish = Wish.new(date: Date.today,
-                       sport_id: horse_riding.id,
+                       sport_id: cycling.id,
                        user_id: fourteenth_user.id,
                        location: '108 Av. de France, 75013 Paris')
-puts "saving Hortence's wish..."
+puts "saving hortence's wish..."
 hortences_wish.save!
 puts "Wish saved successfully!"
 
-puts "Creating Maud's wish..."
+puts "Creating maud's wish..."
 mauds_wish = Wish.new(date: Date.today,
-                       sport_id: horse_riding.id,
+                       sport_id: cycling.id,
                        user_id: nineteenth_user.id,
                        location: '15 Rue Maurice de la Sizeranne, 75015 Paris')
-puts "saving Maud's wish..."
+puts "saving maud's wish..."
 mauds_wish.save!
 puts "Wish saved successfully!"
 
-puts "Creating Rania's wish..."
+puts "Creating rania's wish..."
 ranias_wish = Wish.new(date: Date.today,
-                       sport_id: horse_riding.id,
+                       sport_id: cycling.id,
                        user_id: sixteenth_user.id,
                        location: '32 Rue Jean-Pierre Timbaud, 75011 Paris')
-puts "saving Rania's wish..."
+puts "saving rania's wish..."
 ranias_wish.save!
 puts "Wish saved successfully!"
 
-puts "Creating Catherine's wish..."
+puts "Creating catherine's wish..."
 catherines_wish = Wish.new(date: Date.today,
-                       sport_id: horse_riding.id,
+                       sport_id: cycling.id,
                        user_id: third_user.id,
                        location: '3 Rue de Vaugirard, 75006 Paris')
-puts "saving Catherine's wish..."
+puts "saving catherine's wish..."
 catherines_wish.save!
 puts "Wish saved successfully!"
-
-puts "Creating Camille's wish..."
-camilles_wish = Wish.new(date: Date.today,
-                       sport_id: horse_riding.id,
-                       user_id: eighteenth_user.id,
-                       location: '2-12 Imp. Baudran, 75013 Paris')
-puts "saving Camille's wish..."
-camilles_wish.save!
-puts "Wish saved successfully!"
-
-puts "Creating Kelly's wish..."
-kellys_wish = Wish.new(date: Date.today,
-                       sport_id: horse_riding.id,
-                       user_id: fourth_user.id,
-                       location: '45-43 Rue de la Procession, 75015 Paris')
-puts "saving Kelly's wish..."
-kellys_wish.save!
-puts "Wish saved successfully!"
-
-puts "Creating Stella's wish..."
-stellas_wish = Wish.new(date: Date.today,
-                       sport_id: horse_riding.id,
-                       user_id: seventeenth_user.id,
-                       location: '28-40 Av. de la Bourdonnais, 75007 Paris')
-puts "saving Stella's wish..."
-stellas_wish.save!
-puts "Wish saved successfully!"
-puts "Horse riding Wishes saved successfuly!"
+puts "Cycling Wishes saved successfuly!"
 
 # puts "creating diane's like toward charlotte's wish"
 # Like.create!(wish: charlottes_wish, uforth_user)
