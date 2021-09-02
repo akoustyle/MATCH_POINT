@@ -676,7 +676,7 @@ puts "Wish saved successfully!"
 puts "Creating Paula's wish..."
 paulas_wish = Wish.new(date: Date.today,
                        sport_id: basketball.id,
-                       user_id: nineth_user.id,
+                       user_id: ninth_user.id,
                        location: '2 Rue de Birague, 75004 Paris')
 puts "saving Paula's wish..."
 paulas_wish.save!
@@ -977,7 +977,7 @@ puts "Wish saved successfully!"
 puts "Creating Paula's wish..."
 paulas_wish = Wish.new(date: Date.today,
                        sport_id: running.id,
-                       user_id: nineth_user.id,
+                       user_id: ninth_user.id,
                        location: '2 Rue de Birague, 75004 Paris')
 puts "saving Paula's wish..."
 paulas_wish.save!
@@ -1105,7 +1105,7 @@ puts "petanque Wishes saved successfuly!"
 # puts "Creating Paula's wish..."
 # paulas_wish = Wish.new(date: Date.today,
 #                        sport_id: ping_pong.id,
-#                        user_id: nineth_user.id,
+#                        user_id: ninth_user.id,
 #                        location: '2 Rue de Birague, 75004 Paris')
 # puts "saving Paula's wish..."
 # paulas_wish.save!
@@ -1269,7 +1269,7 @@ puts "Wish saved successfully!"
 puts "Creating Paula's wish..."
 paulas_wish = Wish.new(date: Date.today,
                        sport_id: ping_pong.id,
-                       user_id: nineth_user.id,
+                       user_id: ninth_user.id,
                        location: '2 Rue de Birague, 75004 Paris')
 puts "saving Paula's wish..."
 paulas_wish.save!
@@ -1378,7 +1378,7 @@ puts "Wish saved successfully!"
 puts "Creating paula's wish..."
 paulas_wish = Wish.new(date: Date.today,
                        sport_id: golf.id,
-                       user_id: nineth_user.id,
+                       user_id: ninth_user.id,
                        location: '2 Rue de Birague, 75004 Paris')
 puts "saving paula's wish..."
 paulas_wish.save!
