@@ -75,7 +75,7 @@ top: 351px; */
   }
 
   p {
-    font-size: 12px;
+    font-size: 16px;
     opacity: 0.7;
     margin: 0;
   }
@@ -92,9 +92,9 @@ top: 351px; */
 }
 
 .card-current-match .container {
-  text-align: right;
+  text-align: center;
   #chat-link {
-    color: $red;
+    color: white;
   }
 }
 

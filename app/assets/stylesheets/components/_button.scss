@@ -12,16 +12,18 @@
 }
 
 .chat-button-show {
-  text-align-last: center;
-  border-radius: 20px;
-  color: white;
-  font-weight: 700;
-  font-size: 20px;
-  width: 100%;
-  padding: 5px 100px;
-  border: none;
-  margin-top: 20px;
-  background-color: $red;
+    margin: 0 auto;
+    width: 60vw;
+    display: flex;
+    text-align: center;
+    background-color: $red;
+    border-radius: 15px;
+    height: 45px;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 12px;
 }
 .wish-button {
   display:flex;

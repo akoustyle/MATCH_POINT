@@ -11,20 +11,22 @@
         </ul>-->
         <div class="match-card-details">
           <h2><%= wish.user.username %>, <%= wish.user.age %> years old</h2>
-          <p><i class="fas fa-stopwatch fax2"></i> <%= wish.sport.name %></p>
+          <div class="wish-tag">
+            <%= wish.sport.name %></p>
+          </div>
         </div>
       <% end %>
     <% end %>
     <div class="card-current-match-infos">
-      <div>
+      <%# <div>
         <%= render "recent_match" %>
-      </div>
+      <%# </div> %>
     </div>
-    <div class="container">
-      <%= link_to chatroom_path(@match.chatroom) do %>
-        <i id="chat-link" class="far fa-comments fa-3x"></i>
+    <%# <div class="container chat-button-show"> %>
+      <%= link_to chatroom_path(@match.chatroom), class: "chat-button-show" do %>
+        <i id="chat-link" class="far fa-comments fa-2x"></i>
       <% end %>
-    </div>
+    <%# </div> %>
   </div>
 
 <%# if policy(Match).destroy? %>
