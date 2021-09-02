@@ -4,13 +4,40 @@
 // }
 
 .delete-button {
-position: absolute;
-width: 131px;
-height: 48px;
-left: 169px;
-top: 426px;
+  position: absolute;
+  width: 131px;
+  height: 48px;
+  left: 169px;
+  top: 426px;
 
-background: $red;
-border: 8px solid #FFD1D1;
-border-radius: 30px;
+  background: $red;
+  border: 8px solid #ffd1d1;
+  border-radius: 30px;
+}
+
+.img-index {
+  width: 113px;
+  height: 113px;
+  align-self: center;
+  // margin-left: 10px;
+}
+
+.card-other-matches {
+
+  height: 130px;
+
+  .card-other-matches-infos {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+  li p {
+    font-size: large;
+    opacity: 0.9;
+    font-size: 16px;
+    margin: 0;
+    align-items: end;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
 }
