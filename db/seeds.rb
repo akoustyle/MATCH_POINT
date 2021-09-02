@@ -560,6 +560,7 @@ tennis_wish = []
   puts "Wish put in tennis array!"
 end
 
+
 running_wish = []
 6.times do
   puts "Creating running wish..."
