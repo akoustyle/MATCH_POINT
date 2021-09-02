@@ -12,6 +12,16 @@
     margin-top: 4px;
   }
 
+  .footer-font {
+    font-size: 12px;
+    font-weight: 500;
+    color: black;
+  }
+
+  p {
+    align-self: center;
+  }
+
   .fas {
     color: $gray;
     font-size: 30px;
@@ -19,8 +29,8 @@
   a.active {
     border-top: 3px solid $red;
     color: $red;
-    i,
-    small {
+
+    i, p {
       color: $red;
     }
   }
