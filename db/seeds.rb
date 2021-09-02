@@ -325,15 +325,15 @@ eigth_user.save!
 puts "Christelle saved successfully!"
 
 puts "Creating Paula..."
-nineth_user = User.new(username: 'Popo',
+ninth_user = User.new(username: 'Popo',
                       email: 'Paula@lewagon.org',
                       password: "123456",
                       age: rand(27..30))
 user_photo = URI.open("https://images.unsplash.com/photo-1542145748-bd00b11de29d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80.jpeg")
-nineth_user.photo.attach(io: user_photo, filename: "Paula_photo.jpeg", content_type: 'image/jpeg')
+ninth_user.photo.attach(io: user_photo, filename: "Paula_photo.jpeg", content_type: 'image/jpeg')
 puts "attaching photo...."
 puts "saving Paula..."
-nineth_user.save!
+ninth_user.save!
 puts "Paula saved successfully!"
 
 puts "Creating Christina..."

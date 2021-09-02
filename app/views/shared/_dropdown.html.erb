@@ -1,5 +1,5 @@
-<div class="">
-<% toto = @user_wish&.sport&.name %>
+<div class="arrow">
+  <% toto = @user_wish&.sport&.name %>
   <div class="text-center select-box">
     <%= simple_form_for Wish.new, url: wishes_path, method: :post, data: { controller: "wish-dropdown" } do |f| %>
       <%= f.input :sport,
@@ -10,7 +10,8 @@
                   error: 'Please select a sport to begin your journey',
                   required: false,
                   wrapper_html: { class: 'wish-form-group' },
-                  input_html: { class: "home-dropdown #{"wish-index-dropdown" if controller_name == "wishes" && action_name == "index"}", data: { action: "input->wish-dropdown#submit" } } %>
+                  input_html: { class: "home-dropdown #{"wish-index-dropdown" if controller_name == "wishes" && action_name == "index"}", data: { action: "input->wish-dropdown#submit", wish_dropdown_target: 'select' } } %>
+      <i class="fas fa-angle-down"></i>
     <% end %>
   </div>
 </div>
