@@ -4,11 +4,6 @@
     <% @match.wishes.each do |wish| %>
       <% if wish.user != current_user %>
         <%= cl_image_tag wish.user.photo.key, class: 'img-index' %>
-       <!-- <ul>
-        <li><%= wish.user.username %></li>
-        <li><%= wish.user.age %></li>
-        <li><%= wish.sport.name %></li>
-        </ul>-->
         <div class="match-card-details">
           <h2><%= wish.user.username %>, <%= wish.user.age %> years old</h2>
           <div class="wish-tag">
