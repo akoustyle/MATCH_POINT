@@ -637,14 +637,14 @@ puts "saving Charlotte's wish..."
 charlottes_wish.save!
 puts "Wish saved successfully!"
 
-puts "Creating Diane's wish..."
-dianes_wish = Wish.new(date: Date.today,
-                       sport_id: basketball.id,
-                       user_id: second_user.id,
-                       location: 'Pl. des Vosges, 75003 Paris')
-puts "saving Diane's wish..."
-dianes_wish.save!
-puts "Wish saved successfully!"
+# puts "Creating Diane's wish..."
+# dianes_wish = Wish.new(date: Date.today,
+#                        sport_id: basketball.id,
+#                        user_id: second_user.id,
+#                        location: 'Pl. des Vosges, 75003 Paris')
+# puts "saving Diane's wish..."
+# dianes_wish.save!
+# puts "Wish saved successfully!"
 
 puts "Creating Perle's wish..."
 perles_wish = Wish.new(date: Date.today,
