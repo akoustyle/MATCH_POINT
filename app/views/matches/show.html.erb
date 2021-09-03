@@ -20,10 +20,12 @@
 
     <div class="px-3 d-flex align-iems-center match-card-location" data-toggle="modal" data-target="#exampleModal">
       <i class="fas fa-map-marked-alt fa-2x d-flex align-items-center mr-3"></i>
+      <% if @location %>
       <div>
         <strong><%= @location.name %></strong>
         <div><%= @location.address %> <i class="fas fa-external-link-alt ml-1"></i></div>
       </div>
+      <% end %>
     </div>
     <div class="card-current-match-infos">
       <%# <div>
