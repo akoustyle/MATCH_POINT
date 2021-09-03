@@ -1,10 +1,10 @@
-<div class="message-info <%= message.user === current_user ? 'message-currentuser' : 'message-otheruser' %>" id="message-<%= message.id %>">
-  <%#= image_path(message.user.photo.key), class: 'avatar' %><i class="author">
+<%= is_author %>
+<div class="message-info <%= is_author ? 'message-currentuser' : 'message-otheruser' %>" id="message-<%= message.id %>">
+  <i class="author">
     <span><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></span>
     <span><%= message.user.username %></span>
   </i>
   <div class="message-content">
-
-  <p><%= message.content %></p>
+    <p><%= message.content %></p>
   </div>
 </div>
