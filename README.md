@@ -17,9 +17,9 @@ When matching with a buddy, we select for you the best location within your rang
 
 👤 Authors
 -----------------------------
-[Tiebow](http://github.com/tiebow)
-[StephDCW](http://github.com/stephDCW)
-[Akoustyle](http://github.com/akoustyle)
+*[Tiebow](http://github.com/tiebow)
+*[StephDCW](http://github.com/stephDCW)
+*[Akoustyle](http://github.com/akoustyle)
 
 📝 Contributing
 -----------------------------
