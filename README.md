@@ -26,6 +26,5 @@ When matching with a buddy, we select for you the best location within your rang
 
 Contributions, issues and feature requests are welcome.
 Feel free to check issues page if you want to contribute.
-Check the contributing guide.
 
 Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
